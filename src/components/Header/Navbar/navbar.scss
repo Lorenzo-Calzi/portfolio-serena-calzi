@@ -1,0 +1,88 @@
+@import 'src/sass/common';
+
+#navbar {
+  background-color: $white-color;
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        color: $title-color;
+        background-color: transparent;
+        transition: all ease 0.4s;
+        cursor: pointer;
+
+        &:hover {
+          color: $white-color;
+          background-color: $theme-color;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 320px) and (orientation: portrait) {
+
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+
+}
+
+@media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  #navbar {
+    width: 100%;
+
+    .content {
+      height: 110px;
+
+      ul {
+        gap: 60px;
+
+        li {
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2001px) {
+
+}
