@@ -1,0 +1,37 @@
+@import 'src/sass/common.scss';
+
+h1 {
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 100%;
+}
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 100%;
+}
+h3 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 100%;
+}
+h4 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 100%;
+}
+span {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+}
+.p-big {
+  font-size: 18px;
+  line-height: 100%;
+  padding-top: 1px;
+}
+.p-small {
+  font-size: 16px;
+  line-height: 100%;
+  padding-top: 1px;
+}
