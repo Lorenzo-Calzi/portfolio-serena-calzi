@@ -1,14 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import './header.scss'
 import Info from "./Info/Info";
 import Navbar from "./Navbar/Navbar";
+import Sidebar from "./Sidebar/Sidebar";
 
 const Header = () => {
+
+    const [isVisibleSideBar, setIsVisibleSideBar] = useState(false)
 
     return (
         <header id="header">
             <Info />
-            <Navbar />
+            <Navbar isVisibleSideBar={isVisibleSideBar} setIsVisibleSideBar={setIsVisibleSideBar}  />
+            <Sidebar isVisibleSideBar={isVisibleSideBar} setIsVisibleSideBar={setIsVisibleSideBar}/>
         </header>
     )
 }

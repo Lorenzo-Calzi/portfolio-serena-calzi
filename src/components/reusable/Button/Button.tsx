@@ -3,12 +3,15 @@ import './button.scss'
 import Text from '../Text/Text'
 
 interface ButtonProps {
+    text: string,
+    handler?: any
+    className?: string
 }
-const Button = ({}: ButtonProps) => {
+const Button = ({text, handler, className}: ButtonProps) => {
 
     return (
-        <button className="custom-button">
-            <Text type={"p-big"} color={"white"}>Prenota una visita</Text>
+        <button className={`custom-button ${className && className}`} onClick={handler ? handler : undefined}>
+            <Text type={"p-big"} color={"white"}>{text}</Text>
         </button>
     )
 }
