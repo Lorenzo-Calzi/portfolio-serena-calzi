@@ -16,7 +16,6 @@
   .content {
     margin: auto;
     display: flex;
-    justify-content: center;
     align-items: center;
 
     .bubble {
@@ -24,11 +23,60 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      position: relative;
       background-image: url(../../../assets/images/bubble.png);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+
+      img {
+        position: absolute;
+      }
+      .left-line-img{
+        transform: rotate(3deg);
+        animation: left-line-animation 0.8s 0.2s both;
+      }
+      .right-line-img {
+        transform: rotate(3deg);
+        animation: right-line-animation 0.8s 0.2s both;
+      }
+      .car-img {
+        animation: car-animation 0.8s 0.2s both;
+      }
     }
+  }
+}
+
+@keyframes left-line-animation {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes right-line-animation {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes car-animation {
+  0% {
+    transform: translate(-100px, - 100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
   }
 }
 
@@ -45,6 +93,7 @@
     .content {
       width: 80%;
       height: calc(100% - 15px);
+      justify-content: center;
 
       .bubble {
         width: 100%;
@@ -66,6 +115,7 @@
     .content {
       width: 80%;
       height: calc(100% - 20px);
+      justify-content: center;
 
       .bubble {
         width: 100%;
@@ -87,6 +137,7 @@
     .content {
       width: 70%;
       height: calc(100% - 20px);
+      justify-content: center;
 
       .bubble {
         width: 100%;
@@ -108,6 +159,7 @@
     .content {
       width: 70%;
       height: calc(100% - 20px);
+      justify-content: center;
 
       .bubble {
         height: 75%;
@@ -129,6 +181,7 @@
     .content {
       width: 70%;
       height: calc(100% - 20px);
+      justify-content: center;
 
       .bubble {
         height: 70%;
@@ -150,6 +203,7 @@
     .content {
       width: 70%;
       height: calc(100% - 20px);
+      justify-content: center;
 
       .bubble {
         height: 70%;
@@ -163,6 +217,7 @@
   #jumbotron {
     width: 100%;
     height: calc(100dvh - 40px - 110px);
+    justify-content: center;
 
     .header-after {
       width: 100%;
@@ -192,6 +247,7 @@
     .content {
       width: 70%;
       height: calc(100% - 20px);
+      justify-content: center;
 
       .bubble {
         height: 75%;
@@ -213,6 +269,7 @@
     .content {
       width: 80%;
       height: calc(100% - 20px);
+      justify-content: flex-end;
 
       .bubble {
         height: 75%;
@@ -234,10 +291,30 @@
     .content {
       width: 80%;
       height: calc(100% - 20px);
+      justify-content: flex-end;
 
       .bubble {
         height: 75%;
         aspect-ratio: 1;
+
+        .left-line-img{
+          width: 100px;
+          height: 400px;
+          left: -26px;
+          top: 50px;
+        }
+        .right-line-img {
+          width: 107px;
+          height: 231px;
+          right: -26px;
+          top: 70px;
+        }
+        .car-img {
+          width: 150px;
+          height: 120px;
+          top: -30px;
+          left: 63px;
+        }
       }
     }
   }
@@ -255,6 +332,7 @@
     .content {
       width: 80%;
       height: calc(100% - 40px);
+      justify-content: flex-end;
 
       .bubble {
         height: 75%;
