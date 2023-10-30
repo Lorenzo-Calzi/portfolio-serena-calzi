@@ -19,7 +19,6 @@ const Navbar = () => {
                     <img src={LeftLineImg} className="left-line-img" alt="Immagine di una riga bianca"/>
                     <img src={RightLineImg} className="right-line-img" alt="Immagine di una riga bianca"/>
                     <img src={CarImg} className="car-img" alt="Immagine di una macchina blu"/>
-
                 </div>
             </div>
         </section>
