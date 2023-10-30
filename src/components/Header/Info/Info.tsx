@@ -1,12 +1,13 @@
 import React from "react";
 import './info.scss'
 import Text from "../../reusable/Text/Text"
+import Anchor from "../../reusable/Anchor/Anchor";
 import ClockIcon from "../../../assets/icons/clock-white.svg";
 import PhoneIcon from "../../../assets/icons/phone-white.svg";
 import LocationIcon from "../../../assets/icons/location-white.svg";
-import FacebookIcon from "../../../assets/icons/facebook-white.svg";
 import InstagramIcon from "../../../assets/icons/instagram-white.svg";
-import Anchor from "../../reusable/Anchor/Anchor";
+import LinkedinIcon from "../../../assets/icons/linkedin-white.svg";
+import FacebookIcon from "../../../assets/icons/facebook-white.svg";
 
 const Info = () => {
 
@@ -39,12 +40,16 @@ const Info = () => {
 
                     <div className="right">
                         <div className="social">
-                            <Anchor href={"https://www.facebook.com/serena.calzi.3"} target={true}>
-                                <img src={FacebookIcon} alt="Icona di Facebook"/>
-                            </Anchor>
-                            <div className="divider" />
                             <Anchor href={"https://www.instagram.com/serenacalzi/"} target={true}>
                                 <img src={InstagramIcon} alt="Icona di Instagram"/>
+                            </Anchor>
+                            <div className="divider" />
+                            <Anchor href={"https://www.linkedin.com/in/serenacalzi/"} target={true}>
+                                <img src={LinkedinIcon} alt="Icona di Linkedin"/>
+                            </Anchor>
+                            <div className="divider" />
+                            <Anchor href={"https://www.facebook.com/serena.calzi.3"} target={true}>
+                                <img src={FacebookIcon} alt="Icona di Facebook"/>
                             </Anchor>
                         </div>
                     </div>
