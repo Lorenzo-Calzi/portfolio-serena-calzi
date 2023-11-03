@@ -45,6 +45,14 @@
       }
     }
   }
+  .hero-after {
+    position: absolute;
+    bottom: 0;
+    background-image: url(../../../assets/images/hero-after.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
 }
 
 @keyframes left-line-animation {
@@ -468,6 +476,10 @@
           left: 60px;
         }
       }
+    }
+    .hero-after {
+      width: 100%;
+      height: 60px;
     }
   }
 }
