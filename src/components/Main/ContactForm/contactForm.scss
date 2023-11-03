@@ -1,0 +1,202 @@
+@import 'src/sass/common';
+
+#contact-form {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: $smoke-theme;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  #contact-form {
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+    .row {
+      flex: 1;
+      gap: 10px;
+    }
+    button {
+      height: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+  #contact-form {
+    width: 100%;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+
+    .row {
+      flex: 1;
+      gap: 15px;
+    }
+    button {
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  #contact-form {
+    width: 100%;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 15px;
+
+    .row {
+      flex: 1;
+      gap: 20px;
+    }
+    button {
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  #contact-form {
+    width: 100%;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 15px;
+
+    .row {
+      flex: 1;
+      gap: 20px;
+    }
+    button {
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+  #contact-form {
+    width: 100%;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 15px;
+
+    .row {
+      flex: 1;
+      gap: 20px;
+    }
+    button {
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+  #contact-form {
+    width: 100%;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 15px;
+
+    .row {
+      flex: 1;
+      gap: 20px;
+    }
+    button {
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+  #contact-form {
+    width: 100%;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 15px;
+
+    .row {
+      flex: 1;
+      gap: 20px;
+    }
+    button {
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+  #contact-form {
+    width: 100%;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 15px;
+
+    .row {
+      flex: 1;
+      gap: 20px;
+    }
+    button {
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  #contact-form {
+    width: 50%;
+    gap: 20px;
+    padding: 60px;
+    border-radius: 50px;
+
+    .row {
+      flex: 1;
+      gap: 20px;
+    }
+    button {
+      height: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  #contact-form {
+    width: 50%;
+    gap: 20px;
+    padding: 60px;
+    border-radius: 50px;
+
+    .row {
+      flex: 1;
+      gap: 20px;
+    }
+    button {
+      height: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 2001px) {
+  #contact-form {
+    width: 50%;
+    gap: 20px;
+    padding: 60px;
+    border-radius: 50px;
+
+    .row {
+      flex: 1;
+      gap: 20px;
+    }
+    button {
+      height: 60px;
+    }
+  }
+}
