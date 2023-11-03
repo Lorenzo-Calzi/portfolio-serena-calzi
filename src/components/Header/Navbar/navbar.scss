@@ -31,8 +31,13 @@
         cursor: pointer;
 
         &:hover {
-          color: $white-color;
           background-color: $theme-color;
+
+          a {
+            p {
+              color: $white-color !important;
+            }
+          }
         }
       }
     }
