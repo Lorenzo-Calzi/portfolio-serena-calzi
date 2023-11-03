@@ -5,12 +5,18 @@ import Text from '../Text/Text'
 interface ButtonProps {
     text: string,
     handler?: any
-    className?: string
+    type?: 'button' | 'submit' | 'reset'
+    className?: string;
+    isDisabled?: boolean
 }
-const Button = ({text, handler, className}: ButtonProps) => {
+const Button = ({text, handler, type, className, isDisabled}: ButtonProps) => {
 
     return (
-        <button className={`custom-button ${className && className}`} onClick={handler ? handler : undefined}>
+        <button className={`custom-button ${className && className}`}
+                onClick={handler ? handler : undefined}
+                type={type ? type : 'button'}
+                disabled={isDisabled ? isDisabled : false}
+        >
             <Text type={"p-big"} color={"white"}>{text}</Text>
         </button>
     )
