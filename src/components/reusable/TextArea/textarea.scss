@@ -1,0 +1,161 @@
+@import 'src/sass/common';
+
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    resize: none;
+    border: none;
+
+    &:active, &:focus {
+      outline: 1px dashed $theme-color;
+    }
+    &::placeholder {
+      color: $body-color;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  .textarea-container {
+    width: 100%;
+    gap: 10px;
+
+    textarea {
+      height: 70px;
+      padding: 15px;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+  .textarea-container {
+    width: 100%;
+    gap: 10px;
+
+    textarea {
+      height: 80px;
+      padding: 15px;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  .textarea-container {
+    width: 100%;
+    gap: 10px;
+
+    textarea {
+      height: 100px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  .textarea-container {
+    width: 100%;
+    gap: 10px;
+
+    textarea {
+      height: 100px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+  .textarea-container {
+    width: 100%;
+    gap: 10px;
+
+    textarea {
+      height: 100px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+  .textarea-container {
+    width: 100%;
+    gap: 10px;
+
+    textarea {
+      height: 100px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+  .textarea-container {
+    width: 100%;
+    gap: 10px;
+
+    textarea {
+      height: 100px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+  .textarea-container {
+    width: 100%;
+    gap: 10px;
+
+    textarea {
+      height: 100px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  .textarea-container {
+    width: 100%;
+    gap: 10px;
+
+    textarea {
+      height: 100px;
+      padding: 15px 30px;
+      border-radius: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  .textarea-container {
+    width: 100%;
+    gap: 10px;
+
+    textarea {
+      height: 100px;
+      padding: 15px 30px;
+      border-radius: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 2001px) {
+  .textarea-container {
+    width: 100%;
+    gap: 10px;
+
+    textarea {
+      height: 100px;
+      padding: 15px 30px;
+      border-radius: 30px;
+    }
+  }
+}
