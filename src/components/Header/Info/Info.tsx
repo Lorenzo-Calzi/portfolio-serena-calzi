@@ -25,8 +25,8 @@ const Info = () => {
 
                         <div className="info">
                             <img src={PhoneIcon} alt="Icona di un telefono stilizzato"/>
-                            <Anchor href={"tel:342 361 4249"} target={true}>
-                                <Text type={"p-small"} color={'white'}>342 361 4249</Text>
+                            <Anchor href={"tel:342 361 4249"} target={true} color={"white"}>
+                                342 361 4249
                             </Anchor>
                         </div>
 
