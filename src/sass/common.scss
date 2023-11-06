@@ -26,6 +26,20 @@ html, body {
   scroll-behavior: smooth;
 }
 
+
+// CONTAINER
+.page-container {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+}
+
+.scroll-disabled {
+  height: 100%;
+  margin: 0;
+  overflow: hidden
+}
+
 // SCROLLBAR
 //::-webkit-scrollbar {
 //  width: 10px;
@@ -54,13 +68,6 @@ html, body {
 //  box-shadow: none !important;
 //  border: 2px dashed $lightPurple !important;
 //}
-
-// CONTAINER
-.page-container {
-  height: 100%;
-  width: 80%;
-  margin: auto;
-}
 
 // FLEX
 .flex-row {

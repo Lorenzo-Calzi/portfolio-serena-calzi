@@ -3,12 +3,14 @@ import './contactForm.scss'
 import {useForm} from "react-hook-form";
 import * as Yup from "yup";
 import {yupResolver} from "@hookform/resolvers/yup";
-import emailjs from '@emailjs/browser';
 import Input from "../../reusable/Input/Input";
 import TextArea from "../../reusable/TextArea/TextArea";
 import Button from "../../reusable/Button/Button";
 import Select from "../../reusable/Select/Select";
 import CoursesSTUB from "../../../stub/CoursesSTUB";
+import {useDispatch} from "react-redux";
+import {toggle} from "../../../redux/loaderSlice";
+import emailjs from '@emailjs/browser';
 
 const formSchema = Yup.object().shape({
     nome: Yup.string()
@@ -30,6 +32,8 @@ const formSchema = Yup.object().shape({
 });
 
 const ContactForm = () => {
+    const dispatch = useDispatch()
+
     const {
         register,
         watch,
@@ -63,15 +67,18 @@ const ContactForm = () => {
 
     const submitForm = (event: any) => {
         event.preventDefault();
+        dispatch(toggle())
 
         emailjs.sendForm('service_ctu1qvq', 'template_qcqzrhr', formRef.current, '_8H8v9WlJx2oNsYXn')
             .then((result) => {
                 console.log(result)
+                reset()
+                dispatch(toggle())
             }, (error) => {
                 console.log(error)
+                reset()
+                dispatch(toggle())
             });
-
-        reset()
     }
 
     return (
