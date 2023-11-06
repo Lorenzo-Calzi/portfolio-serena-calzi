@@ -1,6 +1,5 @@
 import React, {Dispatch, SetStateAction} from "react";
 import './navbar.scss'
-import Text from '../../reusable/Text/Text'
 import Anchor from "../../reusable/Anchor/Anchor";
 import Button from "../../reusable/Button/Button";
 
@@ -22,8 +21,8 @@ const Navbar = ({isVisibleSideBar, setIsVisibleSideBar}: NavbarProps) => {
         <section id="navbar">
             <div className="page-container">
                 <div className="content">
-                    {/*<div className="logo" />*/}
-                    <Text type={"h4"}>Drs. Serena Calzi</Text>
+                    <div className="logo" />
+                    {/*<Text type={"h4"}>Drs. Serena Calzi</Text>*/}
 
                     <ul>
                         <li><Anchor fontWeight={500}>Home</Anchor></li>

@@ -3,7 +3,7 @@ import './jumbotron.scss'
 import Text from "../../reusable/Text/Text"
 import LeftLineImg from '../../../assets/images/hero-left-white-line.png'
 import RightLineImg from '../../../assets/images/hero-right-white-line.png'
-import CarImg from '../../../assets/images/logo.png'
+import CarImg from '../../../assets/images/hero-car.png'
 
 
 const Navbar = () => {
