@@ -1,11 +1,11 @@
 @import 'src/sass/common';
 
 #contact-form {
-  height: fit-content;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   background-color: $smoke-theme;
+  border: 2px solid $smoke-theme;
 
   .row {
     display: flex;
@@ -154,7 +154,7 @@
   #contact-form {
     width: 50%;
     gap: 20px;
-    padding: 60px;
+    padding: 40px;
     border-radius: 50px;
 
     .row {
@@ -171,7 +171,7 @@
   #contact-form {
     width: 50%;
     gap: 20px;
-    padding: 60px;
+    padding: 50px;
     border-radius: 50px;
 
     .row {

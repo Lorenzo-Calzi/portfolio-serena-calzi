@@ -63,7 +63,6 @@ const ContactForm = () => {
 
     const submitForm = (event: any) => {
         event.preventDefault();
-        reset()
 
         emailjs.sendForm('service_ctu1qvq', 'template_qcqzrhr', formRef.current, '_8H8v9WlJx2oNsYXn')
             .then((result) => {
@@ -71,6 +70,8 @@ const ContactForm = () => {
             }, (error) => {
                 console.log(error)
             });
+
+        reset()
     }
 
     return (
