@@ -1,0 +1,171 @@
+#popup {
+  width: 100%;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(142, 169, 166, 0.16);
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation: 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    background-color: rgb(253, 253, 253);
+    border: 2px dashed rgb(235, 235, 235);
+    box-shadow: 0 8px 40px 0 rgba(105, 116, 119, 0.08);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    top: -200px;
+  }
+  100% {
+    top: 50px;
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    top: 50px;
+  }
+  100% {
+    top: -200px;
+  }
+}
+
+
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  #popup {
+    .content {
+      width: fit-content;
+      height: fit-content;
+      gap: 15px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+  #popup {
+    .content {
+      width: fit-content;
+      height: fit-content;
+      gap: 15px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  #popup {
+    .content {
+      width: fit-content;
+      height: fit-content;
+      gap: 20px;
+      padding: 25px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  #popup {
+    .content {
+      width: fit-content;
+      height: fit-content;
+      gap: 20px;
+      padding: 30px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+  #popup {
+    .content {
+      width: fit-content;
+      height: fit-content;
+      gap: 20px;
+      padding: 25px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+  #popup {
+    .content {
+      width: fit-content;
+      height: fit-content;
+      gap: 20px;
+      padding: 30px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+  #popup {
+    .content {
+      width: fit-content;
+      height: fit-content;
+      gap: 20px;
+      padding: 35px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+  #popup {
+    .content {
+      width: fit-content;
+      height: fit-content;
+      gap: 20px;
+      padding: 30px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  #popup {
+    .content {
+      width: fit-content;
+      height: fit-content;
+      gap: 20px;
+      padding: 35px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  #popup {
+    .content {
+      width: fit-content;
+      height: fit-content;
+      gap: 20px;
+      padding: 40px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 2001px) {
+  #popup {
+    .content {
+      width: fit-content;
+      height: fit-content;
+      gap: 20px;
+      padding: 40px;
+      border-radius: 10px;
+    }
+  }
+}
