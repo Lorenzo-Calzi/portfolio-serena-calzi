@@ -7,8 +7,9 @@ import TelephoneIcon from "../../../assets/icons/telephone-call-orange.svg"
 import {GoogleMap, MarkerF, useLoadScript} from "@react-google-maps/api";
 
 const ContactInfo = () => {
+    const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_APIKEY
     const {isLoaded} = useLoadScript({
-        googleMapsApiKey: "AIzaSyA4D0eN2KHwQ4yqiKePf6NNA92lG6vY2hs",
+        googleMapsApiKey: googleMapsApiKey ? googleMapsApiKey : ''
     })
     const center = useMemo(() => ({lat: 45.55897716416121, lng: 9.135750454738675}), [])
 
