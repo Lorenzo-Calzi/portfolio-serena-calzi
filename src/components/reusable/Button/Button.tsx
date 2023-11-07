@@ -17,7 +17,7 @@ const Button = ({text, handler, type, className, isDisabled}: ButtonProps) => {
                 type={type ? type : 'button'}
                 disabled={isDisabled ? isDisabled : false}
         >
-            <Text type={"p-big"} color={"white"}>{text}</Text>
+            <Text type={"p-big"} color={"white"} textAlign={'center'}>{text}</Text>
         </button>
     )
 }
