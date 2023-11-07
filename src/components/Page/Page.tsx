@@ -1,17 +1,20 @@
 import React from "react";
+import {useSelector} from "react-redux";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Loader from "../reusable/Loader/Loader";
-import {useSelector} from "react-redux";
+import Popup from "../reusable/Popup/Popup";
 
 const Page = () => {
-    const { loader } = useSelector((state: any) => state.loader)
+    const { loaderVisibility } = useSelector((state: any) => state.loader)
+    const { popupVisibility, popupMessage } = useSelector((state: any) => state.popup)
 
     return (
-        <div id="page" className={!loader ? 'scroll-disabled' : ''}>
+        <div id="page">
             <Header />
             <Main />
-            {loader && <Loader /> }
+            {loaderVisibility && <Loader /> }
+            {popupVisibility && <Popup popupVisibility={popupVisibility} message={popupMessage} />}
         </div>
     )
 }

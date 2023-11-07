@@ -3,14 +3,15 @@ import './contactForm.scss'
 import {useForm} from "react-hook-form";
 import * as Yup from "yup";
 import {yupResolver} from "@hookform/resolvers/yup";
+import {useDispatch} from "react-redux";
+import {toggleLoader} from "../../../redux/loaderSlice";
+import {togglePopup} from "../../../redux/popupSlice";
+import emailjs from '@emailjs/browser';
 import Input from "../../reusable/Input/Input";
 import TextArea from "../../reusable/TextArea/TextArea";
 import Button from "../../reusable/Button/Button";
 import Select from "../../reusable/Select/Select";
 import CoursesSTUB from "../../../stub/CoursesSTUB";
-import {useDispatch} from "react-redux";
-import {toggle} from "../../../redux/loaderSlice";
-import emailjs from '@emailjs/browser';
 
 const formSchema = Yup.object().shape({
     nome: Yup.string()
@@ -67,17 +68,17 @@ const ContactForm = () => {
 
     const submitForm = (event: any) => {
         event.preventDefault();
-        dispatch(toggle())
+        dispatch(toggleLoader())
 
         emailjs.sendForm('service_ctu1qvq', 'template_qcqzrhr', formRef.current, '_8H8v9WlJx2oNsYXn')
             .then((result) => {
-                console.log(result)
                 reset()
-                dispatch(toggle())
+                dispatch(toggleLoader())
+                dispatch(togglePopup("L'email è stata inviata!"))
             }, (error) => {
-                console.log(error)
                 reset()
-                dispatch(toggle())
+                dispatch(toggleLoader())
+                dispatch(togglePopup(`Errore: ${error}`))
             });
     }
 

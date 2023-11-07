@@ -7,7 +7,7 @@ import TelephoneIcon from "../../../assets/icons/telephone-call-orange.svg"
 import {GoogleMap, MarkerF, useLoadScript} from "@react-google-maps/api";
 
 const ContactInfo = () => {
-    const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_APIKEY
+    const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
     const {isLoaded} = useLoadScript({
         googleMapsApiKey: googleMapsApiKey ? googleMapsApiKey : ''
     })
@@ -57,7 +57,7 @@ const ContactInfo = () => {
                         options={
                             {
                                 mapTypeControl: false,
-                                mapTypeId: "hybrid"
+                                mapTypeId: "roadmap",
                             }
                         }
                     >

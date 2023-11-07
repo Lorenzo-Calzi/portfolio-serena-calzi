@@ -3,16 +3,15 @@ import {createSlice} from '@reduxjs/toolkit'
 export const loaderSlice = createSlice({
     name: 'loader',
     initialState: {
-        loader: false,
+        loaderVisibility: false,
     },
     reducers: {
-        toggle: (state) => {
-            state.loader = !state.loader
+        toggleLoader: (state) => {
+            state.loaderVisibility = !state.loaderVisibility
         }
     },
 })
 
-// Action creators are generated for each case reducer function
-export const { toggle } = loaderSlice.actions
+export const { toggleLoader } = loaderSlice.actions
 
 export default loaderSlice.reducer

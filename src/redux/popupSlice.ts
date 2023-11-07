@@ -3,8 +3,8 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit'
 export const popupSlice = createSlice({
     name: 'popup',
     initialState: {
-        popupVisibility: true,
-        popupMessage: 'Messaggio di test'
+        popupVisibility: false,
+        popupMessage: ''
     },
     reducers: {
         togglePopup: (state, action: PayloadAction<string>) => {
