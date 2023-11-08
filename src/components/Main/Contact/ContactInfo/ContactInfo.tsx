@@ -1,9 +1,9 @@
 import React, {useMemo} from "react";
 import './contactInfo.scss'
-import Text from '../../reusable/Text/Text'
-import MapIcon from "../../../assets/icons/map-pin-orange.svg"
-import EmailIcon from "../../../assets/icons/presentation-card-open.svg"
-import TelephoneIcon from "../../../assets/icons/telephone-call-orange.svg"
+import Text from '../../../reusable/Text/Text'
+import MapIcon from "../../../../assets/icons/map-pin-orange.svg"
+import EmailIcon from "../../../../assets/icons/presentation-card-open.svg"
+import TelephoneIcon from "../../../../assets/icons/telephone-call-orange.svg"
 import {GoogleMap, MarkerF, useLoadScript} from "@react-google-maps/api";
 
 const ContactInfo = () => {
