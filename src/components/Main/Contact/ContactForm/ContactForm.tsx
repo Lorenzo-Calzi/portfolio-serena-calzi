@@ -7,6 +7,7 @@ import {useDispatch} from "react-redux";
 import {toggleLoader} from "../../../../redux/loaderSlice";
 import {togglePopup} from "../../../../redux/popupSlice";
 import emailjs from '@emailjs/browser';
+import {motion} from "framer-motion";
 import Input from "../../../reusable/Input/Input";
 import TextArea from "../../../reusable/TextArea/TextArea";
 import Button from "../../../reusable/Button/Button";
@@ -83,7 +84,15 @@ const ContactForm = () => {
     }
 
     return (
-        <form id="contact-form" ref={formRef} onChange={checkForm} onSubmit={submitForm}>
+        <motion.form id="contact-form"
+                     ref={formRef}
+                     onChange={checkForm}
+                     onSubmit={submitForm}
+                     initial={{ opacity: 0, x: -500 }}
+                     whileInView={{ opacity: 1, x: 0 }}
+                     transition={{ delay: 0, duration: 1}}
+                     viewport={{ once: true, amount: 0 }}
+        >
             <div className="row">
                 <Input register={register} errors={errors} inputName={"nome"} placeholder={"Nome *"} type={"text"} />
                 <Input register={register} errors={errors} inputName={"cognome"} placeholder={"Cognome *"} type={"text"} />
@@ -100,7 +109,7 @@ const ContactForm = () => {
             </div>
 
             <Button text={"Invia"} type={"submit"} isDisabled={!formIsValid} />
-        </form>
+        </motion.form>
     )
 }
 

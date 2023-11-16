@@ -2,6 +2,7 @@ import React from "react";
 import './counter.scss'
 import CountUp from "react-countup";
 import Text from "../../reusable/Text/Text"
+import {motion} from "framer-motion";
 import BasketBall from '../../../assets/images/basket-ball.png'
 
 const Counter = () => {
@@ -10,25 +11,44 @@ const Counter = () => {
         <section id="counter">
             <div className="page-container">
                 <div className="content">
-                    <div className="count">
+                    <motion.div className="count"
+                                initial={{ opacity: 0, y: -100 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0, duration: 1}}
+                                viewport={{ once: true, amount: 0 }}
+                    >
                         <CountUp start={0} end={45} duration={3} enableScrollSpy={true}/>
                         <Text type={"h4"} textAlign={"center"}>Qualified Teachers</Text>
-                    </div>
+                    </motion.div>
 
-                    <div className="count">
+                    <motion.div className="count"
+                                initial={{ opacity: 0, y: -100 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0, duration: 1.5}}
+                                viewport={{ once: true, amount: 0 }}
+                    >
                         <CountUp start={0} end={20} duration={3} enableScrollSpy={true}/>
                         <Text type={"h4"} textAlign={"center"}>Years Of Experience</Text>
-                    </div>
+                    </motion.div>
 
-                    <div className="count">
+                    <motion.div className="count"
+                                initial={{ opacity: 0, y: -100 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0, duration: 2}}
+                                viewport={{ once: true, amount: 0 }}
+                    >
                         <CountUp start={0} end={565} duration={3} enableScrollSpy={true}/>
                         <Text type={"h4"} textAlign={"center"}>Students Enrolled</Text>
-                    </div>
+                    </motion.div>
 
-                    <div className="count">
+                    <motion.div className="count"
+                                initial={{ opacity: 0, y: -100 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0, duration: 2.5}}
+                                viewport={{ once: true, amount: 0 }}>
                         <CountUp start={0} end={15} duration={3} enableScrollSpy={true}/>
                         <Text type={"h4"} textAlign={"center"}>Total Groups</Text>
-                    </div>
+                    </motion.div>
                 </div>
                 <img src={BasketBall} alt="Immagine di una palla da basket"/>
             </div>

@@ -5,6 +5,7 @@ import MapIcon from "../../../../assets/icons/map-pin-orange.svg"
 import EmailIcon from "../../../../assets/icons/presentation-card-open.svg"
 import TelephoneIcon from "../../../../assets/icons/telephone-call-orange.svg"
 import {GoogleMap, MarkerF, useLoadScript} from "@react-google-maps/api";
+import {motion} from "framer-motion";
 
 const ContactInfo = () => {
     const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
@@ -14,7 +15,12 @@ const ContactInfo = () => {
     const center = useMemo(() => ({lat: 45.55897716416121, lng: 9.135750454738675}), [])
 
     return (
-        <div id="contact-info">
+        <motion.div id="contact-info"
+                    initial={{ opacity: 0, x: 500 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0, duration: 1}}
+                    viewport={{ once: true, amount: 0 }}
+        >
             <div className="info">
                 <div className="icon">
                     <img src={MapIcon} alt="Icona di una mappa"/>
@@ -66,7 +72,7 @@ const ContactInfo = () => {
                 )
             }
 
-        </div>
+        </motion.div>
     )
 }
 
