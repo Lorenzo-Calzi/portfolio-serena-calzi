@@ -14,6 +14,7 @@
     "@types/node": "^16.18.59",
     "@types/react": "^18.2.31",
     "@types/react-dom": "^18.2.14",
+    "framer-motion": "^10.16.5",
     "react": "^18.2.0",
     "react-countup": "^6.5.0",
     "react-dom": "^18.2.0",
@@ -23,6 +24,7 @@
     "react-scripts": "5.0.1",
     "redux": "^4.2.1",
     "sass": "^1.69.4",
+    "swiper": "^11.0.4",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
     "yup": "^1.3.2"
