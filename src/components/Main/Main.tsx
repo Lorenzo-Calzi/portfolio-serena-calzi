@@ -4,6 +4,7 @@ import Jumbotron from "./Jumbotron/Jumbotron";
 import Services from "./Services/Services";
 import Contact from "./Contact/Contact";
 import Counter from "./Counter/Counter";
+import Courses from "./Courses/Courses";
 
 const Main = () => {
     return (
@@ -11,6 +12,7 @@ const Main = () => {
             <Jumbotron />
             <Services />
             <Counter />
+            <Courses />
             <Contact />
         </main>
     )
