@@ -102,7 +102,7 @@ const ContactForm = () => {
                 <Input register={register} errors={errors} inputName={"telefono"} placeholder={"Telefono *"} type={"tel"} />
             </div>
             <div className="row">
-                <Select register={register} errors={errors} selectName={"corso"} options={CoursesSTUB} defaultValue={"Seleziona un corso *"} />
+                <Select register={register} errors={errors} selectName={"corso"} options={CoursesSTUB.map((course) => course.title)} defaultValue={"Seleziona un corso *"} />
             </div>
             <div className="row">
                 <TextArea register={register} errors={errors} placeholder={"Messaggio *"} textAreaName={"messaggio"}/>
