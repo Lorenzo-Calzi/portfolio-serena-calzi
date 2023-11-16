@@ -26,7 +26,7 @@ const Popup = ({message, popupVisibility}: PopupProps) => {
 
     return (
         <div id="popup">
-            <div ref={popupRef} className="content" style={{animationName: popupVisibility ? 'slide-bottom' : 'slide-top'}}>
+            <div ref={popupRef} className="content" style={{animationName: popupVisibility ? 'popup-slide-bottom' : 'popup-slide-top'}}>
                 <Text type={"p-big"} textAlign={'center'}>{message}</Text>
                 <Button text={"CHIUDI"} handler={hidePopup} />
             </div>
