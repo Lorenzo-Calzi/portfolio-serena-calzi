@@ -24,7 +24,7 @@
       justify-content: center;
       align-items: center;
       position: relative;
-      background-image: url(../../../assets/images/bubble.png);
+      background-image: url(../../../assets/images/bubble-logo.png);
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -34,14 +34,9 @@
       }
       .left-line-img{
         transform: rotate(3deg);
-        animation: left-line-animation 1s 0.2s both;
       }
       .right-line-img {
         transform: rotate(3deg);
-        animation: right-line-animation 1s 0.2s both;
-      }
-      .car-img {
-        animation: car-animation 1s 0.4s both;
       }
     }
   }
@@ -54,40 +49,6 @@
     background-repeat: no-repeat;
   }
 }
-
-@keyframes left-line-animation {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes right-line-animation {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes car-animation {
-  0% {
-    transform: translate(-100px, - 100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   #jumbotron {

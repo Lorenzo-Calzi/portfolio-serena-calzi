@@ -1,10 +1,8 @@
 import React from "react";
 import './jumbotron.scss'
-import Text from "../../reusable/Text/Text"
+import {motion} from "framer-motion";
 import LeftLineImg from '../../../assets/images/hero-left-white-line.png'
 import RightLineImg from '../../../assets/images/hero-right-white-line.png'
-import CarImg from '../../../assets/images/hero-car.png'
-
 
 const Navbar = () => {
     return (
@@ -12,13 +10,27 @@ const Navbar = () => {
             <div className="header-after" />
             <div className="content">
                 <div className="bubble">
-                    <Text type={"h2"}>Testo</Text>
-                    <Text type={"h1"} color={"#fe5d37"}>Testo</Text>
-                    <Text type={"h2"}>Testo</Text>
+                    <motion.img
+                        src={LeftLineImg} className="left-line-img" alt="Immagine di una riga bianca"
+                        initial={{ opacity: 0, y: -100, x: -100 }}
+                        whileInView={{ opacity: 1, y: 0, x: 0 }}
+                        transition={{ delay: 0, duration: 1}}
+                        viewport={{ once: true, amount: 0 }}
+                    />
 
-                    <img src={LeftLineImg} className="left-line-img" alt="Immagine di una riga bianca"/>
-                    <img src={RightLineImg} className="right-line-img" alt="Immagine di una riga bianca"/>
-                    <img src={CarImg} className="car-img" alt="Immagine di una macchina blu"/>
+                    <motion.img initial={{ opacity: 0, y: -100, x: 100 }}
+                                whileInView={{ opacity: 1, y: 0, x: 0 }}
+                                transition={{ delay: 0, duration: 1}}
+                                viewport={{ once: true, amount: 0 }}
+                                src={RightLineImg} className="right-line-img" alt="Immagine di una riga bianca"
+                    />
+
+                    {/*<motion.img initial={{ opacity: 0, y: -100, x: 100 }}*/}
+                    {/*            whileInView={{ opacity: 1, y: 0, x: 0 }}*/}
+                    {/*            transition={{ delay: 0, duration: 1}}*/}
+                    {/*            viewport={{ once: true, amount: 0 }}*/}
+                    {/*            src={CarImg} className="car-img" alt="Immagine di una macchina blu"*/}
+                    {/*/>*/}
                 </div>
             </div>
             <div className="hero-after" />
