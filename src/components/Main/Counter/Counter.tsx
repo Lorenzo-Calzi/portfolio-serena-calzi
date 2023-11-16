@@ -17,7 +17,7 @@ const Counter = () => {
                                 transition={{ delay: 0, duration: 1}}
                                 viewport={{ once: true, amount: 0 }}
                     >
-                        <CountUp start={0} end={45} duration={3} enableScrollSpy={true}/>
+                        <CountUp start={0} end={45} duration={3} enableScrollSpy={true} scrollSpyOnce={true}/>
                         <Text type={"h4"} textAlign={"center"}>Qualified Teachers</Text>
                     </motion.div>
 
@@ -27,7 +27,7 @@ const Counter = () => {
                                 transition={{ delay: 0, duration: 1.5}}
                                 viewport={{ once: true, amount: 0 }}
                     >
-                        <CountUp start={0} end={20} duration={3} enableScrollSpy={true}/>
+                        <CountUp start={0} end={20} duration={3} enableScrollSpy={true} scrollSpyOnce={true}/>
                         <Text type={"h4"} textAlign={"center"}>Years Of Experience</Text>
                     </motion.div>
 
@@ -37,7 +37,7 @@ const Counter = () => {
                                 transition={{ delay: 0, duration: 2}}
                                 viewport={{ once: true, amount: 0 }}
                     >
-                        <CountUp start={0} end={565} duration={3} enableScrollSpy={true}/>
+                        <CountUp start={0} end={565} duration={3} enableScrollSpy={true} scrollSpyOnce={true}/>
                         <Text type={"h4"} textAlign={"center"}>Students Enrolled</Text>
                     </motion.div>
 
@@ -46,7 +46,7 @@ const Counter = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0, duration: 2.5}}
                                 viewport={{ once: true, amount: 0 }}>
-                        <CountUp start={0} end={15} duration={3} enableScrollSpy={true}/>
+                        <CountUp start={0} end={15} duration={3} enableScrollSpy={true} scrollSpyOnce={true}/>
                         <Text type={"h4"} textAlign={"center"}>Total Groups</Text>
                     </motion.div>
                 </div>
