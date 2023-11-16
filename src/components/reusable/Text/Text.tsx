@@ -2,7 +2,7 @@ import React from "react";
 import './text.scss'
 
 interface TextProps {
-    children: any,
+    children: React.ReactNode,
     color?: string
     type?: 'h1' | 'h2' | 'h3' | 'h4' | 'p-big' | 'p-small' | 'span'
     textAlign?: 'left' | 'center' | 'right'
