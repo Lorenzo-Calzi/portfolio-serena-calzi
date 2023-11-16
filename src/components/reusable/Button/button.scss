@@ -3,6 +3,9 @@
 .custom-button {
   min-width: fit-content;
   height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: $white-color;
   background-color: $theme-color;
   text-transform: capitalize;
