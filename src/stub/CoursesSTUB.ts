@@ -1,10 +1,17 @@
+import ImageCourse1 from "../assets/images/course-1.jpg"
+import ImageCourse2 from "../assets/images/course-2.jpg"
+import ImageCourse3 from "../assets/images/course-3.jpg"
+import ImageCourse4 from "../assets/images/course-4.jpg"
+import ImageCourse5 from "../assets/images/course-5.jpg"
+
+
 export default [
     {
         title: "Corso 1",
         description: "Interactively brand client center through is customized value good ideas.",
         age: "0-2 anni",
         time: "10-12 am",
-        image: "",
+        image: ImageCourse1,
         price: "€47"
     },
     {
@@ -12,7 +19,7 @@ export default [
         description: "Interactively brand client center through is customized value good ideas.",
         age: "2-5 anni",
         time: "12-13 am",
-        image: "",
+        image: ImageCourse2,
         price: "€15"
     },
     {
@@ -20,7 +27,7 @@ export default [
         description: "Interactively brand client center through is customized value good ideas.",
         age: "5-10 anni",
         time: "14-16 pm",
-        image: "",
+        image: ImageCourse3,
         price: "€32"
     },
     {
@@ -28,7 +35,7 @@ export default [
         description: "Interactively brand client center through is customized value good ideas.",
         age: "10-15 anni",
         time: "16-18 pm",
-        image: "",
+        image: ImageCourse4,
         price: "€50"
     },
     {
@@ -36,7 +43,7 @@ export default [
         description: "Interactively brand client center through is customized value good ideas.",
         age: "15-20 anni",
         time: "18-20 pm",
-        image: "",
+        image: ImageCourse5,
         price: "€25"
     }
 ];
