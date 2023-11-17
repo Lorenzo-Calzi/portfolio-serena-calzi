@@ -9,7 +9,12 @@ const Navbar = () => {
         <section id="jumbotron">
             <div className="header-after" />
             <div className="content">
-                <div className="bubble">
+                <motion.div className="bubble"
+                            initial={{ opacity: 0, scale: 0.7 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 0, duration: 1}}
+                            viewport={{ once: true, amount: 0 }}
+                >
                     <motion.img
                         src={LeftLineImg} className="left-line-img" alt="Immagine di una riga bianca"
                         initial={{ opacity: 0, y: -100, x: -100 }}
@@ -31,7 +36,7 @@ const Navbar = () => {
                     {/*            viewport={{ once: true, amount: 0 }}*/}
                     {/*            src={CarImg} className="car-img" alt="Immagine di una macchina blu"*/}
                     {/*/>*/}
-                </div>
+                </motion.div>
             </div>
             <div className="hero-after" />
         </section>

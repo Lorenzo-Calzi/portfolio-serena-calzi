@@ -3,6 +3,7 @@ import './navbar.scss'
 import Text from "../../reusable/Text/Text"
 import Anchor from "../../reusable/Anchor/Anchor";
 import Button from "../../reusable/Button/Button";
+import {motion} from "framer-motion";
 
 interface NavbarProps {
     isVisibleSideBar: boolean;
@@ -22,18 +23,41 @@ const Navbar = ({isVisibleSideBar, setIsVisibleSideBar}: NavbarProps) => {
         <section id="navbar">
             <div className="page-container">
                 <div className="content">
-                    <Text type={"h4"}>Dott.ssa Serena Calzi</Text>
+                    <motion.div initial={{ opacity: 0, x: -40 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0, duration: 1}}
+                                viewport={{ once: true, amount: 0 }}
+                    >
+                        <Text type={"h4"}>Dott.ssa Serena Calzi</Text>
+                    </motion.div>
 
-                    <ul>
+                    <motion.ul
+                        initial={{ opacity: 0, y: -40}}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0, duration: 1}}
+                        viewport={{ once: true, amount: 0 }}
+                    >
                         <li><Anchor fontWeight={500}>Home</Anchor></li>
                         <li><Anchor fontWeight={500}>About</Anchor></li>
                         <li><Anchor fontWeight={500}>Studi</Anchor></li>
                         <li><Anchor fontWeight={500}>Progetti</Anchor></li>
-                    </ul>
+                    </motion.ul>
 
-                    <Button text={"Contattami"} className={"bookAVisitButton"} />
+                    <motion.div initial={{ opacity: 0, x: 40 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0, duration: 1}}
+                                viewport={{ once: true, amount: 0 }}
+                    >
+                        <Button text={"Contattami"} className={"bookAVisitButton"} />
+                    </motion.div>
 
-                    <Button text={"Menu"} handler={toggleSideBar} className={"toggleSideBarButton"} />
+                    <motion.div initial={{ opacity: 0, x: 40 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: 0, duration: 1}}
+                                viewport={{ once: true, amount: 0 }}
+                    >
+                        <Button text={"Menu"} handler={toggleSideBar} className={"toggleSideBarButton"} />
+                    </motion.div>
                 </div>
             </div>
         </section>

@@ -45,7 +45,7 @@ const Services = () => {
             })
         } else if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
             setSwiperSetting({
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 30
             })
         } else if (window.innerWidth >= 1025 && window.innerWidth <= 1200) {

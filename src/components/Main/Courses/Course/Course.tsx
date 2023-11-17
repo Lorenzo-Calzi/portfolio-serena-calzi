@@ -1,6 +1,7 @@
 import React from "react";
 import './course.scss'
 import Text from '../../../reusable/Text/Text'
+import {motion} from "framer-motion";
 
 interface CourseProps {
     title: string,
@@ -13,8 +14,13 @@ interface CourseProps {
 
 const Course = ({title, description, age, time, image, price}: CourseProps) => {
     return (
-        <div id="course">
-            <div className="image" style={{backgroundImage: ""}}>
+        <motion.div id="course"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0, duration: 1}}
+                    viewport={{ once: true, amount: 0 }}
+        >
+            <div className="image" style={{ backgroundImage:`url(${image})` }}>
                 <div className="price">
                     <Text type={"h4"} color={"white"}>{price}</Text>
                 </div>
@@ -36,7 +42,7 @@ const Course = ({title, description, age, time, image, price}: CourseProps) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

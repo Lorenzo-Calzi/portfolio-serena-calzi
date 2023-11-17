@@ -14,9 +14,9 @@ interface ServiceProps {
 const Service = ({image, title, description, backgroundColor, textColor}: ServiceProps) => {
     return (
         <motion.div id="service" style={{backgroundColor: backgroundColor}}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0, duration: 2}}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0, duration: 1}}
                     viewport={{ once: true, amount: 0 }}
         >
             <img src={image} alt={`${title} icon`}/>

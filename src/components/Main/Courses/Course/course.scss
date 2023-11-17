@@ -10,7 +10,9 @@
   .image {
     position: absolute;
     top: 0;
-    background-color: #786acf;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     .price {
       display: flex;

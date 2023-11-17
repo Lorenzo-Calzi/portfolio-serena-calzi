@@ -24,7 +24,7 @@ const Counter = () => {
                     <motion.div className="count"
                                 initial={{ opacity: 0, y: -100 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0, duration: 1.5}}
+                                transition={{ delay: 0, duration: 1.25}}
                                 viewport={{ once: true, amount: 0 }}
                     >
                         <CountUp start={0} end={20} duration={3} enableScrollSpy={true} scrollSpyOnce={true}/>
@@ -34,7 +34,7 @@ const Counter = () => {
                     <motion.div className="count"
                                 initial={{ opacity: 0, y: -100 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0, duration: 2}}
+                                transition={{ delay: 0, duration: 1.5}}
                                 viewport={{ once: true, amount: 0 }}
                     >
                         <CountUp start={0} end={565} duration={3} enableScrollSpy={true} scrollSpyOnce={true}/>
@@ -44,7 +44,7 @@ const Counter = () => {
                     <motion.div className="count"
                                 initial={{ opacity: 0, y: -100 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0, duration: 2.5}}
+                                transition={{ delay: 0, duration: 1.75}}
                                 viewport={{ once: true, amount: 0 }}>
                         <CountUp start={0} end={15} duration={3} enableScrollSpy={true} scrollSpyOnce={true}/>
                         <Text type={"h4"} textAlign={"center"}>Total Groups</Text>
