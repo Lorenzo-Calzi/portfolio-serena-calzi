@@ -51,12 +51,13 @@ const Navbar = ({isVisibleSideBar, setIsVisibleSideBar}: NavbarProps) => {
                         <Button text={"Contattami"} className={"bookAVisitButton"} />
                     </motion.div>
 
-                    <motion.div initial={{ opacity: 0, x: 40 }}
+                    <motion.div className={"toggleSideBarButton"}
+                                initial={{ opacity: 0, x: 40 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0, duration: 1}}
                                 viewport={{ once: true, amount: 0 }}
                     >
-                        <Button text={"Menu"} handler={toggleSideBar} className={"toggleSideBarButton"} />
+                        <Button text={"Menu"} handler={toggleSideBar} />
                     </motion.div>
                 </div>
             </div>
