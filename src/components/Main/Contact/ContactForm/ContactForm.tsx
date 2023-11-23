@@ -88,8 +88,8 @@ const ContactForm = () => {
                      ref={formRef}
                      onChange={checkForm}
                      onSubmit={submitForm}
-                     initial={{ opacity: 0, x: -500 }}
-                     whileInView={{ opacity: 1, x: 0 }}
+                     initial={{ opacity: 0}}
+                     whileInView={{ opacity: 1}}
                      transition={{ delay: 0, duration: 1}}
                      viewport={{ once: true, amount: 0 }}
         >
