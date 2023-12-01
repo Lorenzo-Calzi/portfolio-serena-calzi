@@ -29,16 +29,9 @@ const Navbar = () => {
                                 viewport={{ once: true, amount: 0 }}
                                 src={RightLineImg} className="right-line-img" alt="Immagine di una riga bianca"
                     />
-
-                    {/*<motion.img initial={{ opacity: 0, y: -100, x: 100 }}*/}
-                    {/*            whileInView={{ opacity: 1, y: 0, x: 0 }}*/}
-                    {/*            transition={{ delay: 0, duration: 1}}*/}
-                    {/*            viewport={{ once: true, amount: 0 }}*/}
-                    {/*            src={CarImg} className="car-img" alt="Immagine di una macchina blu"*/}
-                    {/*/>*/}
                 </motion.div>
             </div>
-            <div className="hero-after" />
+            <div className="jumbotron-after" />
         </section>
     )
 }
