@@ -63,6 +63,7 @@ const Counter = () => {
                 </div>
                 <img src={BasketBall} alt="Immagine di una palla da basket"/>
             </div>
+            <div className="counter-after" />
         </section>
     )
 }
