@@ -6,6 +6,8 @@ import ContactInfo from "./ContactInfo/ContactInfo";
 const Contact = () => {
     return (
         <section id="contact">
+            <div className="steps-after" />
+
             <div className="page-container">
                 <div className="content">
                     <ContactForm />
