@@ -66,7 +66,7 @@ const Services = () => {
         }
     };
     return (
-        <div id="services">
+        <section id="services">
             <div className="page-container">
                 <div className="content">
                     <motion.div initial={{ opacity: 0, y: -100 }}
@@ -91,7 +91,7 @@ const Services = () => {
                 <img src={StarBig} alt="Immagine di una stella" className="star-xl"/>
                 <img src={StarSmall} alt="Immagine di una stella" className="star-sm"/>
             </div>
-        </div>
+        </section>
     )
 }
 
