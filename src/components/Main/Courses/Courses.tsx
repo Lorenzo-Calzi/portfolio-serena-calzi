@@ -41,7 +41,7 @@ const Courses = () => {
             })
         } else if (window.innerWidth >= 481 && window.innerWidth <= 768) {
             setSwiperSetting({
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 30
             })
         } else if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
@@ -68,7 +68,7 @@ const Courses = () => {
     };
 
     return (
-        <div id="courses">
+        <section id="courses">
             <div className="page-container">
                 <div className="content">
                     <motion.div initial={{ opacity: 0, y: -100 }}
@@ -100,7 +100,8 @@ const Courses = () => {
                 <img src={Cloud} alt="Immagine di una nuvola" className="cloud"/>
                 <img src={Divided} alt="Immagine del simbolo diviso" className="divided"/>
             </div>
-        </div>
+            <div className="steps-before" />
+        </section>
     )
 }
 
