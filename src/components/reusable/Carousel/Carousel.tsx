@@ -27,11 +27,11 @@ const Carousel = ({children, stub, slidesPerView, navigation, pagination, autopl
                         swiperRef.current = swiper;
                     }}
                     loop
-                    autoplay={autoplay && {
+                    autoplay={stub.length > slidesPerView && autoplay && {
                         delay: 2500,
                         disableOnInteraction: false,
                     }}
-                    pagination={pagination && {
+                    pagination={ stub.length > slidesPerView && pagination && {
                         clickable: true,
                         dynamicBullets: true,
                     }}
