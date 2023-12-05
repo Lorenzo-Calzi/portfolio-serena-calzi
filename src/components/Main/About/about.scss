@@ -1,0 +1,230 @@
+#about {
+  background-color: #F9F6EF;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .copies {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        width: fit-content;
+      }
+    }
+    #carousel {
+      .slide {
+        width: 100%;
+        aspect-ratio: 1.5;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  #about {
+    padding: 50px 0;
+
+    .content {
+      flex-direction: column-reverse;
+      gap: 30px;
+
+      .copies {
+        width: 100%;
+        gap: 15px;
+      }
+      #carousel {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+  #about {
+    padding: 50px 0;
+
+    .content {
+      flex-direction: column-reverse;
+      gap: 30px;
+
+      .copies {
+        width: 100%;
+        gap: 15px;
+      }
+      #carousel {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  #about {
+    padding: 50px 0;
+
+    .content {
+      flex-direction: column-reverse;
+      gap: 30px;
+
+      .copies {
+        width: 100%;
+        gap: 20px;
+      }
+      #carousel {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  #about {
+    padding: 50px 0;
+
+    .content {
+      gap: 50px;
+
+      .copies {
+        width: 50%;
+        gap: 25px;
+      }
+      #carousel {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+  #about {
+    padding: 50px 0;
+
+    .content {
+      flex-direction: column-reverse;
+      gap: 30px;
+
+      .copies {
+        width: 100%;
+        gap: 20px;
+      }
+      #carousel {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+  #about {
+    padding: 50px 0;
+
+    .content {
+      flex-direction: column-reverse;
+      gap: 30px;
+
+      .copies {
+        width: 100%;
+        gap: 20px;
+      }
+      #carousel {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+  #about {
+    padding: 50px 0;
+
+    .content {
+      gap: 50px;
+
+      .copies {
+        width: 50%;
+        gap: 25px;
+      }
+      #carousel {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+  #about {
+    padding: 50px 0;
+
+    .content {
+      gap: 50px;
+
+      .copies {
+        width: 50%;
+        gap: 25px;
+      }
+      #carousel {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  #about {
+    padding: 100px 0;
+
+    .content {
+      gap: 100px;
+
+      .copies {
+        width: 50%;
+        gap: 30px;
+      }
+      #carousel {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  #about {
+    padding: 100px 0;
+
+    .content {
+      gap: 100px;
+
+      .copies {
+        width: 50%;
+        gap: 30px;
+      }
+      #carousel {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2001px) {
+  #about {
+    padding: 100px 0;
+
+    .content {
+      gap: 100px;
+
+      .copies {
+        width: 50%;
+        gap: 30px;
+      }
+      #carousel {
+        width: 50%;
+      }
+    }
+  }
+}
