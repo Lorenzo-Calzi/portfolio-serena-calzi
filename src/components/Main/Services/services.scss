@@ -15,6 +15,12 @@
     position: absolute;
     animation: rotation 10s infinite linear;
   }
+
+  &:hover {
+    .swiper-pagination, .arrow-left, .arrow-right {
+      opacity: 1;
+    }
+  }
 }
 
 @keyframes zoom {

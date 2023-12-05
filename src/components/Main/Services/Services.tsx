@@ -77,7 +77,7 @@ const Services = () => {
                         <Text type={"h2"} textAlign={"center"}>Servizi</Text>
                     </motion.div>
 
-                    <Carousel slidesPerView={swiperSetting.slidesPerView} spaceBetween={swiperSetting.spaceBetween} stub={ServicesSTUB}>
+                    <Carousel slidesPerView={swiperSetting.slidesPerView} spaceBetween={swiperSetting.spaceBetween} stub={ServicesSTUB} navigation pagination>
                         {
                             ServicesSTUB.map((service, index) => (
                                 <SwiperSlide key={index}>
