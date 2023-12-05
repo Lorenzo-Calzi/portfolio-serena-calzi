@@ -28,6 +28,12 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  &:hover {
+    .swiper-pagination, .arrow-left, .arrow-right {
+      opacity: 1;
+    }
+  }
 }
 
 @keyframes zoom {

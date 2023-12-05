@@ -9,9 +9,9 @@ import 'swiper/css/pagination';
 import {motion} from "framer-motion";
 import CoursesSTUB from "../../../stub/CoursesSTUB";
 import Apple from '../../../assets/images/apple.png'
+import Divided from '../../../assets/images/math.png'
 import Ruler from '../../../assets/images/ruler.png'
 import Cloud from '../../../assets/images/cloud.png'
-import Divided from '../../../assets/images/math.png'
 
 const Courses = () => {
     const [swiperSetting, setSwiperSetting] = useState({
@@ -79,7 +79,13 @@ const Courses = () => {
                         <Text type={"h2"} textAlign={"center"}>Corsi</Text>
                     </motion.div>
 
-                    <Carousel slidesPerView={swiperSetting.slidesPerView} spaceBetween={swiperSetting.spaceBetween} stub={CoursesSTUB}>
+                    <Carousel
+                        slidesPerView={swiperSetting.slidesPerView}
+                        spaceBetween={swiperSetting.spaceBetween}
+                        stub={CoursesSTUB}
+                        navigation
+                        pagination
+                    >
                         {
                             CoursesSTUB.map((course, index) => (
                                 <SwiperSlide key={index}>
@@ -95,6 +101,7 @@ const Courses = () => {
                         }
                     </Carousel>
                 </div>
+
                 <img src={Apple} alt="Immagine di una mela" className="apple"/>
                 <img src={Ruler} alt="Immagine di un righello" className="ruler"/>
                 <img src={Cloud} alt="Immagine di una nuvola" className="cloud"/>
