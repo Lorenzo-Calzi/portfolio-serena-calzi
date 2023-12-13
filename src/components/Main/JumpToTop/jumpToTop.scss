@@ -6,6 +6,7 @@
   right: 5%;
   z-index: 999;
   transition: all 0.4s linear;
+  opacity: 0;
 
   a {
     width: 50px;
@@ -25,30 +26,27 @@
 }
 
 .show {
-  opacity: 1;
+  opacity: 1 !important;
   animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
-.hide {
-  opacity: 0;
-  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
-}
-
 @keyframes slide-bottom {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
   }
   100% {
     transform: translateY(0);
   }
 }
 
+.hide {
+  opacity: 0 !important;
+  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 @keyframes slide-top {
   0% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
   }
 }

@@ -3,27 +3,30 @@ import "./jumpToTop.scss"
 import Anchor from "../../reusable/Anchor/Anchor";
 
 const JumpToTop = () => {
-    const header = document.getElementById("header");
-    const jumpToTop = document.getElementById("jumpToTop");
-
-    console.log(header, jumpToTop)
-
-    const myScrollFunc = function () {
+    const checkScroll = (headerEl: HTMLElement, jumpToTopEl: HTMLElement) => {
         const currentY = window.scrollY;
 
-        if(header && jumpToTop) {
-            if (currentY >= header.offsetHeight) {
-                jumpToTop.className = "show"
+        if(headerEl && jumpToTopEl) {
+            if (currentY >= headerEl.offsetHeight) {
+                jumpToTopEl.className = "show"
             } else {
-                jumpToTop.className = "hide"
+                jumpToTopEl.className = "hide"
             }
         }
-    };
-
-    window.addEventListener("scroll", myScrollFunc);
+    }
 
     useEffect(() => {
-        myScrollFunc()
+        const headerEl = document.getElementById("header");
+        const jumpToTopEl = document.getElementById("jumpToTop");
+
+        if(headerEl && jumpToTopEl) {
+            checkScroll(headerEl, jumpToTopEl)
+
+            window.addEventListener("scroll", () => checkScroll(headerEl, jumpToTopEl));
+            return () => {
+                window.removeEventListener("scroll", () => checkScroll(headerEl, jumpToTopEl));
+            };
+        }
     }, []);
 
     return (
