@@ -37,10 +37,11 @@ const Navbar = ({isVisibleSideBar, setIsVisibleSideBar}: NavbarProps) => {
                         transition={{ delay: 0, duration: 1}}
                         viewport={{ once: true, amount: 0 }}
                     >
-                        <li><Anchor fontWeight={500}>Home</Anchor></li>
-                        <li><Anchor fontWeight={500}>About</Anchor></li>
-                        <li><Anchor fontWeight={500}>Studi</Anchor></li>
-                        <li><Anchor fontWeight={500}>Progetti</Anchor></li>
+                        <li><Anchor fontWeight={500} href={"#"}>Home</Anchor></li>
+                        <li><Anchor fontWeight={500} href={"#services"}>Servizi</Anchor></li>
+                        <li><Anchor fontWeight={500} href={"#about"}>About</Anchor></li>
+                        <li><Anchor fontWeight={500} href={"#courses"}>Corsi</Anchor></li>
+                        <li><Anchor fontWeight={500} href={"#steps"}>Progetti</Anchor></li>
                     </motion.ul>
 
                     <motion.div initial={{ opacity: 0, x: 40 }}
@@ -48,7 +49,7 @@ const Navbar = ({isVisibleSideBar, setIsVisibleSideBar}: NavbarProps) => {
                                 transition={{ delay: 0, duration: 1}}
                                 viewport={{ once: true, amount: 0 }}
                     >
-                        <Button text={"Contattami"} className={"bookAVisitButton"} />
+                        <Button text={"Contattami"} className={"bookAVisitButton"} link={"#contact"}/>
                     </motion.div>
 
                     <motion.div className={"toggleSideBarButton"}
