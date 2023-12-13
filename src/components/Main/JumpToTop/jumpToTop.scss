@@ -1,0 +1,54 @@
+@import 'src/sass/common';
+
+#jumpToTop {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 999;
+  transition: all 0.4s linear;
+
+  a {
+    width: 50px;
+    height: 50px;
+    background-image: url(../../../assets/icons/arrow-top-white.svg);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $theme-color;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+
+    &:hover {
+      background-color: $title-color;
+    }
+  }
+}
+
+.show {
+  opacity: 1;
+  animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.hide {
+  opacity: 0;
+  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
