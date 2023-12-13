@@ -1,15 +1,17 @@
 import React from "react";
 import './button.scss'
 import Text from '../Text/Text'
+import Anchor from "../Anchor/Anchor";
 
 interface ButtonProps {
     text: string,
-    handler?: any
-    type?: 'button' | 'submit' | 'reset'
-    className?: string;
+    handler?: any,
+    type?: 'button' | 'submit' | 'reset',
+    link?: string,
+    className?: string,
     isDisabled?: boolean
 }
-const Button = ({text, handler, type, className, isDisabled}: ButtonProps) => {
+const Button = ({text, handler, type, link, className, isDisabled}: ButtonProps) => {
 
     return (
         <button className={`custom-button ${className && className}`}
@@ -17,7 +19,13 @@ const Button = ({text, handler, type, className, isDisabled}: ButtonProps) => {
                 type={type ? type : 'button'}
                 disabled={isDisabled ? isDisabled : false}
         >
-            <Text type={"p-big"} color={"white"} textAlign={'center'}>{text}</Text>
+            {
+                !link ? (
+                    <Text type={"p-big"} color={"white"} textAlign={'center'}>{text}</Text>
+                ) : (
+                    <Anchor href={link} color={"white"}>{text}</Anchor>
+                )
+            }
         </button>
     )
 }
