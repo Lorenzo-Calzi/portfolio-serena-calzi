@@ -20,11 +20,15 @@ const Course = ({title, description, age, time, image, price}: CourseProps) => {
                     transition={{ delay: 0, duration: 1}}
                     viewport={{ once: true, amount: 0 }}
         >
-            <div className="image" style={{ backgroundImage:`url(${image})` }}>
+            <div className="top-content">
+                <div className="image-container">
+                    <div className="image" style={{ backgroundImage:`url(${image})` }} />
+                </div>
                 <div className="price">
                     <Text type={"h4"} color={"white"}>{price}</Text>
                 </div>
             </div>
+
             <div className="void-space-transaparent" />
             <div className="void-space" />
             <div className="course-content">
