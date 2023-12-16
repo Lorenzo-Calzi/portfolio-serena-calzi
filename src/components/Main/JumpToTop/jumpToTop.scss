@@ -50,3 +50,147 @@
     transform: translateY(-200%);
   }
 }
+
+
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  #jumpToTop {
+    bottom: 20px;
+    right: 20px;
+
+    a {
+      width: 35px;
+      height: 35px;
+      background-size: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+  #jumpToTop {
+    bottom: 25px;
+    right: 25px;
+
+    a {
+      width: 45px;
+      height: 45px;
+      background-size: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  #jumpToTop {
+    bottom: 35px;
+    right: 35px;
+
+    a {
+      width: 50px;
+      height: 50px;
+      background-size: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  #jumpToTop {
+    bottom: 45px;
+    right: 45px;
+
+    a {
+      width: 50px;
+      height: 50px;
+      background-size: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+  #jumpToTop {
+    bottom: 35px;
+    right: 35px;
+
+    a {
+      width: 40px;
+      height: 40px;
+      background-size: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+  #jumpToTop {
+    bottom: 35px;
+    right: 35px;
+
+    a {
+      width: 50px;
+      height: 50px;
+      background-size: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+  #jumpToTop {
+    bottom: 45px;
+    right: 45px;
+
+    a {
+      width: 50px;
+      height: 50px;
+      background-size: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+  #jumpToTop {
+    bottom: 45px;
+    right: 45px;
+
+    a {
+      width: 50px;
+      height: 50px;
+      background-size: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  #jumpToTop {
+    bottom: 50px;
+    right: 50px;
+
+    a {
+      width: 50px;
+      height: 50px;
+      background-size: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  #jumpToTop {
+    bottom: 50px;
+    right: 50px;
+
+    a {
+      width: 50px;
+      height: 50px;
+      background-size: 60%;
+    }
+  }
+}
+
+@media screen and (min-width: 2001px) {
+  #jumpToTop {
+    bottom: 50px;
+    right: 50px;
+
+    a {
+      width: 50px;
+      height: 50px;
+      background-size: 60%;
+    }
+  }
+}
