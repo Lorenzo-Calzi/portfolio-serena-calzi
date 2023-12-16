@@ -1,13 +1,36 @@
 @import 'src/sass/common.scss';
 
+//.custom-button {
+//  min-width: fit-content;
+//  height: fit-content;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  color: $white-color;
+//  background-color: $theme-color;
+//  text-transform: capitalize;
+//  text-align: center;
+//  border: none;
+//  cursor: pointer;
+//
+//  &:disabled {
+//    cursor: not-allowed;
+//  }
+//}
+
+
 .custom-button {
   min-width: fit-content;
   height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   color: $white-color;
   background-color: $theme-color;
+  transition: 0.5s;
   text-transform: capitalize;
   text-align: center;
   border: none;
@@ -18,113 +41,124 @@
   }
 }
 
+.custom-button span {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  left: calc((var(--n) - 1) * 25%);
+  z-index: -1;
+  background-color: $title-color;
+  border-radius: 50%;
+  transform: translateY(150%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+}
+
+.custom-button:hover span {
+  transform: translateY(0) scale(2);
+}
+
+.custom-button span:nth-child(1) {
+  --n: 1;
+}
+
+.custom-button span:nth-child(2) {
+  --n: 2;
+}
+
+.custom-button span:nth-child(3) {
+  --n: 3;
+}
+
+.custom-button span:nth-child(4) {
+  --n: 4;
+}
+
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   .custom-button {
+    font-size: 18px;
+    padding: 5px;
     border-radius: 5px;
-
-    p {
-      padding: 5px;
-    }
   }
 }
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   .custom-button {
+    font-size: 18px;
+    padding: 5px 10px;
     border-radius: 5px;
-
-    p {
-      padding: 5px 10px;
-    }
   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
   .custom-button {
+    font-size: 18px;
     border-radius: 10px;
-
-    p {
-      padding: 10px 20px;
-    }
+    padding: 10px 20px;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
   .custom-button {
+    font-size: 18px;
     border-radius: 10px;
-
-    p {
-      padding: 10px 20px;
-    }
+    padding: 10px 20px;
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
   .custom-button {
+    font-size: 18px;
+    padding: 10px 20px;
     border-radius: 10px;
-
-    p {
-      padding: 10px 20px;
-    }
   }
 }
 
 @media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
   .custom-button {
+    font-size: 18px;
+    padding: 10px 20px;
     border-radius: 10px;
-
-    p {
-      padding: 10px 20px;
-    }
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
   .custom-button {
+    font-size: 18px;
+    padding: 10px 20px;
     border-radius: 10px;
-
-    p {
-      padding: 10px 20px;
-    }
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
   .custom-button {
+    font-size: 18px;
+    padding: 10px 20px;
     border-radius: 10px;
-
-    p {
-      padding: 10px 20px;
-    }
   }
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1500px) {
   .custom-button {
+    font-size: 18px;
+    padding: 15px 20px;
     border-radius: 50px;
-
-    p {
-      padding: 15px 20px;
-    }
   }
 }
 
 @media screen and (min-width: 1501px) and (max-width: 2000px) {
   .custom-button {
+    font-size: 18px;
+    padding: 15px 20px;
     border-radius: 50px;
-
-    p {
-      padding: 15px 20px;
-    }
   }
 }
 
 @media screen and (min-width: 2001px) {
   .custom-button {
+    font-size: 18px;
+    padding: 15px 20px;
     border-radius: 50px;
-
-    p {
-      padding: 15px 20px;
-    }
   }
 }
