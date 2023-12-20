@@ -1,0 +1,580 @@
+#courses {
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .apple {
+    position: absolute;
+    animation: zoom 3s infinite linear;
+  }
+  .divided {
+    position: absolute;
+    animation: rotation 10s infinite linear;
+  }
+  .ruler {
+    position: absolute;
+    animation: rotation 10s infinite linear;
+  }
+  .cloud {
+    position: absolute;
+    animation: zoom 3s infinite linear;
+  }
+  .steps-before {
+    background-image: url(../../../../assets/images/steps-before-after.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    .swiper-pagination, .arrow-left, .arrow-right {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  #courses {
+    gap: 50px;
+    padding-top: 50px;
+
+    .content {
+      gap: 20px;
+
+      .swiper-container {
+        gap: 20px;
+
+        .arrows {
+          gap: 30px;
+
+          .arrow-left, .arrow-right {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .apple, .divided, .ruler, .cloud {
+      display: none;
+    }
+    .steps-before {
+      width: 100%;
+      height: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+  #courses {
+    gap: 50px;
+    padding-top: 50px;
+
+    .content {
+      gap: 20px;
+
+      .swiper-container {
+        gap: 20px;
+
+        .arrows {
+          gap: 30px;
+
+          .arrow-left, .arrow-right {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .apple, .divided, .ruler, .cloud {
+      display: none;
+    }
+    .steps-before {
+      width: 100%;
+      height: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  #courses {
+    gap: 50px;
+    padding-top: 50px;
+
+    .content {
+      gap: 30px;
+
+      .swiper-container {
+        gap: 30px;
+
+        .arrows {
+          gap: 30px;
+
+          .arrow-left, .arrow-right {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .apple {
+      width: 50px;
+      height: 50px;
+      top: -20px;
+      left: -30px;
+    }
+    .divided {
+      width: 30px;
+      height: 30px;
+      top: -10px;
+      right: -10px;
+    }
+    .ruler {
+      width: 35px;
+      height: 35px;
+      bottom: -20px;
+      left: 50px;
+    }
+    .cloud {
+      width: 55px;
+      height: 55px;
+      bottom: -30px;
+      right: 50px;
+    }
+    .steps-before {
+      width: 100%;
+      height: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  #courses {
+    gap: 50px;
+    padding-top: 50px;
+
+    .content {
+      gap: 30px;
+
+      .swiper-container {
+        gap: 30px;
+
+        .arrows {
+          gap: 30px;
+
+          .arrow-left, .arrow-right {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .apple {
+      width: 50px;
+      height: 50px;
+      top: -20px;
+      left: -30px;
+    }
+    .divided {
+      width: 30px;
+      height: 30px;
+      top: -10px;
+      right: -10px;
+    }
+    .ruler {
+      width: 35px;
+      height: 35px;
+      bottom: -20px;
+      left: 50px;
+    }
+    .cloud {
+      width: 55px;
+      height: 55px;
+      bottom: -30px;
+      right: 50px;
+    }
+    .steps-before {
+      width: 100%;
+      height: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+  #courses {
+    gap: 50px;
+    padding-top: 50px;
+
+    .content {
+      gap: 30px;
+
+      .swiper-container {
+        gap: 30px;
+
+        .arrows {
+          gap: 30px;
+
+          .arrow-left, .arrow-right {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .apple {
+      width: 50px;
+      height: 50px;
+      top: -20px;
+      left: -30px;
+    }
+    .divided {
+      width: 30px;
+      height: 30px;
+      top: -10px;
+      right: -10px;
+    }
+    .ruler {
+      width: 35px;
+      height: 35px;
+      bottom: -20px;
+      left: 50px;
+    }
+    .cloud {
+      width: 55px;
+      height: 55px;
+      bottom: -30px;
+      right: 50px;
+    }
+    .steps-before {
+      width: 100%;
+      height: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+  #courses {
+    gap: 50px;
+    padding-top: 50px;
+
+    .content {
+      gap: 30px;
+
+      .swiper-container {
+        gap: 30px;
+
+        .arrows {
+          gap: 30px;
+
+          .arrow-left, .arrow-right {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .apple {
+      width: 50px;
+      height: 50px;
+      top: -20px;
+      left: -30px;
+    }
+    .divided {
+      width: 30px;
+      height: 30px;
+      top: -10px;
+      right: -10px;
+    }
+    .ruler {
+      width: 35px;
+      height: 35px;
+      bottom: -20px;
+      left: 50px;
+    }
+    .cloud {
+      width: 55px;
+      height: 55px;
+      bottom: -30px;
+      right: 50px;
+    }
+    .steps-before {
+      width: 100%;
+      height: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+  #courses {
+    gap: 50px;
+    padding-top: 50px;
+
+    .content {
+      gap: 30px;
+
+      .swiper-container {
+        gap: 30px;
+
+        .arrows {
+          gap: 30px;
+
+          .arrow-left, .arrow-right {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .apple {
+      width: 50px;
+      height: 50px;
+      top: -20px;
+      left: -30px;
+    }
+    .divided {
+      width: 30px;
+      height: 30px;
+      top: -10px;
+      right: -10px;
+    }
+    .ruler {
+      width: 35px;
+      height: 35px;
+      bottom: -20px;
+      left: 50px;
+    }
+    .cloud {
+      width: 55px;
+      height: 55px;
+      bottom: -30px;
+      right: 50px;
+    }
+    .steps-before {
+      width: 100%;
+      height: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+  #courses {
+    gap: 50px;
+    padding-top: 50px;
+
+    .content {
+      gap: 30px;
+
+      .swiper-container {
+        gap: 30px;
+
+        .arrows {
+          gap: 30px;
+
+          .arrow-left, .arrow-right {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .apple {
+      width: 50px;
+      height: 50px;
+      top: -20px;
+      left: -30px;
+    }
+    .divided {
+      width: 30px;
+      height: 30px;
+      top: -10px;
+      right: -10px;
+    }
+    .ruler {
+      width: 35px;
+      height: 35px;
+      bottom: -20px;
+      left: 50px;
+    }
+    .cloud {
+      width: 55px;
+      height: 55px;
+      bottom: -30px;
+      right: 50px;
+    }
+    .steps-before {
+      width: 100%;
+      height: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  #courses {
+    gap: 100px;
+    padding-top: 100px;
+
+    .content {
+      gap: 50px;
+
+      .swiper-container {
+        gap: 30px;
+
+        .arrows {
+          gap: 30px;
+
+          .arrow-left, .arrow-right {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+    .apple {
+      width: 80px;
+      height: 80px;
+      top: -20px;
+      left: -60px;
+    }
+    .divided {
+      width: 60px;
+      height: 60px;
+      top: -20px;
+      right: -20px;
+    }
+    .ruler {
+      width: 65px;
+      height: 65px;
+      bottom: -50px;
+      left: 100px;
+    }
+    .cloud {
+      width: 85px;
+      height: 85px;
+      bottom: -60px;
+      right: 100px;
+    }
+    .steps-before {
+      width: 100%;
+      height: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  #courses {
+    gap: 100px;
+    padding-top: 100px;
+
+    .content {
+      gap: 50px;
+
+      .swiper-container {
+        gap: 30px;
+
+        .arrows {
+          gap: 30px;
+
+          .arrow-left, .arrow-right {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+    .apple {
+      width: 80px;
+      height: 80px;
+      top: -20px;
+      left: -60px;
+    }
+    .divided {
+      width: 60px;
+      height: 60px;
+      top: -20px;
+      right: -20px;
+    }
+    .ruler {
+      width: 65px;
+      height: 65px;
+      bottom: -50px;
+      left: 100px;
+    }
+    .cloud {
+      width: 85px;
+      height: 85px;
+      bottom: -60px;
+      right: 100px;
+    }
+    .steps-before {
+      width: 100%;
+      height: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 2001px) {
+  #courses {
+    gap: 100px;
+    padding-top: 100px;
+
+    .content {
+      gap: 50px;
+
+      .swiper-container {
+        gap: 30px;
+
+        .arrows {
+          gap: 30px;
+
+          .arrow-left, .arrow-right {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+    .apple {
+      width: 80px;
+      height: 80px;
+      top: -20px;
+      left: -60px;
+    }
+    .divided {
+      width: 60px;
+      height: 60px;
+      top: -20px;
+      right: -20px;
+    }
+    .ruler {
+      width: 65px;
+      height: 65px;
+      bottom: -50px;
+      left: 100px;
+    }
+    .cloud {
+      width: 85px;
+      height: 85px;
+      bottom: -60px;
+      right: 100px;
+    }
+    .steps-before {
+      width: 100%;
+      height: 40px;
+    }
+  }
+}
+

@@ -1,0 +1,527 @@
+@import '../../../../sass/common';
+
+#jumbotron {
+  position: relative;
+  background-image: url(../../../../assets/images/hero-image.jpg);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+
+  .header-after {
+    background-image: url(../../../../assets/images/header-after.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+  .content {
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    .bubble {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-image: url(../../../../assets/images/bubble-logo.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      img {
+        position: absolute;
+      }
+      .left-line-img{
+        transform: rotate(3deg);
+      }
+      .right-line-img {
+        transform: rotate(3deg);
+      }
+    }
+  }
+  .jumbotron-after {
+    position: absolute;
+    bottom: 0;
+    background-image: url(../../../../assets/images/hero-after.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  #jumbotron {
+    width: 100%;
+    height: 450px;
+
+    .header-after {
+      width: 100%;
+      height: 15px;
+    }
+    .content {
+      width: 80%;
+      height: calc(100% - 30px);
+      justify-content: center;
+
+      .bubble {
+        width: 100%;
+        aspect-ratio: 1;
+
+        .left-line-img{
+          width: 45px;
+          height: 180px;
+          left: -15px;
+          top: 25px;
+        }
+        .right-line-img {
+          width: 45px;
+          height: 125px;
+          right: -15px;
+          top: 30px;
+        }
+        .car-img {
+          width: 80px;
+          height: 50px;
+          top: -15px;
+          left: 25px;
+        }
+      }
+    }
+    .jumbotron-after {
+      width: 100%;
+      height: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+  #jumbotron {
+    width: 100%;
+    height: 500px;
+
+    .header-after {
+      width: 100%;
+      height: 20px;
+    }
+    .content {
+      width: 80%;
+      height: calc(100% - 40px);
+      justify-content: center;
+
+      .bubble {
+        width: 100%;
+        aspect-ratio: 1;
+
+        .left-line-img{
+          width: 60px;
+          height: 240px;
+          left: -15px;
+          top: 35px;
+        }
+        .right-line-img {
+          width: 60px;
+          height: 155px;
+          right: -15px;
+          top: 40px;
+        }
+        .car-img {
+          width: 100px;
+          height: 70px;
+          top: -20px;
+          left: 35px;
+        }
+      }
+    }
+    .jumbotron-after {
+      width: 100%;
+      height: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  #jumbotron {
+    width: 100%;
+    height: 700px;
+
+    .header-after {
+      width: 100%;
+      height: 20px;
+    }
+    .content {
+      width: 70%;
+      height: calc(100% - 55px);
+      justify-content: center;
+
+      .bubble {
+        width: 100%;
+        aspect-ratio: 1;
+
+        .left-line-img{
+          width: 100px;
+          height: 400px;
+          left: -25px;
+          top: 75px;
+        }
+        .right-line-img {
+          width: 100px;
+          height: 235px;
+          right: -25px;
+          top: 80px;
+        }
+        .car-img {
+          width: 130px;
+          height: 100px;
+          top: -5px;
+          left: 60px;
+        }
+      }
+    }
+    .jumbotron-after {
+      width: 100%;
+      height: 35px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  #jumbotron {
+    width: 100%;
+    height: 750px;
+
+    .header-after {
+      width: 100%;
+      height: 20px;
+    }
+    .content {
+      width: 70%;
+      height: calc(100% - 60px);
+      justify-content: center;
+
+      .bubble {
+        height: 75%;
+        aspect-ratio: 1;
+
+        .left-line-img{
+          width: 100px;
+          height: 400px;
+          left: -25px;
+          top: 75px;
+        }
+        .right-line-img {
+          width: 100px;
+          height: 235px;
+          right: -25px;
+          top: 80px;
+        }
+        .car-img {
+          width: 130px;
+          height: 100px;
+          top: -5px;
+          left: 60px;
+        }
+      }
+    }
+    .jumbotron-after {
+      width: 100%;
+      height: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+  #jumbotron {
+    width: 100%;
+    height: 600px;
+
+    .header-after {
+      width: 100%;
+      height: 20px;
+    }
+    .content {
+      width: 70%;
+      height: calc(100% - 50px);
+      justify-content: center;
+
+      .bubble {
+        height: 70%;
+        aspect-ratio: 1;
+
+        .left-line-img{
+          width: 80px;
+          height: 320px;
+          left: -20px;
+          top: 50px;
+        }
+        .right-line-img {
+          width: 80px;
+          height: 195px;
+          right: -20px;
+          top: 55px;
+        }
+        .car-img {
+          width: 100px;
+          height: 70px;
+          top: -10px;
+          left: 55px;
+        }
+      }
+    }
+    .jumbotron-after {
+      width: 100%;
+      height: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+  #jumbotron {
+    width: 100%;
+    height: 700px;
+
+    .header-after {
+      width: 100%;
+      height: 20px;
+    }
+    .content {
+      width: 70%;
+      height: calc(100% - 60px);
+      justify-content: center;
+
+      .bubble {
+        height: 70%;
+        aspect-ratio: 1;
+
+        .left-line-img{
+          width: 90px;
+          height: 360px;
+          left: -25px;
+          top: 65px;
+        }
+        .right-line-img {
+          width: 90px;
+          height: 215px;
+          right: -25px;
+          top: 70px;
+        }
+        .car-img {
+          width: 120px;
+          height: 90px;
+          top: -10px;
+          left: 55px;
+        }
+      }
+    }
+    .jumbotron-after {
+      width: 100%;
+      height: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+  #jumbotron {
+    width: 100%;
+    height: calc(100dvh - 40px - 70px);
+    justify-content: center;
+
+    .header-after {
+      width: 100%;
+      height: 20px;
+    }
+    .content {
+      width: 80%;
+      height: calc(100% - 60px);
+
+      .bubble {
+        height: 75%;
+        aspect-ratio: 1;
+
+        .left-line-img{
+          width: 90px;
+          height: 360px;
+          left: -25px;
+          top: 65px;
+        }
+        .right-line-img {
+          width: 90px;
+          height: 215px;
+          right: -25px;
+          top: 70px;
+        }
+        .car-img {
+          width: 120px;
+          height: 90px;
+          top: -10px;
+          left: 55px;
+        }
+      }
+    }
+    .jumbotron-after {
+      width: 100%;
+      height: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+  #jumbotron {
+    width: 100%;
+    height: 750px;
+
+    .header-after {
+      width: 100%;
+      height: 20px;
+    }
+    .content {
+      width: 70%;
+      height: calc(100% - 60px);
+      justify-content: center;
+
+      .bubble {
+        height: 75%;
+        aspect-ratio: 1;
+      }
+    }
+    .jumbotron-after {
+      width: 100%;
+      height: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  #jumbotron {
+    width: 100%;
+    height: calc(100dvh - 40px - 50px);
+
+    .header-after {
+      width: 100%;
+      height: 20px;
+    }
+    .content {
+      width: 80%;
+      height: calc(100% - 80px);
+      justify-content: flex-end;
+
+      .bubble {
+        height: 75%;
+        aspect-ratio: 1;
+
+        .left-line-img{
+          width: 120px;
+          height: 480px;
+          left: -30px;
+          top: 85px;
+        }
+        .right-line-img {
+          width: 120px;
+          height: 275px;
+          right: -30px;
+          top: 90px;
+        }
+        .car-img {
+          width: 150px;
+          height: 120px;
+          top: -10px;
+          left: 75px;
+        }
+      }
+    }
+    .jumbotron-after {
+      width: 100%;
+      height: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  #jumbotron {
+    width: 100%;
+    height: calc(100dvh - 40px - 50px);
+
+    .header-after {
+      width: 100%;
+      height: 20px;
+    }
+    .content {
+      width: 80%;
+      height: calc(100% - 80px);
+      justify-content: flex-end;
+
+      .bubble {
+        height: 75%;
+        aspect-ratio: 1;
+
+        .left-line-img{
+          width: 100px;
+          height: 400px;
+          left: -25px;
+          top: 65px;
+        }
+        .right-line-img {
+          width: 100px;
+          height: 230px;
+          right: -25px;
+          top: 70px;
+        }
+        .car-img {
+          width: 150px;
+          height: 120px;
+          top: -30px;
+          left: 60px;
+        }
+      }
+    }
+    .jumbotron-after {
+      width: 100%;
+      height: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 2001px) {
+  #jumbotron {
+    width: 100%;
+    height: calc(100dvh - 40px - 10px);
+
+    .header-after {
+      width: 100%;
+      height: 40px;
+    }
+    .content {
+      width: 80%;
+      height: calc(100% - 140px);
+      justify-content: flex-end;
+
+      .bubble {
+        height: 75%;
+        aspect-ratio: 1;
+
+        .left-line-img{
+          width: 150px;
+          height: 600px;
+          left: -35px;
+          top: 130px;
+        }
+        .right-line-img {
+          width: 150px;
+          height: 330px;
+          right: -35px;
+          top: 135px;
+        }
+        .car-img {
+          width: 200px;
+          height: 170px;
+          top: -15px;
+          left: 110px;
+        }
+      }
+    }
+    .jumbotron-after {
+      width: 100%;
+      height: 100px;
+    }
+  }
+}
