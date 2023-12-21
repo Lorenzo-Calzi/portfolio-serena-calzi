@@ -1,16 +1,16 @@
 import React from 'react';
-import "./aboutPage.scss"
-import Footer from "../reusable/Footer/Footer";
+import "./coursesPage.scss"
 import Header from "../reusable/Header/Header";
 import Breadcrumb from "../reusable/Breadcrumb/Breadcrumb";
+import Footer from "../reusable/Footer/Footer";
 
-const AboutPage = () => {
+const CoursesPage = () => {
     return (
         <div>
-            <Header components={<Breadcrumb title={"About"}/>}/>
+            <Header components={<Breadcrumb title={"Corsi"}/>}/>
             <Footer/>
         </div>
     )
 }
 
-export default AboutPage
+export default CoursesPage
