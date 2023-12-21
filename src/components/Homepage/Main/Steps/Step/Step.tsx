@@ -12,14 +12,15 @@ interface StepProps {
 
 const Step = ({image, title, description, index}: StepProps) => {
     return (
-        <motion.div id="step"
-                    initial={{ opacity: 0, y: -50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0, duration: 1}}
-                    viewport={{ once: true, amount: 0 }}
+        <motion.a id="step"
+                  href="/progetti"
+                  initial={{opacity: 0, y: -50}}
+                  whileInView={{opacity: 1, y: 0}}
+                  transition={{delay: 0, duration: 1}}
+                  viewport={{once: true, amount: 0}}
         >
             <div className="top">
-                <div className="icon" style={{backgroundImage: `url(${image})`}} />
+                <div className="icon" style={{backgroundImage: `url(${image})`}}/>
                 <Text type={'h4'}>{title}</Text>
             </div>
             <div className="bottom">
@@ -28,7 +29,7 @@ const Step = ({image, title, description, index}: StepProps) => {
             <div className="number">
                 <Text type={'h4'} color={'#fe5d37'}>0{index}</Text>
             </div>
-        </motion.div>
+        </motion.a>
     )
 }
 
