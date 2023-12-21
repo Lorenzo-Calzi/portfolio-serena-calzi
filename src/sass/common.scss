@@ -110,20 +110,20 @@ a {
   text-decoration: none;
 }
 
-// SCROLLBAR
+//SCROLLBAR
 //::-webkit-scrollbar {
 //  width: 10px;
 //}
 //
-//::-webkit-scrollbar-track {
-//  background: $lightPurple;
-//}
-//
-//::-webkit-scrollbar-thumb {
-//  background: $purple;
-//}
-//
-//::-webkit-scrollbar-thumb:hover {
-//  background: $darkPurple;
-//  cursor: pointer;
-//}
+::-webkit-scrollbar-track {
+  background: #ffe9e4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $theme-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $theme-color;
+  cursor: pointer;
+}

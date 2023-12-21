@@ -1,4 +1,4 @@
-@import '../../../../sass/common';
+@import '../../../sass/common';
 
 #jumpToTop {
   position: fixed;
@@ -11,7 +11,7 @@
   a {
     width: 50px;
     height: 50px;
-    background-image: url(../../../../assets/icons/arrow-top-white.svg);
+    background-image: url(../../../assets/icons/arrow-top-white.svg);
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
@@ -29,6 +29,7 @@
   opacity: 1 !important;
   animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
 @keyframes slide-bottom {
   0% {
     transform: translateY(-200%);
@@ -42,6 +43,7 @@
   opacity: 0 !important;
   animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
 @keyframes slide-top {
   0% {
     transform: translateY(0);
