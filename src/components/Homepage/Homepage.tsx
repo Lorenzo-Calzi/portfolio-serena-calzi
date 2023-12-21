@@ -1,11 +1,12 @@
 import React, {useEffect} from "react";
 import {useSelector} from "react-redux";
-import Header from "./Header/Header";
+import Header from "../reusable/Header/Header";
 import Main from "./Main/Main";
 import Loader from "../reusable/Loader/Loader";
 import Popup from "../reusable/Popup/Popup";
-import Footer from "./Footer/Footer";
+import Footer from "../reusable/Footer/Footer";
 import JumpToTop from "./JumpToTop/JumpToTop";
+import Jumbotron from "./Header/Jumbotron/Jumbotron";
 
 const Homepage = () => {
     const {loaderVisibility} = useSelector((state: any) => state.loader)
@@ -21,7 +22,7 @@ const Homepage = () => {
 
     return (
         <div id="homepage">
-            <Header/>
+            <Header components={<Jumbotron/>}/>
             <Main/>
             <Footer/>
             <JumpToTop/>
