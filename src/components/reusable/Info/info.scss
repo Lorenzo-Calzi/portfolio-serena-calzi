@@ -1,4 +1,4 @@
-@import '../../../../sass/common';
+@import '../../../sass/common';
 
 #header-infos {
   background-color: $theme-color;
@@ -16,12 +16,15 @@
         display: flex;
         align-items: center;
 
-        img {}
+        img {
+        }
       }
+
       .divider {
         background-color: #FE886C;
       }
     }
+
     .right {
       display: flex;
       align-items: center;
@@ -30,7 +33,9 @@
         display: flex;
         align-items: center;
 
-        img {}
+        img {
+        }
+
         .divider {
           background-color: #FE886C;
         }
@@ -73,11 +78,13 @@
             width: 16px;
           }
         }
+
         .divider {
           height: 20px;
           width: 2px;
         }
       }
+
       .right {
         .social {
           gap: 15px;
@@ -86,6 +93,7 @@
             height: 16px;
             width: 16px;
           }
+
           .divider {
             height: 20px;
             width: 2px;
@@ -124,11 +132,13 @@
             width: 16px;
           }
         }
+
         .divider {
           height: 20px;
           width: 2px;
         }
       }
+
       .right {
         .social {
           gap: 15px;
@@ -137,6 +147,7 @@
             height: 16px;
             width: 16px;
           }
+
           .divider {
             height: 20px;
             width: 2px;
@@ -169,11 +180,13 @@
             width: 16px;
           }
         }
+
         .divider {
           height: 20px;
           width: 2px;
         }
       }
+
       .right {
         .social {
           gap: 15px;
@@ -182,6 +195,7 @@
             height: 16px;
             width: 16px;
           }
+
           .divider {
             height: 20px;
             width: 2px;
@@ -208,11 +222,13 @@
             height: 16px;
           }
         }
+
         .divider {
           width: 2px;
           height: 20px;
         }
       }
+
       .right {
         .social {
           gap: 15px;
@@ -221,6 +237,7 @@
             width: 16px;
             height: 16px;
           }
+
           .divider {
             width: 2px;
             height: 20px;
@@ -247,11 +264,13 @@
             width: 16px;
           }
         }
+
         .divider {
           height: 20px;
           width: 2px;
         }
       }
+
       .right {
         .social {
           gap: 15px;
@@ -260,6 +279,7 @@
             height: 16px;
             width: 16px;
           }
+
           .divider {
             height: 20px;
             width: 2px;

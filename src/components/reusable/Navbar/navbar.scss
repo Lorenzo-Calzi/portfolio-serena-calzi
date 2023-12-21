@@ -1,4 +1,4 @@
-@import '../../../../sass/common';
+@import '../../../sass/common';
 
 #navbar {
   width: 100%;
@@ -34,6 +34,14 @@
             p {
               color: $white-color !important;
             }
+          }
+        }
+      }
+
+      .active {
+        a {
+          p {
+            color: $theme-color !important;
           }
         }
       }
@@ -94,6 +102,7 @@
           }
         }
       }
+
       .toggleSideBarButton {
         display: none;
       }
@@ -141,6 +150,7 @@
           }
         }
       }
+
       .toggleSideBarButton {
         display: none;
       }
@@ -164,6 +174,7 @@
           }
         }
       }
+
       .toggleSideBarButton {
         display: none;
       }
@@ -187,6 +198,7 @@
           }
         }
       }
+
       .toggleSideBarButton {
         display: none;
       }
@@ -210,6 +222,7 @@
           }
         }
       }
+
       .toggleSideBarButton {
         display: none;
       }
@@ -233,6 +246,7 @@
           }
         }
       }
+
       .toggleSideBarButton {
         display: none;
       }

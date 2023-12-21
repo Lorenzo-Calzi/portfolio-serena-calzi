@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.scss"
-import Text from "../../reusable/Text/Text";
+import Text from "../Text/Text";
 
 const Footer = () => {
     return (
