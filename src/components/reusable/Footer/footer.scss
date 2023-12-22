@@ -7,6 +7,12 @@
   justify-content: center;
   align-items: center;
   background-color: #1a1a1a;
+
+  p {
+    a {
+      color: $theme-color;
+    }
+  }
 }
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
