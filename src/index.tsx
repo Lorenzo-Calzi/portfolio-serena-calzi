@@ -26,31 +26,51 @@ const router = createBrowserRouter([
     {
         path: "servizi",
         element: (
-            <ServicesPage/>
+            <React.StrictMode>
+                <Provider store={store}>
+                    <ServicesPage/>
+                </Provider>
+            </React.StrictMode>
         )
     },
     {
         path: "about",
         element: (
-            <AboutPage/>
+            <React.StrictMode>
+                <Provider store={store}>
+                    <AboutPage/>
+                </Provider>
+            </React.StrictMode>
         )
     },
     {
         path: "corsi",
         element: (
-            <CoursesPage/>
+            <React.StrictMode>
+                <Provider store={store}>
+                    <CoursesPage/>
+                </Provider>
+            </React.StrictMode>
         )
     },
     {
         path: "progetti",
         element: (
-            <ProjectsPage/>
+            <React.StrictMode>
+                <Provider store={store}>
+                    <ProjectsPage/>
+                </Provider>
+            </React.StrictMode>
         )
     },
     {
         path: "*",
         element: (
-            <ErrorPage/>
+            <React.StrictMode>
+                <Provider store={store}>
+                    <ErrorPage/>
+                </Provider>
+            </React.StrictMode>
         )
     }
 ])
