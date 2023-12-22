@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {ReactElement} from "react";
 import './header.scss'
 import Info from "../../reusable/Info/Info";
 import Navbar from "../../reusable/Navbar/Navbar";
@@ -6,21 +6,19 @@ import Sidebar from "../../reusable/Sidebar/Sidebar";
 import {useLocation} from "react-router-dom";
 
 interface HeaderProps {
-    components?: any
+    components?: ReactElement,
+    sideBarVisibility?: boolean
 }
 
-const Header = ({components}: HeaderProps) => {
-
-    const [isVisibleSideBar, setIsVisibleSideBar] = useState(false)
+const Header = ({components, sideBarVisibility}: HeaderProps) => {
     const location = useLocation()
     const currentSlug = location.pathname.split('/')[1]
 
     return (
         <header id="header">
             <Info/>
-            <Navbar isVisibleSideBar={isVisibleSideBar} setIsVisibleSideBar={setIsVisibleSideBar}
-                    currentSlug={currentSlug}/>
-            <Sidebar isVisibleSideBar={isVisibleSideBar} setIsVisibleSideBar={setIsVisibleSideBar}/>
+            <Navbar currentSlug={currentSlug}/>
+            <Sidebar isVisibleSideBar={sideBarVisibility} currentSlug={currentSlug}/>
             {components && components}
         </header>
     )

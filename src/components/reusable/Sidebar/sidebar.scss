@@ -80,11 +80,18 @@
         img {
         }
       }
+
+      .active {
+        a {
+          p {
+            color: $theme-color !important;
+          }
+        }
+      }
     }
   }
 
   .void {
-    background-color: rgba(0, 0, 0, 0.6);
   }
 }
 

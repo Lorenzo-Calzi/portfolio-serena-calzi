@@ -1,24 +1,18 @@
-import React, {Dispatch, SetStateAction} from "react";
+import React from "react";
 import './navbar.scss'
 import Text from "../Text/Text"
 import Anchor from "../Anchor/Anchor";
 import Button from "../Button/Button";
 import {motion} from "framer-motion";
+import {useDispatch} from "react-redux";
+import {toggleSideBar} from "../../../redux/sideBarSlice";
 
 interface NavbarProps {
-    isVisibleSideBar: boolean;
-    setIsVisibleSideBar: Dispatch<SetStateAction<boolean>>
     currentSlug: string
 }
 
-const Navbar = ({isVisibleSideBar, setIsVisibleSideBar, currentSlug}: NavbarProps) => {
-    const toggleSideBar = () => {
-        if (!isVisibleSideBar) {
-            setIsVisibleSideBar(true)
-        } else {
-            setIsVisibleSideBar(false)
-        }
-    }
+const Navbar = ({currentSlug}: NavbarProps) => {
+    const dispatch = useDispatch()
 
     return (
         <section id="navbar">
@@ -69,7 +63,7 @@ const Navbar = ({isVisibleSideBar, setIsVisibleSideBar, currentSlug}: NavbarProp
                                 transition={{delay: 0, duration: 1}}
                                 viewport={{once: true, amount: 0}}
                     >
-                        <Button text={"Menu"} handler={toggleSideBar}/>
+                        <Button text={"Menu"} handler={() => dispatch(toggleSideBar())}/>
                     </motion.div>
                 </div>
             </div>
