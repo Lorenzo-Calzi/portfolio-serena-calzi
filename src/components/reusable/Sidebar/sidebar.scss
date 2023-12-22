@@ -131,7 +131,6 @@
 
         li {
           gap: 20px;
-          padding: 20px 0;
 
           &:first-child {
             padding: 0 0 20px 0;
@@ -140,6 +139,11 @@
           img {
             width: 20px;
             height: 20px;
+          }
+
+          a {
+            flex: 1;
+            padding: 20px 0;
           }
         }
       }
@@ -183,11 +187,15 @@
 
         li {
           gap: 20px;
-          padding: 20px 0;
 
           img {
             width: 20px;
             height: 20px;
+          }
+
+          a {
+            flex: 1;
+            padding: 20px 0;
           }
         }
       }
@@ -231,7 +239,6 @@
 
         li {
           gap: 20px;
-          padding: 20px 0;
 
           &:first-child {
             padding: 0 0 20px 0;
@@ -240,6 +247,11 @@
           img {
             width: 20px;
             height: 20px;
+          }
+
+          a {
+            flex: 1;
+            padding: 20px 0;
           }
         }
       }
@@ -289,7 +301,6 @@
 
         li {
           gap: 20px;
-          padding: 20px 0;
 
           &:first-child {
             padding: 0 0 20px 0;
@@ -298,6 +309,11 @@
           img {
             width: 20px;
             height: 20px;
+          }
+
+          a {
+            flex: 1;
+            padding: 20px 0;
           }
         }
       }
@@ -341,7 +357,6 @@
 
         li {
           gap: 20px;
-          padding: 20px 0;
 
           &:first-child {
             padding: 0 0 20px 0;
@@ -350,6 +365,11 @@
           img {
             width: 20px;
             height: 20px;
+          }
+
+          a {
+            flex: 1;
+            padding: 20px 0;
           }
         }
       }
