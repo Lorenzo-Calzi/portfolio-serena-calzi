@@ -11,6 +11,9 @@ import ServicesPage from "./components/ServicesPage/ServicesPage";
 import CoursesPage from "./components/CoursesPage/CoursesPage";
 import ProjectsPage from "./components/ProjectsPage/ProjectsPage";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
+import CourseDetails from "./components/CoursesPage/CourseDetails/CourseDetails";
+import ProjectDetails from "./components/ProjectsPage/ProjectDetails/ProjectDetails";
+import ServiceDetails from "./components/ServicesPage/ServiceDetails/ServiceDetails";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +32,16 @@ const router = createBrowserRouter([
             <React.StrictMode>
                 <Provider store={store}>
                     <ServicesPage/>
+                </Provider>
+            </React.StrictMode>
+        )
+    },
+    {
+        path: "servizi/:nomeServizio",
+        element: (
+            <React.StrictMode>
+                <Provider store={store}>
+                    <ServiceDetails/>
                 </Provider>
             </React.StrictMode>
         )
@@ -54,11 +67,31 @@ const router = createBrowserRouter([
         )
     },
     {
+        path: "corsi/:nomeCorso",
+        element: (
+            <React.StrictMode>
+                <Provider store={store}>
+                    <CourseDetails/>
+                </Provider>
+            </React.StrictMode>
+        )
+    },
+    {
         path: "progetti",
         element: (
             <React.StrictMode>
                 <Provider store={store}>
                     <ProjectsPage/>
+                </Provider>
+            </React.StrictMode>
+        )
+    },
+    {
+        path: "progetti/:nomeProgetto",
+        element: (
+            <React.StrictMode>
+                <Provider store={store}>
+                    <ProjectDetails/>
                 </Provider>
             </React.StrictMode>
         )

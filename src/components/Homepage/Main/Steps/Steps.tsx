@@ -13,23 +13,26 @@ const Steps = () => {
             <img src={CloudTopRight} className="cloud-top-right" alt="Immagini a forma di nuvola"/>
             <div className="page-container">
                 <div className="content">
-                    <Step image={StepsSTUB[0].image} title={StepsSTUB[0].title} description={StepsSTUB[0].description} index={1}/>
+                    <Step image={StepsSTUB[0].image} title={StepsSTUB[0].title} description={StepsSTUB[0].description}
+                          index={1} slug={StepsSTUB[0].title.replace(/ /g, "-").toLowerCase()}/>
                     <motion.img src={Arrow} alt="Immagine di una freccia curva"
                                 className="steps-arrow"
-                                initial={{ opacity: 0, y: -50 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0, duration: 1}}
-                                viewport={{ once: true, amount: 0 }}
+                                initial={{opacity: 0, y: -50}}
+                                whileInView={{opacity: 1, y: 0}}
+                                transition={{delay: 0, duration: 1}}
+                                viewport={{once: true, amount: 0}}
                     />
-                    <Step image={StepsSTUB[1].image} title={StepsSTUB[1].title} description={StepsSTUB[1].description} index={2}/>
+                    <Step image={StepsSTUB[1].image} title={StepsSTUB[1].title} description={StepsSTUB[1].description}
+                          index={2} slug={StepsSTUB[1].title.replace(/ /g, "-").toLowerCase()}/>
                     <motion.img src={Arrow} alt="Immagine di una freccia curva"
                                 className="steps-arrow"
-                                 initial={{ opacity: 0, y: -50 }}
-                                 whileInView={{ opacity: 1, y: 0 }}
-                                 transition={{ delay: 0, duration: 1}}
-                                 viewport={{ once: true, amount: 0 }}
+                                initial={{opacity: 0, y: -50}}
+                                whileInView={{opacity: 1, y: 0}}
+                                transition={{delay: 0, duration: 1}}
+                                viewport={{once: true, amount: 0}}
                     />
-                    <Step image={StepsSTUB[2].image} title={StepsSTUB[2].title} description={StepsSTUB[2].description} index={3}/>
+                    <Step image={StepsSTUB[2].image} title={StepsSTUB[2].title} description={StepsSTUB[2].description}
+                          index={3} slug={StepsSTUB[2].title.replace(/ /g, "-").toLowerCase()}/>
                 </div>
             </div>
             <img src={CloudBottomLeft} className="cloud-bottom-left" alt="Immagini a forma di nuvola"/>

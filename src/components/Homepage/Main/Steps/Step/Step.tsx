@@ -8,12 +8,13 @@ interface StepProps {
     title: string,
     description: string
     index: number
+    slug: string
 }
 
-const Step = ({image, title, description, index}: StepProps) => {
+const Step = ({image, title, description, index, slug}: StepProps) => {
     return (
         <motion.a id="step"
-                  href="/progetti"
+                  href={`progetti/${slug}`}
                   initial={{opacity: 0, y: -50}}
                   whileInView={{opacity: 1, y: 0}}
                   transition={{delay: 0, duration: 1}}

@@ -69,19 +69,23 @@ const Services = () => {
         <section id="services">
             <div className="page-container">
                 <div className="content">
-                    <motion.div initial={{ opacity: 0, y: -100 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0, duration: 1}}
-                                viewport={{ once: true, amount: 0 }}
+                    <motion.div initial={{opacity: 0, y: -100}}
+                                whileInView={{opacity: 1, y: 0}}
+                                transition={{delay: 0, duration: 1}}
+                                viewport={{once: true, amount: 0}}
                     >
                         <Text type={"h2"} textAlign={"center"}>Servizi</Text>
                     </motion.div>
 
-                    <Carousel slidesPerView={swiperSetting.slidesPerView} spaceBetween={swiperSetting.spaceBetween} stub={ServicesSTUB} navigation pagination>
+                    <Carousel slidesPerView={swiperSetting.slidesPerView} spaceBetween={swiperSetting.spaceBetween}
+                              stub={ServicesSTUB} navigation pagination>
                         {
                             ServicesSTUB.map((service, index) => (
                                 <SwiperSlide key={index}>
-                                    <Service image={service.image} title={service.title} description={service.description} backgroundColor={service.backgroundColor} textColor={service.textColor}/>
+                                    <Service image={service.image} title={service.title}
+                                             description={service.description} backgroundColor={service.backgroundColor}
+                                             textColor={service.textColor}
+                                             slug={service.title.replace(/ /g, "-").toLowerCase()}/>
                                 </SwiperSlide>
                             ))
                         }

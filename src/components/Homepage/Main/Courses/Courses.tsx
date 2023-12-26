@@ -71,10 +71,10 @@ const Courses = () => {
         <section id="courses">
             <div className="page-container">
                 <div className="content">
-                    <motion.div initial={{ opacity: 0, y: -100 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0, duration: 1}}
-                                viewport={{ once: true, amount: 0 }}
+                    <motion.div initial={{opacity: 0, y: -100}}
+                                whileInView={{opacity: 1, y: 0}}
+                                transition={{delay: 0, duration: 1}}
+                                viewport={{once: true, amount: 0}}
                     >
                         <Text type={"h2"} textAlign={"center"}>Corsi</Text>
                     </motion.div>
@@ -95,6 +95,7 @@ const Courses = () => {
                                             time={course.time}
                                             image={course.image}
                                             price={course.price}
+                                            slug={course.title.replace(/ /g, "-").toLowerCase()}
                                     />
                                 </SwiperSlide>
                             ))
@@ -107,7 +108,7 @@ const Courses = () => {
                 <img src={Cloud} alt="Immagine di una nuvola" className="cloud"/>
                 <img src={Divided} alt="Immagine del simbolo diviso" className="divided"/>
             </div>
-            <div className="steps-before" />
+            <div className="steps-before"/>
         </section>
     )
 }

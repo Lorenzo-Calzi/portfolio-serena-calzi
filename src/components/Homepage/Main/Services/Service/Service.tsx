@@ -9,12 +9,13 @@ interface ServiceProps {
     description: string,
     backgroundColor: string,
     textColor: string
+    slug: string
 }
 
-const Service = ({image, title, description, backgroundColor, textColor}: ServiceProps) => {
+const Service = ({image, title, description, backgroundColor, textColor, slug}: ServiceProps) => {
     return (
         <motion.a id="service" style={{backgroundColor: backgroundColor}}
-                  href="/servizi"
+                  href={`servizi/${slug}`}
                   initial={{opacity: 0, scale: 0.8}}
                   whileInView={{opacity: 1, scale: 1}}
                   transition={{delay: 0, duration: 1}}
