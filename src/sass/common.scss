@@ -24,6 +24,7 @@ $cyan: #5ad7ca;
 html, body {
   height: 100%;
   scroll-behavior: smooth;
+  //-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 
@@ -48,28 +49,6 @@ html, body {
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes slide-bottom {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-top {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
