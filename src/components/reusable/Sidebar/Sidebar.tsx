@@ -36,7 +36,7 @@ const Sidebar = ({isVisibleSideBar, currentSlug}: SidebarProps) => {
                         <Anchor fontWeight={500} href={currentSlug ? "/about" : "#about"}>Studi</Anchor></li>
                     <li className={currentSlug === "corsi" ? "active" : ""} onClick={() => dispatch(toggleSideBar())}>
                         <img src={ChevronRightIcon} alt="Icona di un freccia verso destra"/>
-                        <Anchor fontWeight={500} href={currentSlug ? "/corsi" : "#courses"}>Progetti</Anchor></li>
+                        <Anchor fontWeight={500} href={currentSlug ? "/corsi" : "#courses"}>Corsi</Anchor></li>
                     <li className={currentSlug === "progetti" ? "active" : ""}
                         onClick={() => dispatch(toggleSideBar())}>
                         <img src={ChevronRightIcon} alt="Icona di un freccia verso destra"/>
