@@ -21,6 +21,7 @@ const Input = ({register, errors, inputName, placeholder, type}: InputProps) => 
                    type={type}
                    onFocusCapture={() => setIsOnFocus(true)}
                    onBlurCapture={() => setIsOnFocus(false)}
+                   style={{borderColor: errors[inputName] && !isOnFocus ? '#f53131' : 'transparent'}}
             />
 
             {errors[inputName] && !isOnFocus && (
