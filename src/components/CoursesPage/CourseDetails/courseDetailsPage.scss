@@ -1,0 +1,593 @@
+@import 'src/sass/common';
+
+.course-details {
+  .course-content {
+    display: flex;
+    flex-direction: column;
+
+    .course-info {
+      display: flex;
+
+      #carousel {
+
+        .swiper-pagination, .arrow-left, .arrow-right {
+          opacity: 0;
+        }
+
+        .image-details {
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .details {
+        flex: 1;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        box-shadow: 0 8px 40px 0 rgba(105, 116, 119, 0.08);
+
+        .detail {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          border-bottom: 1px solid #ececec;
+
+          &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+          }
+
+          img {
+          }
+
+          .right {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+          }
+        }
+      }
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  .course-details {
+    .course-content {
+      gap: 25px;
+      padding: 50px 0;
+
+      .course-info {
+        flex-direction: column;
+        gap: 25px;
+
+        #carousel {
+          width: 100%;
+
+          .image-details {
+            height: 200px;
+            border-radius: 10px
+          }
+        }
+
+        .details {
+          gap: 10px;
+          padding: 20px 40px;
+          border-radius: 10px;
+
+          .detail {
+            gap: 20px;
+            padding-bottom: 10px;
+
+            img {
+              width: 25px;
+              height: 25px;
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+
+      .description {
+        gap: 25px;
+      }
+
+      .contact {
+        flex-direction: column;
+        gap: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+  .course-details {
+    .course-content {
+      gap: 50px;
+      padding: 50px 0;
+
+      .course-info {
+        flex-direction: column;
+        gap: 50px;
+
+        #carousel {
+          width: 100%;
+
+          .image-details {
+            height: 300px;
+            border-radius: 10px
+          }
+        }
+
+        .details {
+          gap: 10px;
+          padding: 20px 40px;
+          border-radius: 10px;
+
+          .detail {
+            gap: 20px;
+            padding-bottom: 10px;
+
+            img {
+              width: 25px;
+              height: 25px;
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+
+      .description {
+        gap: 25px;
+      }
+
+      .contact {
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  .course-details {
+    .course-content {
+      gap: 50px;
+      padding: 50px 0;
+
+      .course-info {
+        flex-direction: column;
+        gap: 50px;
+
+        #carousel {
+          width: 100%;
+
+          .image-details {
+            height: 350px;
+            border-radius: 10px
+          }
+        }
+
+        .details {
+          gap: 10px;
+          padding: 20px 40px;
+          border-radius: 10px;
+
+          .detail {
+            gap: 20px;
+            padding-bottom: 10px;
+
+            img {
+              width: 25px;
+              height: 25px;
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+
+      .description {
+        gap: 25px;
+      }
+
+      .contact {
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  .course-details {
+    .course-content {
+      gap: 50px;
+      padding: 50px 0;
+
+      .course-info {
+        flex-direction: column;
+        gap: 50px;
+
+        #carousel {
+          width: 100%;
+
+          .image-details {
+            height: 350px;
+            border-radius: 10px
+          }
+        }
+
+        .details {
+          gap: 10px;
+          padding: 20px 40px;
+          border-radius: 10px;
+
+          .detail {
+            gap: 20px;
+            padding-bottom: 10px;
+
+            img {
+              width: 25px;
+              height: 25px;
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+
+      .description {
+        gap: 25px;
+      }
+
+      .contact {
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+  .course-details {
+    .course-content {
+      gap: 50px;
+      padding: 50px 0;
+
+      .course-info {
+        flex-direction: column;
+        gap: 50px;
+
+        #carousel {
+          width: 100%;
+
+          .image-details {
+            height: 300px;
+            border-radius: 10px
+          }
+        }
+
+        .details {
+          gap: 10px;
+          padding: 20px 40px;
+          border-radius: 10px;
+
+          .detail {
+            gap: 20px;
+            padding-bottom: 10px;
+
+            img {
+              width: 25px;
+              height: 25px;
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+
+      .description {
+        gap: 25px;
+      }
+
+      .contact {
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+  .course-details {
+    .course-content {
+      gap: 50px;
+      padding: 50px 0;
+
+      .course-info {
+        flex-direction: column;
+        gap: 50px;
+
+        #carousel {
+          width: 100%;
+
+          .image-details {
+            height: 350px;
+            border-radius: 10px
+          }
+        }
+
+        .details {
+          gap: 10px;
+          padding: 20px 40px;
+          border-radius: 10px;
+
+          .detail {
+            gap: 20px;
+            padding-bottom: 10px;
+
+            img {
+              width: 25px;
+              height: 25px;
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+
+      .description {
+        gap: 25px;
+      }
+
+      .contact {
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+  .course-details {
+    .course-content {
+      gap: 50px;
+      padding: 50px 0;
+
+      .course-info {
+        gap: 50px;
+
+        #carousel {
+          width: 60%;
+
+          .image-details {
+            height: 100%;
+            border-radius: 30px
+          }
+        }
+
+        .details {
+          gap: 10px;
+          padding: 20px 40px;
+          border-radius: 30px;
+
+          .detail {
+            gap: 20px;
+            padding-bottom: 10px;
+
+            img {
+              width: 25px;
+              height: 25px;
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+
+      .description {
+        gap: 25px;
+      }
+
+      .contact {
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+  .course-details {
+    .course-content {
+      gap: 50px;
+      padding: 50px 0;
+
+      .course-info {
+        gap: 50px;
+
+        #carousel {
+          width: 60%;
+
+          .image-details {
+            height: 100%;
+            border-radius: 30px
+          }
+        }
+
+        .details {
+          gap: 10px;
+          padding: 20px 40px;
+          border-radius: 30px;
+
+          .detail {
+            gap: 20px;
+            padding-bottom: 10px;
+
+            img {
+              width: 25px;
+              height: 25px;
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+
+      .description {
+        gap: 25px;
+      }
+
+      .contact {
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  .course-details {
+    .course-content {
+      gap: 50px;
+      padding: 100px 0;
+
+      .course-info {
+        gap: 50px;
+
+        #carousel {
+          width: 60%;
+
+          .image-details {
+            height: 100%;
+            border-radius: 30px
+          }
+        }
+
+        .details {
+          gap: 10px;
+          padding: 20px 40px;
+          border-radius: 30px;
+
+          .detail {
+            gap: 20px;
+            padding-bottom: 10px;
+
+            img {
+              width: 25px;
+              height: 25px;
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+
+      .description {
+        gap: 25px;
+      }
+
+      .contact {
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  .course-details {
+    .course-content {
+      gap: 50px;
+      padding: 100px 0;
+
+      .course-info {
+        gap: 50px;
+
+        #carousel {
+          width: 60%;
+
+          .image-details {
+            height: 100%;
+            border-radius: 30px
+          }
+        }
+
+        .details {
+          gap: 10px;
+          padding: 20px 40px;
+          border-radius: 30px;
+
+          .detail {
+            gap: 20px;
+            padding-bottom: 10px;
+
+            img {
+              width: 25px;
+              height: 25px;
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+
+      .description {
+        gap: 25px;
+      }
+
+      .contact {
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2001px) {
+  .course-details {
+    .course-content {
+      gap: 50px;
+      padding: 100px 0;
+
+      .course-info {
+        gap: 50px;
+
+        #carousel {
+          width: 60%;
+
+          .image-details {
+            height: 100%;
+            border-radius: 30px
+          }
+        }
+
+        .details {
+          gap: 10px;
+          padding: 20px 40px;
+          border-radius: 30px;
+
+          .detail {
+            gap: 20px;
+            padding-bottom: 10px;
+
+            img {
+              width: 25px;
+              height: 25px;
+              padding-bottom: 2px;
+            }
+          }
+        }
+      }
+
+      .description {
+        gap: 25px;
+      }
+
+      .contact {
+        gap: 50px;
+      }
+    }
+  }
+}
