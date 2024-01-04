@@ -1,5 +1,9 @@
 import React, {useRef, useState} from "react";
 import './contactForm.scss'
+import Input from "../../../../reusable/Input/Input";
+import TextArea from "../../../../reusable/TextArea/TextArea";
+import Button from "../../../../reusable/Button/Button";
+import Select from "../../../../reusable/Select/Select";
 import {useForm} from "react-hook-form";
 import * as Yup from "yup";
 import {yupResolver} from "@hookform/resolvers/yup";
@@ -8,10 +12,6 @@ import {toggleLoader} from "../../../../../redux/loaderSlice";
 import {togglePopup} from "../../../../../redux/popupSlice";
 import emailjs from '@emailjs/browser';
 import {motion} from "framer-motion";
-import Input from "../../../../reusable/Input/Input";
-import TextArea from "../../../../reusable/TextArea/TextArea";
-import Button from "../../../../reusable/Button/Button";
-import Select from "../../../../reusable/Select/Select";
 import CoursesSTUB from "../../../../../stub/CoursesSTUB";
 
 const formSchema = Yup.object().shape({
@@ -33,14 +33,18 @@ const formSchema = Yup.object().shape({
         .required("Il messaggio è richiesto")
 });
 
-const ContactForm = () => {
+interface ContactFormProps {
+    options?: string
+}
+
+const ContactForm = ({options}: ContactFormProps) => {
     const dispatch = useDispatch()
 
     const {
         register,
         watch,
         reset,
-        formState: { errors }
+        formState: {errors}
     } = useForm({
         mode: "onChange",
         reValidateMode: "onChange",
@@ -51,7 +55,7 @@ const ContactForm = () => {
     const formRef = useRef<any>()
 
     const checkForm = () => {
-        if( watch("nome") &&
+        if (watch("nome") &&
             watch("cognome") &&
             watch("email") &&
             watch("telefono") &&
@@ -61,13 +65,13 @@ const ContactForm = () => {
         ) {
             setFormIsValid(true)
         } else {
-            if(formIsValid) {
+            if (formIsValid) {
                 setFormIsValid(false)
             }
         }
     }
 
-    const submitForm = (event: any) => {
+    const askInfo = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         dispatch(toggleLoader())
 
@@ -83,32 +87,41 @@ const ContactForm = () => {
             });
     }
 
+    const courseRegistration = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        dispatch(togglePopup("Complimenti, ti sei registrato con successo!"))
+    }
+
     return (
         <motion.form id="contact-form"
                      ref={formRef}
                      onChange={checkForm}
-                     onSubmit={submitForm}
-                     initial={{ opacity: 0}}
-                     whileInView={{ opacity: 1}}
-                     transition={{ delay: 0, duration: 1}}
-                     viewport={{ once: true, amount: 0 }}
+                     onSubmit={options ? courseRegistration : askInfo}
+                     initial={{opacity: 0}}
+                     whileInView={{opacity: 1}}
+                     transition={{delay: 0, duration: 1}}
+                     viewport={{once: true, amount: 0}}
         >
             <div className="row">
-                <Input register={register} errors={errors} inputName={"nome"} placeholder={"Nome *"} type={"text"} />
-                <Input register={register} errors={errors} inputName={"cognome"} placeholder={"Cognome *"} type={"text"} />
+                <Input register={register} errors={errors} inputName={"nome"} placeholder={"Nome *"} type={"text"}/>
+                <Input register={register} errors={errors} inputName={"cognome"} placeholder={"Cognome *"}
+                       type={"text"}/>
             </div>
             <div className="row">
-                <Input register={register} errors={errors} inputName={"email"} placeholder={"Email *"} type={"email"} />
-                <Input register={register} errors={errors} inputName={"telefono"} placeholder={"Telefono *"} type={"tel"} />
+                <Input register={register} errors={errors} inputName={"email"} placeholder={"Email *"} type={"email"}/>
+                <Input register={register} errors={errors} inputName={"telefono"} placeholder={"Telefono *"}
+                       type={"tel"}/>
             </div>
             <div className="row">
-                <Select register={register} errors={errors} selectName={"corso"} options={CoursesSTUB.map((course) => course.title)} defaultValue={"Seleziona un corso *"} />
+                <Select register={register} errors={errors} selectName={"corso"}
+                        options={options ? [] : CoursesSTUB.map((course) => course.title)}
+                        defaultValue={options ? options : "Seleziona un corso *"}/>
             </div>
             <div className="row">
                 <TextArea register={register} errors={errors} placeholder={"Messaggio *"} textAreaName={"messaggio"}/>
             </div>
 
-            <Button text={"Invia"} type={"submit"} isDisabled={!formIsValid} />
+            <Button text={options ? 'Iscriviti' : "Invia"} type={"submit"} isDisabled={!formIsValid}/>
         </motion.form>
     )
 }
