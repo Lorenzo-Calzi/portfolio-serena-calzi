@@ -18,8 +18,9 @@ const TextArea = ({register, errors, textAreaName, placeholder}: TextAreaProps) 
             <textarea
                 {...register(textAreaName)}
                 placeholder={placeholder}
-                  onFocusCapture={() => setIsOnFocus(true)}
-                  onBlurCapture={() => setIsOnFocus(false)}
+                onFocusCapture={() => setIsOnFocus(true)}
+                onBlurCapture={() => setIsOnFocus(false)}
+                style={{borderColor: errors[textAreaName] && !isOnFocus ? '#f53131' : 'transparent'}}
             />
 
             {errors[textAreaName] && !isOnFocus && (

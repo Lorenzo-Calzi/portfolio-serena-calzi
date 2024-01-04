@@ -5,12 +5,13 @@
   flex-direction: column;
 
   textarea {
+    border: 1px solid;
     resize: none;
-    border: none;
 
     &:active, &:focus {
       outline: 1px dashed $theme-color;
     }
+
     &::placeholder {
       color: $body-color;
     }
