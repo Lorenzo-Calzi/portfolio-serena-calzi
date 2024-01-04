@@ -4,15 +4,16 @@ import Info from "../../reusable/Info/Info";
 import Navbar from "../../reusable/Navbar/Navbar";
 import Sidebar from "../../reusable/Sidebar/Sidebar";
 import {useLocation} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 interface HeaderProps {
     components?: ReactElement,
-    sideBarVisibility?: boolean
 }
 
-const Header = ({components, sideBarVisibility}: HeaderProps) => {
+const Header = ({components}: HeaderProps) => {
     const location = useLocation()
     const currentSlug = location.pathname.split('/')[1]
+    const {sideBarVisibility} = useSelector((state: any) => state.sideBar)
 
     return (
         <header id="header">

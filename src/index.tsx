@@ -1,19 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {Provider} from "react-redux";
+import {Provider, useSelector} from "react-redux";
 import store from "./redux/store";
 import Homepage from "./components/Homepage/Homepage";
 import AboutPage from "./components/Aboutpage/AboutPage";
 import ServicesPage from "./components/ServicesPage/ServicesPage";
 import CoursesPage from "./components/CoursesPage/CoursesPage";
+import CourseDetailsPage from "./components/CoursesPage/CourseDetails/CourseDetailsPage";
 import ProjectsPage from "./components/ProjectsPage/ProjectsPage";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
-import CourseDetails from "./components/CoursesPage/CourseDetails/CourseDetails";
 import ProjectDetails from "./components/ProjectsPage/ProjectDetails/ProjectDetails";
 import ServiceDetails from "./components/ServicesPage/ServiceDetails/ServiceDetails";
+import Popup from "./components/reusable/Popup/Popup";
+import Cover from "./components/Cover/Cover";
+import Loader from "./components/reusable/Loader/Loader";
 
 const router = createBrowserRouter([
     {
@@ -71,7 +74,7 @@ const router = createBrowserRouter([
         element: (
             <React.StrictMode>
                 <Provider store={store}>
-                    <CourseDetails/>
+                    <CourseDetailsPage/>
                 </Provider>
             </React.StrictMode>
         )
@@ -108,11 +111,45 @@ const router = createBrowserRouter([
     }
 ])
 
+const SharedPopup = () => {
+    const {popupVisibility, popupMessage} = useSelector((state: any) => state.popup)
+    useEffect(() => {
+        if (popupVisibility) {
+            document.body.classList.add('scroll-disabled')
+        } else {
+            document.body.classList.remove('scroll-disabled')
+        }
+    }, [popupVisibility]);
+
+    return popupVisibility && <Popup popupVisibility={popupVisibility} message={popupMessage}/>
+}
+
+const SharedSideBar = () => {
+    const {sideBarVisibility} = useSelector((state: any) => state.sideBar)
+
+    return sideBarVisibility && <Cover/>
+}
+
+const SharedLoader = () => {
+    const {loaderVisibility} = useSelector((state: any) => state.loader)
+
+    return loaderVisibility && <Loader/>
+}
+
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 
-root.render(<RouterProvider router={router}/>)
+root.render(<>
+    <React.StrictMode>
+        <Provider store={store}>
+            <RouterProvider router={router}/>
+            <SharedPopup/>
+            <SharedSideBar/>
+            <SharedLoader/>
+        </Provider>
+    </React.StrictMode>
+</>)
 
 reportWebVitals();
 
