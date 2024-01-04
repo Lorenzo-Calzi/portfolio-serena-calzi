@@ -1,24 +1,5 @@
 @import 'src/sass/common.scss';
 
-//.custom-button {
-//  min-width: fit-content;
-//  height: fit-content;
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//  color: $white-color;
-//  background-color: $theme-color;
-//  text-transform: capitalize;
-//  text-align: center;
-//  border: none;
-//  cursor: pointer;
-//
-//  &:disabled {
-//    cursor: not-allowed;
-//  }
-//}
-
-
 .custom-button {
   min-width: fit-content;
   height: fit-content;
@@ -37,43 +18,47 @@
   cursor: pointer;
 
   &:disabled {
+    background-color: #ff937d;
     cursor: not-allowed;
+
+    span {
+      display: none;
+    }
+  }
+
+  &:hover span {
+    transform: translateY(0) scale(2);
+  }
+
+  span {
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    left: calc((var(--n) - 1) * 25%);
+    z-index: -1;
+    background-color: $title-color;
+    border-radius: 50%;
+    transform: translateY(150%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+
+    &:nth-child(1) {
+      --n: 1;
+    }
+
+    &:nth-child(2) {
+      --n: 2;
+    }
+
+    &:nth-child(3) {
+      --n: 3;
+    }
+
+    &:nth-child(4) {
+      --n: 4;
+    }
   }
 }
-
-.custom-button span {
-  width: 25%;
-  height: 100%;
-  position: absolute;
-  left: calc((var(--n) - 1) * 25%);
-  z-index: -1;
-  background-color: $title-color;
-  border-radius: 50%;
-  transform: translateY(150%);
-  transition: 0.5s;
-  transition-delay: calc((var(--n) - 1) * 0.1s);
-}
-
-.custom-button:hover span {
-  transform: translateY(0) scale(2);
-}
-
-.custom-button span:nth-child(1) {
-  --n: 1;
-}
-
-.custom-button span:nth-child(2) {
-  --n: 2;
-}
-
-.custom-button span:nth-child(3) {
-  --n: 3;
-}
-
-.custom-button span:nth-child(4) {
-  --n: 4;
-}
-
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   .custom-button {
