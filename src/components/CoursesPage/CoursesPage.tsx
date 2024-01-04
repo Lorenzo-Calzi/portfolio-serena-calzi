@@ -8,7 +8,7 @@ import CoursesSTUB from "../../stub/CoursesSTUB";
 
 const CoursesPage = () => {
     return (
-        <div>
+        <div id="courses-page">
             <Header components={<Breadcrumb title={"Corsi"}/>}/>
 
             <div className="page-container">
@@ -28,7 +28,7 @@ const CoursesPage = () => {
                     }
                 </div>
             </div>
-            
+
             <Footer/>
         </div>
     )
