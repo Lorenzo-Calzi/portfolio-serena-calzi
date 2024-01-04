@@ -18,7 +18,8 @@
     transition: all 0.5s ease-in-out;
     opacity: 0;
 
-    .swiper-pagination-bullet {}
+    .swiper-pagination-bullet {
+    }
 
     .swiper-pagination-bullet-active {
       background-color: $theme-color;
@@ -40,6 +41,7 @@
       background-color: $theme-color;
     }
   }
+
   .arrow-left {
     background-image: url(../../../assets/icons/arrow-left-orange.svg);
 
@@ -47,6 +49,7 @@
       background-image: url(../../../assets/icons/arrow-left-white.svg);
     }
   }
+
   .arrow-right {
     background-image: url(../../../assets/icons/arrow-right-orange.svg);
 
@@ -69,6 +72,7 @@
         height: 20px;
       }
     }
+
     .arrow-left, .arrow-right {
       display: none;
     }
@@ -88,6 +92,7 @@
         height: 25px;
       }
     }
+
     .arrow-left, .arrow-right {
       display: none;
     }
@@ -107,6 +112,7 @@
         height: 25px;
       }
     }
+
     .arrow-left, .arrow-right {
       display: none;
     }
@@ -126,6 +132,7 @@
         height: 25px;
       }
     }
+
     .arrow-left, .arrow-right {
       display: none;
     }
@@ -145,6 +152,7 @@
         height: 25px;
       }
     }
+
     .arrow-left, .arrow-right {
       display: none;
     }
@@ -164,6 +172,7 @@
         height: 25px;
       }
     }
+
     .arrow-left, .arrow-right {
       display: none;
     }
@@ -183,6 +192,7 @@
         height: 25px;
       }
     }
+
     .arrow-left, .arrow-right {
       display: none;
     }
@@ -202,6 +212,7 @@
         height: 25px;
       }
     }
+
     .arrow-left, .arrow-right {
       display: none;
     }
@@ -226,11 +237,13 @@
       width: 60px;
       height: 60px;
     }
+
     .arrow-left {
       top: 50%;
       left: -100px;
       transform: translate(0, -50%);
     }
+
     .arrow-right {
       top: 50%;
       right: -100px;
@@ -257,11 +270,13 @@
       width: 60px;
       height: 60px;
     }
+
     .arrow-left {
       top: 50%;
       left: -100px;
       transform: translate(0, -50%);
     }
+
     .arrow-right {
       top: 50%;
       right: -100px;
@@ -288,11 +303,13 @@
       width: 60px;
       height: 60px;
     }
+
     .arrow-left {
       top: 50%;
       left: -100px;
       transform: translate(0, -50%);
     }
+
     .arrow-right {
       top: 50%;
       right: -100px;
