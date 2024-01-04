@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './courseDetailsPage.scss'
 import Breadcrumb from "../../reusable/Breadcrumb/Breadcrumb";
 import Header from "../../reusable/Header/Header";
@@ -8,8 +8,6 @@ import {useParams} from "react-router-dom";
 import ContactForm from "../../Homepage/Main/Contact/ContactForm/ContactForm";
 import ContactInfo from "../../Homepage/Main/Contact/ContactInfo/ContactInfo";
 import Footer from "../../reusable/Footer/Footer";
-import Popup from "../../reusable/Popup/Popup";
-import {useSelector} from "react-redux";
 import CoursesSTUB from "../../../stub/CoursesSTUB";
 import {SwiperSlide} from "swiper/react";
 import 'swiper/css';
@@ -24,15 +22,6 @@ import PriceIcon from "../../../assets/icons/price-tag-orange.svg"
 const CourseDetailsPage = () => {
     const {nomeCorso} = useParams();
     const currentIndex = CoursesSTUB.findIndex((course) => course.title.toLowerCase() === nomeCorso?.replace("-", " "))
-    const {popupVisibility, popupMessage} = useSelector((state: any) => state.popup)
-
-    useEffect(() => {
-        if (popupVisibility) {
-            document.body.classList.add('scroll-disabled')
-        } else {
-            document.body.classList.remove('scroll-disabled')
-        }
-    }, [popupVisibility]);
 
     return (
         <div className="course-details">
@@ -128,8 +117,6 @@ const CourseDetailsPage = () => {
             </div>
 
             <Footer/>
-
-            {popupVisibility && <Popup popupVisibility={popupVisibility} message={popupMessage}/>}
         </div>
     )
 }
