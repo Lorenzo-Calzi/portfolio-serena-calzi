@@ -7,11 +7,12 @@
   flex-direction: column;
 
   input {
-    border: none;
+    border: 1px solid;
 
     &:active, &:focus {
       outline: 1px dashed $theme-color;
     }
+
     &::placeholder {
       color: $body-color;
     }
