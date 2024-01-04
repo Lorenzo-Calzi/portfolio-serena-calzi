@@ -2,84 +2,133 @@
 
 .error-message {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background: $error-color;
+
+  p {
+    padding-top: 2px !important;
+  }
 }
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   .error-message {
-    padding: 4px 8px;
-    border-radius: 5px;
+    gap: 5px;
+    padding: 4px 0;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   .error-message {
-    padding: 4px 8px;
-    border-radius: 5px;
+    gap: 5px;
+    padding: 4px 0;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
   .error-message {
-    padding: 6px 12px;
-    border-radius: 5px;
+    gap: 5px;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
   .error-message {
-    padding: 6px 12px;
-    border-radius: 5px;
+    gap: 5px;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
   .error-message {
-    padding: 6px 12px;
-    border-radius: 5px;
+    gap: 5px;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
 @media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
   .error-message {
-    padding: 6px 12px;
-    border-radius: 5px;
+    gap: 5px;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
   .error-message {
-    padding: 6px 12px;
-    border-radius: 5px;
+    gap: 5px;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
   .error-message {
-    padding: 6px 12px;
-    border-radius: 5px;
+    gap: 5px;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1500px) {
   .error-message {
-    padding: 8px 16px;
-    border-radius: 30px;
+    gap: 5px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
 @media screen and (min-width: 1501px) and (max-width: 2000px) {
   .error-message {
-    padding: 8px 16px;
-    border-radius: 30px;
+    gap: 5px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
 @media screen and (min-width: 2001px) {
   .error-message {
-    padding: 8px 16px;
-    border-radius: 30px;
+    gap: 5px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
