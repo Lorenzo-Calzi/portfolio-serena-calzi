@@ -20,9 +20,10 @@ const Select = ({register, errors, selectName, options, defaultValue}: TextAreaP
                 {...register(selectName)}
                 onFocusCapture={() => setIsOnFocus(true)}
                 onBlurCapture={() => setIsOnFocus(false)}
-                defaultValue={defaultValue}
+                defaultValue={""}
             >
-                <option value={defaultValue} disabled>{defaultValue}</option>
+                <option value={""} disabled>{defaultValue}</option>
+
                 {
                     options.map((option, index) => (
                         <option key={index} value={option}>{option}</option>

@@ -2,14 +2,20 @@
 
 #contact-form {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
   flex-wrap: wrap;
   background-color: $smoke-theme;
   border: 2px solid $smoke-theme;
 
-  .row {
+  .input-row,
+  .select-row,
+  .textarea-row {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  button {
+    flex: 1;
   }
 }
 
@@ -21,10 +27,24 @@
     padding: 10px;
     border-radius: 10px;
 
-    .row {
+    .input-row, {
       flex: 1;
-      gap: 10px;
+      gap: 5px;
+
+      p {
+        padding: 0 15px;
+      }
     }
+
+    .select-row, .textarea-row {
+      width: 100%;
+      gap: 5px;
+
+      p {
+        padding: 0 15px;
+      }
+    }
+
     button {
       height: 40px;
     }
@@ -38,10 +58,24 @@
     padding: 20px;
     border-radius: 10px;
 
-    .row {
+    .input-row, {
       flex: 1;
-      gap: 15px;
+      gap: 5px;
+
+      p {
+        padding: 0 15px;
+      }
     }
+
+    .select-row, .textarea-row {
+      width: 100%;
+      gap: 5px;
+
+      p {
+        padding: 0 15px;
+      }
+    }
+
     button {
       height: 50px;
     }
@@ -55,10 +89,24 @@
     padding: 30px;
     border-radius: 15px;
 
-    .row {
+    .input-row, {
       flex: 1;
-      gap: 20px;
+      gap: 5px;
+
+      p {
+        padding: 0 20px;
+      }
     }
+
+    .select-row, .textarea-row {
+      width: 100%;
+      gap: 5px;
+
+      p {
+        padding: 0 20px;
+      }
+    }
+
     button {
       height: 50px;
     }
@@ -72,10 +120,24 @@
     padding: 30px;
     border-radius: 15px;
 
-    .row {
+    .input-row, {
       flex: 1;
-      gap: 20px;
+      gap: 5px;
+
+      p {
+        padding: 0 20px;
+      }
     }
+
+    .select-row, .textarea-row {
+      width: 100%;
+      gap: 5px;
+
+      p {
+        padding: 0 20px;
+      }
+    }
+
     button {
       height: 50px;
     }
@@ -89,10 +151,24 @@
     padding: 30px;
     border-radius: 15px;
 
-    .row {
+    .input-row, {
       flex: 1;
-      gap: 20px;
+      gap: 5px;
+
+      p {
+        padding: 0 20px;
+      }
     }
+
+    .select-row, .textarea-row {
+      width: 100%;
+      gap: 5px;
+
+      p {
+        padding: 0 20px;
+      }
+    }
+
     button {
       height: 50px;
     }
@@ -106,10 +182,24 @@
     padding: 30px;
     border-radius: 15px;
 
-    .row {
+    .input-row, {
       flex: 1;
-      gap: 20px;
+      gap: 5px;
+
+      p {
+        padding: 0 20px;
+      }
     }
+
+    .select-row, .textarea-row {
+      width: 100%;
+      gap: 5px;
+
+      p {
+        padding: 0 20px;
+      }
+    }
+
     button {
       height: 50px;
     }
@@ -123,10 +213,24 @@
     padding: 30px;
     border-radius: 15px;
 
-    .row {
+    .input-row, {
       flex: 1;
-      gap: 20px;
+      gap: 5px;
+
+      p {
+        padding: 0 20px;
+      }
     }
+
+    .select-row, .textarea-row {
+      width: 100%;
+      gap: 5px;
+
+      p {
+        padding: 0 20px;
+      }
+    }
+
     button {
       height: 50px;
     }
@@ -140,10 +244,24 @@
     padding: 30px;
     border-radius: 15px;
 
-    .row {
+    .input-row, {
       flex: 1;
-      gap: 20px;
+      gap: 5px;
+
+      p {
+        padding: 0 20px;
+      }
     }
+
+    .select-row, .textarea-row {
+      width: 100%;
+      gap: 5px;
+
+      p {
+        padding: 0 20px;
+      }
+    }
+
     button {
       height: 50px;
     }
@@ -157,10 +275,24 @@
     padding: 40px;
     border-radius: 50px;
 
-    .row {
+    .input-row, {
       flex: 1;
-      gap: 20px;
+      gap: 5px;
+
+      p {
+        padding: 0 30px;
+      }
     }
+
+    .select-row, .textarea-row {
+      width: 100%;
+      gap: 5px;
+
+      p {
+        padding: 0 30px;
+      }
+    }
+
     button {
       height: 60px;
     }
@@ -174,10 +306,24 @@
     padding: 50px;
     border-radius: 50px;
 
-    .row {
+    .input-row, {
       flex: 1;
-      gap: 20px;
+      gap: 5px;
+
+      p {
+        padding: 0 30px;
+      }
     }
+
+    .select-row, .textarea-row {
+      width: 100%;
+      gap: 5px;
+
+      p {
+        padding: 0 30px;
+      }
+    }
+
     button {
       height: 60px;
     }
@@ -191,10 +337,24 @@
     padding: 60px;
     border-radius: 50px;
 
-    .row {
+    .input-row, {
       flex: 1;
-      gap: 20px;
+      gap: 5px;
+
+      p {
+        padding: 0 30px;
+      }
     }
+
+    .select-row, .textarea-row {
+      width: 100%;
+      gap: 5px;
+
+      p {
+        padding: 0 30px;
+      }
+    }
+
     button {
       height: 60px;
     }

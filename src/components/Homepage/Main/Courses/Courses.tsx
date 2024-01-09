@@ -91,10 +91,10 @@ const Courses = () => {
                                 <SwiperSlide key={index}>
                                     <Course title={course.title}
                                             description={course.description}
-                                            age={course.age}
-                                            time={course.time}
+                                            age={course.details.age}
+                                            time={course.details.timetables}
                                             image={course.image}
-                                            price={course.price}
+                                            price={course.details.price}
                                             slug={course.title.replace(/ /g, "-").toLowerCase()}
                                     />
                                 </SwiperSlide>

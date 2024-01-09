@@ -1,9 +1,10 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import './contactForm.scss'
-import Input from "../../../../reusable/Input/Input";
-import TextArea from "../../../../reusable/TextArea/TextArea";
 import Button from "../../../../reusable/Button/Button";
+import Input from "../../../../reusable/Input/Input";
 import Select from "../../../../reusable/Select/Select";
+import TextArea from "../../../../reusable/TextArea/TextArea";
+import Text from "../../../../reusable/Text/Text"
 import {useForm} from "react-hook-form";
 import * as Yup from "yup";
 import {yupResolver} from "@hookform/resolvers/yup";
@@ -12,32 +13,27 @@ import {toggleLoader} from "../../../../../redux/loaderSlice";
 import {togglePopup} from "../../../../../redux/popupSlice";
 import emailjs from '@emailjs/browser';
 import {motion} from "framer-motion";
-import CoursesSTUB from "../../../../../stub/CoursesSTUB";
 
-const formSchema = Yup.object().shape({
-    nome: Yup.string()
-        .required("Il nome è richiesto")
-        .matches(/^[a-zA-Z ]*$/g, "Il nome non è valido"),
-    cognome: Yup.string()
-        .required("Il cognome è richiesto")
-        .matches(/^[a-zA-Z ]*$/g, "Il cognome non è valido"),
-    email: Yup.string()
-        .required("L'email è richiesta")
-        .matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g, "L'email non è valida"),
-    telefono: Yup.string()
-        .required("Il numero di telefono è richiesto")
-        .matches(/^[0-9]*$/g, "Il numero di telefono non è valido"),
-    corso: Yup.string()
-        .required("Il corso è richiesto"),
-    messaggio: Yup.string()
-        .required("Il messaggio è richiesto")
-});
+interface formInputsProps {
+    tag: "input" | "textarea" | "select" | string,
+    type?: string,
+    required: boolean
+    defaultValue?: string,
+    name: string,
+    options?: string[],
+    label: string,
+    placeholder?: string
+}
+
 
 interface ContactFormProps {
+    formInputs: formInputsProps[],
+    formSchema: any
     options?: string
 }
 
-const ContactForm = ({options}: ContactFormProps) => {
+const ContactForm = ({formInputs, formSchema, options}: ContactFormProps) => {
+    const resolverSchema = Yup.object().shape(formSchema);
     const dispatch = useDispatch()
 
     const {
@@ -48,28 +44,25 @@ const ContactForm = ({options}: ContactFormProps) => {
     } = useForm({
         mode: "onChange",
         reValidateMode: "onChange",
-        resolver: yupResolver(formSchema)
+        resolver: yupResolver(resolverSchema)
     });
 
     const [formIsValid, setFormIsValid] = useState(false)
     const formRef = useRef<any>()
 
-    const checkForm = () => {
-        if (watch("nome") &&
-            watch("cognome") &&
-            watch("email") &&
-            watch("telefono") &&
-            watch("corso") !== 'Seleziona un corso *' &&
-            watch("messaggio") &&
-            Object.keys(errors).length === 0
-        ) {
+    useEffect(() => {
+        const notRquiredFields = formInputs.filter((input) => !input.required)
+        const notRquiredFieldsNames = notRquiredFields.map((field) => field.name)
+        const emptyFields = Object.keys(watch()).filter((key: any) => !watch(key) && !notRquiredFieldsNames.includes(key))
+
+        if (watch() && !emptyFields.length && Object.keys(errors).length === 0) {
             setFormIsValid(true)
         } else {
             if (formIsValid) {
                 setFormIsValid(false)
             }
         }
-    }
+    }, [watch(), errors])
 
     const askInfo = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -89,37 +82,50 @@ const ContactForm = ({options}: ContactFormProps) => {
 
     const courseRegistration = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        reset()
         dispatch(togglePopup("Complimenti, ti sei registrato con successo!"))
     }
 
     return (
         <motion.form id="contact-form"
                      ref={formRef}
-                     onChange={checkForm}
                      onSubmit={options ? courseRegistration : askInfo}
                      initial={{opacity: 0}}
                      whileInView={{opacity: 1}}
                      transition={{delay: 0, duration: 1}}
                      viewport={{once: true, amount: 0}}
         >
-            <div className="row">
-                <Input register={register} errors={errors} inputName={"nome"} placeholder={"Nome *"} type={"text"}/>
-                <Input register={register} errors={errors} inputName={"cognome"} placeholder={"Cognome *"}
-                       type={"text"}/>
-            </div>
-            <div className="row">
-                <Input register={register} errors={errors} inputName={"email"} placeholder={"Email *"} type={"email"}/>
-                <Input register={register} errors={errors} inputName={"telefono"} placeholder={"Telefono *"}
-                       type={"tel"}/>
-            </div>
-            <div className="row">
-                <Select register={register} errors={errors} selectName={"corso"}
-                        options={options ? [] : CoursesSTUB.map((course) => course.title)}
-                        defaultValue={options ? options : "Seleziona un corso *"}/>
-            </div>
-            <div className="row">
-                <TextArea register={register} errors={errors} placeholder={"Messaggio *"} textAreaName={"messaggio"}/>
-            </div>
+            {
+                formInputs.map((input: formInputsProps, index: number) => (
+                    input.tag === "input" ? (
+                        <div className="input-row" key={index}>
+                            <Text type={"p-small"}
+                                  color={'#fe5d37'}>{`${input.label} ${input.required ? "*" : ""}`}</Text>
+                            <Input register={register} errors={errors} inputName={input.name}
+                                   placeholder={input.placeholder ? input.placeholder : ""}
+                                   type={input.type ? input.type : "text"}/>
+                        </div>
+
+                    ) : input.tag === "select" ? (
+                        <div className="select-row" key={index}>
+                            <Text type={"p-small"}
+                                  color={'#fe5d37'}>{`${input.label} ${input.required ? "*" : ""}`}</Text>
+                            <Select register={register} errors={errors} selectName={input.name}
+                                    options={input.options ? input.options.map((option) => option) : ["Nessuna opzione disponibile"]}
+                                    defaultValue={input.defaultValue ? input.defaultValue : "Seleziona un opzione"}
+                            />
+                        </div>
+                    ) : input.tag === "textarea" && (
+                        <div className="textarea-row" key={index}>
+                            <Text type={"p-small"}
+                                  color={'#fe5d37'}>{`${input.label} ${input.required ? "*" : ""}`}</Text>
+                            <TextArea register={register} errors={errors}
+                                      placeholder={input.placeholder ? input.placeholder : ""}
+                                      textAreaName={input.name}/>
+                        </div>
+                    )
+                ))
+            }
 
             <Button text={options ? 'Iscriviti' : "Invia"} type={"submit"} isDisabled={!formIsValid}/>
         </motion.form>
