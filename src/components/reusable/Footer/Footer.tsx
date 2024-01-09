@@ -1,6 +1,7 @@
 import React from "react";
 import "./footer.scss"
 import Text from "../Text/Text";
+import moment from "moment";
 
 const Footer = () => {
     return (
@@ -10,7 +11,8 @@ const Footer = () => {
                       textAlign={"center"}
                       color={"#888888FF"}
                 >
-                    Copyright © 2023 By <a href="https://portfolio-lorenzo-calzi.vercel.app/" target="_blank">Lorenzo
+                    Copyright © {moment().year()} By <a href="https://portfolio-lorenzo-calzi.vercel.app/"
+                                                        target="_blank">Lorenzo
                     Calzi</a> | All
                     Right Reserved.
                 </Text>
