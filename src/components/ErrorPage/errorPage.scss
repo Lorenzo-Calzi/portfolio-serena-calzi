@@ -1,0 +1,281 @@
+#error-page {
+  width: 100%;
+  background-image: url(../../assets/images/error-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(../../assets/images/error-shape.png);
+    background-position: right;
+    background-repeat: no-repeat;
+
+    .copies {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+      }
+
+      h4 {
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) and (orientation: portrait) {
+  #error-page {
+    height: 100dvh;
+
+    .content {
+      align-items: center;
+      gap: 40px;
+      background-size: 0;
+
+      .copies {
+        align-items: center;
+        gap: 20px;
+
+        h1, h4 {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+  #error-page {
+    height: 100dvh;
+
+    .content {
+      align-items: center;
+      gap: 40px;
+      background-size: 0;
+
+      .copies {
+        align-items: center;
+        gap: 20px;
+
+        h1, h4 {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+  #error-page {
+    height: 100dvh;
+
+    .content {
+      align-items: center;
+      gap: 40px;
+      background-size: 0;
+
+      .copies {
+        align-items: center;
+        gap: 20px;
+
+        h1, h4 {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  #error-page {
+    height: 100dvh;
+
+    .content {
+      align-items: center;
+      gap: 40px;
+      background-size: 0;
+
+      .copies {
+        align-items: center;
+        gap: 20px;
+
+        h1, h4 {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
+  #error-page {
+    min-height: 100dvh;
+
+    .content {
+      align-items: start;
+      gap: 40px;
+      padding: 20px 0;
+      background-size: 35%;
+
+      .copies {
+        gap: 20px;
+
+        h1 {
+          max-width: 65%;
+        }
+
+        h4 {
+          max-width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
+  #error-page {
+    height: 100dvh;
+
+    .content {
+      align-items: start;
+      gap: 40px;
+      padding: 20px 0;
+      background-size: 35%;
+
+      .copies {
+        gap: 20px;
+
+        h1 {
+          max-width: 65%;
+        }
+
+        h4 {
+          max-width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
+  #error-page {
+    height: 100dvh;
+
+    .content {
+      align-items: start;
+      gap: 40px;
+      padding: 20px 0;
+      background-size: 35%;
+
+      .copies {
+        gap: 20px;
+
+        h1 {
+          max-width: 65%;
+        }
+
+        h4 {
+          max-width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
+  #error-page {
+    height: 100dvh;
+
+    .content {
+      align-items: start;
+      gap: 40px;
+      padding: 20px 0;
+      background-size: 35%;
+
+      .copies {
+        gap: 20px;
+
+        h1 {
+          max-width: 65%;
+        }
+
+        h4 {
+          max-width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1500px) {
+  #error-page {
+    height: 100dvh;
+
+    .content {
+      align-items: start;
+      gap: 40px;
+      padding: 20px 0;
+      background-size: 35%;
+
+      .copies {
+        gap: 20px;
+
+        h1 {
+          max-width: 65%;
+        }
+
+        h4 {
+          max-width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  #error-page {
+    .content {
+      align-items: start;
+      gap: 40px;
+      background-size: 35%;
+
+      .copies {
+        gap: 20px;
+
+        h1 {
+          max-width: 65%;
+        }
+
+        h4 {
+          max-width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2001px) {
+  #error-page {
+    .content {
+      align-items: start;
+      gap: 40px;
+      background-size: 35%;
+
+      .copies {
+        gap: 20px;
+
+        h1 {
+          max-width: 65%;
+        }
+
+        h4 {
+          max-width: 50%;
+        }
+      }
+    }
+  }
+}
