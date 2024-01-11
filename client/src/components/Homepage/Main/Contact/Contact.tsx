@@ -12,7 +12,8 @@ const Contact = () => {
 
             <div className="page-container">
                 <div className="content">
-                    <ContactForm formInputs={DefaultFormInputsSTUB} formSchema={DefaultFormSchemaSTUB}/>
+                    <ContactForm formInputs={DefaultFormInputsSTUB} formSchema={DefaultFormSchemaSTUB}
+                                 description={"Compila il form se hai bisogno di informazioni!"}/>
                     <ContactInfo/>
                 </div>
             </div>

@@ -30,9 +30,10 @@ interface ContactFormProps {
     formInputs: formInputsProps[],
     formSchema: any
     options?: string
+    description?: string
 }
 
-const ContactForm = ({formInputs, formSchema, options}: ContactFormProps) => {
+const ContactForm = ({formInputs, formSchema, options, description}: ContactFormProps) => {
     const resolverSchema = Yup.object().shape(formSchema);
     const dispatch = useDispatch()
 
@@ -64,9 +65,15 @@ const ContactForm = ({formInputs, formSchema, options}: ContactFormProps) => {
         }
     }, [watch(), errors])
 
-    const askInfo = (event: React.FormEvent<HTMLFormElement>) => {
+    const askInfo = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         dispatch(toggleLoader())
+
+        // const mongoClient = new MongoClient("")
+
+
+        // const data = await mongoClient.db().collection("Customers").find({}).toArray();
+        // console.log(data)
 
         emailjs.sendForm('service_ctu1qvq', 'template_qcqzrhr', formRef.current, '_8H8v9WlJx2oNsYXn')
             .then((result) => {
@@ -95,6 +102,8 @@ const ContactForm = ({formInputs, formSchema, options}: ContactFormProps) => {
                      transition={{delay: 0, duration: 1}}
                      viewport={{once: true, amount: 0}}
         >
+            {description && <Text type={"h4"} textAlign={"center"}>{description}</Text>}
+
             {
                 formInputs.map((input: formInputsProps, index: number) => (
                     input.tag === "input" ? (

@@ -16,10 +16,10 @@ const ContactInfo = () => {
 
     return (
         <motion.div id="contact-info"
-                    initial={{ opacity: 0}}
-                    whileInView={{ opacity: 1}}
-                    transition={{ delay: 0, duration: 1}}
-                    viewport={{ once: true, amount: 0 }}
+                    initial={{opacity: 0}}
+                    whileInView={{opacity: 1}}
+                    transition={{delay: 0, duration: 1}}
+                    viewport={{once: true, amount: 0}}
         >
             <div className="info">
                 <div className="icon">
@@ -67,7 +67,7 @@ const ContactInfo = () => {
                             }
                         }
                     >
-                        <MarkerF position={center} />
+                        <MarkerF position={center}/>
                     </GoogleMap>
                 )
             }
