@@ -1,8 +1,8 @@
 import React, {ReactElement} from "react";
 import './header.scss'
-import Info from "../../reusable/Info/Info";
-import Navbar from "../../reusable/Navbar/Navbar";
-import Sidebar from "../../reusable/Sidebar/Sidebar";
+import Info from "../Info/Info";
+import Navbar from "../Navbar/Navbar";
+import Sidebar from "../Sidebar/Sidebar";
 import {useLocation} from "react-router-dom";
 import {useSelector} from "react-redux";
 
