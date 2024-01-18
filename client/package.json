@@ -1,4 +1,5 @@
 {
+  "proxy": "http://localhost:4000",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -14,6 +15,7 @@
     "@types/node": "^16.18.59",
     "@types/react": "^18.2.31",
     "@types/react-dom": "^18.2.14",
+    "axios": "^1.6.5",
     "framer-motion": "^10.16.5",
     "moment": "^2.30.1",
     "react": "^18.2.0",

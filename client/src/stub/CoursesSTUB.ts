@@ -125,11 +125,11 @@ export default [
                 problematiche: Yup.string()
                     .required("Le problematiche sono richieste"),
                 preferenze: Yup.string()
-                    .required("Le problematiche sono richieste"),
+                    .required("Le preferenze sono richieste"),
                 coppia: Yup.string()
-                    .required("Le problematiche sono richieste"),
+                    .required("Il tipo di partecipazione è richiesto"),
                 aspettative: Yup.string()
-                    .required("La presentazione è richiesta"),
+                    .required("La aspettative sono richieste"),
                 note: Yup.string()
             }
         },
@@ -255,11 +255,11 @@ export default [
                 problematiche: Yup.string()
                     .required("Le problematiche sono richieste"),
                 preferenze: Yup.string()
-                    .required("Le problematiche sono richieste"),
+                    .required("Le preferenze sono richieste"),
                 coppia: Yup.string()
-                    .required("Le problematiche sono richieste"),
+                    .required("Il tipo di partecipazione è richiesto"),
                 aspettative: Yup.string()
-                    .required("La presentazione è richiesta"),
+                    .required("La aspettative sono richieste"),
                 note: Yup.string()
             }
         },
