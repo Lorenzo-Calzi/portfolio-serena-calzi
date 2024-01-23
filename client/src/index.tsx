@@ -5,12 +5,13 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import {Provider, useSelector} from "react-redux";
 import store from "./redux/store";
 import Homepage from "./components/Homepage/Homepage";
-import AboutPage from "./components/Aboutpage/AboutPage";
+import AboutPage from "./components/AboutPage/AboutPage";
 import ServicesPage from "./components/ServicesPage/ServicesPage";
 import CoursesPage from "./components/CoursesPage/CoursesPage";
 import CourseDetailsPage from "./components/CoursesPage/CourseDetails/CourseDetailsPage";
 import ProjectsPage from "./components/ProjectsPage/ProjectsPage";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
+import AdminPage from "./components/AdminPage/AdminPage";
 import ProjectDetails from "./components/ProjectsPage/ProjectDetails/ProjectDetails";
 import ServiceDetails from "./components/ServicesPage/ServiceDetails/ServiceDetails";
 import Popup from "./components/reusable/Popup/Popup";
@@ -94,6 +95,16 @@ const router = createBrowserRouter([
             <React.StrictMode>
                 <Provider store={store}>
                     <ProjectDetails/>
+                </Provider>
+            </React.StrictMode>
+        )
+    },
+    {
+        path: "admin",
+        element: (
+            <React.StrictMode>
+                <Provider store={store}>
+                    <AdminPage/>
                 </Provider>
             </React.StrictMode>
         )
