@@ -1,9 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
 import './contactForm.scss'
 import Button from "../../../../reusable/Button/Button";
-import Input from "../../../../reusable/Input/Input";
-import Select from "../../../../reusable/Select/Select";
-import TextArea from "../../../../reusable/TextArea/TextArea";
 import Text from "../../../../reusable/Text/Text"
 import {useForm} from "react-hook-form";
 import * as Yup from "yup";
@@ -13,28 +10,41 @@ import {toggleLoader} from "../../../../../redux/loaderSlice";
 import {togglePopup} from "../../../../../redux/popupSlice";
 import emailjs from '@emailjs/browser';
 import {motion} from "framer-motion";
-
-interface formInputsProps {
-    tag: "input" | "textarea" | "select" | string,
-    type?: string,
-    required: boolean
-    defaultValue?: string,
-    name: string,
-    options?: string[],
-    label: string,
-    placeholder?: string
-}
-
+import FormSchemaSTUB from "../../../../../stub/FormSchemaSTUB";
+import Email from "../../../../reusable/FormElements/Email/Email";
+import Telefono from "../../../../reusable/FormElements/Telefono/Telefono";
+import NomeBambino from "../../../../reusable/FormElements/NomeBambino/NomeBambino";
+import Presentazione from "../../../../reusable/FormElements/Presentazione/Presentazioni";
+import Aspettative from "../../../../reusable/FormElements/Aspettative/Aspettative";
+import Note from "../../../../reusable/FormElements/Note/Note";
+import Problematiche from "../../../../reusable/FormElements/Problematiche/Problematiche";
+import Preferenze from "../../../../reusable/FormElements/Preferenze/Preferenze";
+import PartecipazioneDiCoppia from "../../../../reusable/FormElements/PartecipazioneDiCoppia/PartecipazioneDiCoppia";
+import Corsi from "../../../../reusable/FormElements/Corsi/Corsi";
+import DataDiNascita from "../../../../reusable/FormElements/DataDiNascita/DataDiNascita";
+import Nome from "../../../../reusable/FormElements/Nome/Nome";
+import Messaggio from "../../../../reusable/FormElements/Messaggio/Messaggio";
+import Cognome from "../../../../reusable/FormElements/Cognome/Cognome";
 
 interface ContactFormProps {
-    formInputs: formInputsProps[],
-    formSchema: any
+    formElementsList: string[],
     options?: string
     description?: string
 }
 
-const ContactForm = ({formInputs, formSchema, options, description}: ContactFormProps) => {
-    const resolverSchema = Yup.object().shape(formSchema);
+const ContactForm = ({formElementsList, options, description}: ContactFormProps) => {
+    // console.log(formElementsList)
+    const filtered = Object.keys(FormSchemaSTUB)
+        .filter((key: string) => formElementsList.includes(key))
+        .reduce((obj: any, key: string) => {
+            // @ts-ignore
+            obj[key] = FormSchemaSTUB[key]
+            return obj;
+        }, {});
+
+    console.log(filtered)
+
+    const resolverSchema = Yup.object().shape(filtered);
     const dispatch = useDispatch()
 
     const {
@@ -52,9 +62,8 @@ const ContactForm = ({formInputs, formSchema, options, description}: ContactForm
     const formRef = useRef<any>()
 
     useEffect(() => {
-        const notRquiredFields = formInputs.filter((input) => !input.required)
-        const notRquiredFieldsNames = notRquiredFields.map((field) => field.name)
-        const emptyFields = Object.keys(watch()).filter((key: any) => !watch(key) && !notRquiredFieldsNames.includes(key))
+        const requiredFields = formElementsList.filter((element) => element === "note")
+        const emptyFields = Object.keys(watch()).filter((key: any) => !watch(key) && !requiredFields.includes(key))
 
         if (watch() && !emptyFields.length && Object.keys(errors).length === 0) {
             setFormIsValid(true)
@@ -68,12 +77,6 @@ const ContactForm = ({formInputs, formSchema, options, description}: ContactForm
     const askInfo = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         dispatch(toggleLoader())
-
-        // const mongoClient = new MongoClient("")
-
-
-        // const data = await mongoClient.db().collection("Customers").find({}).toArray();
-        // console.log(data)
 
         emailjs.sendForm('service_ctu1qvq', 'template_qcqzrhr', formRef.current, '_8H8v9WlJx2oNsYXn')
             .then((result) => {
@@ -93,6 +96,41 @@ const ContactForm = ({formInputs, formSchema, options, description}: ContactForm
         dispatch(togglePopup("Complimenti, ti sei registrato con successo!"))
     }
 
+    const renderFormElement = (elementName: string) => {
+        switch (elementName) {
+            case "nome":
+                return <Nome register={register} errors={errors}/>
+            case "cognome":
+                return <Cognome register={register} errors={errors}/>
+            case "email":
+                return <Email register={register} errors={errors}/>
+            case "telefono":
+                return <Telefono register={register} errors={errors}/>
+            case "nomeBambino":
+                return <NomeBambino register={register} errors={errors}/>
+            case "dataNascita":
+                return <DataDiNascita register={register} errors={errors}/>
+            case "corsi":
+                return <Corsi register={register} errors={errors}/>
+            case "problematiche":
+                return <Problematiche register={register} errors={errors}/>
+            case "preferenze":
+                return <Preferenze register={register} errors={errors}/>
+            case "partecipazioneDiCoppia":
+                return <PartecipazioneDiCoppia register={register} errors={errors}/>
+            case "presentazione":
+                return <Presentazione register={register} errors={errors}/>
+            case "messaggio":
+                return <Messaggio register={register} errors={errors}/>
+            case "aspettative":
+                return <Aspettative register={register} errors={errors}/>
+            case "note":
+                return <Note register={register} errors={errors}/>
+            default:
+                return <></>
+        }
+    }
+
     return (
         <motion.form id="contact-form"
                      ref={formRef}
@@ -104,37 +142,13 @@ const ContactForm = ({formInputs, formSchema, options, description}: ContactForm
         >
             {description && <Text type={"h4"} textAlign={"center"}>{description}</Text>}
 
-            {
-                formInputs.map((input: formInputsProps, index: number) => (
-                    input.tag === "input" ? (
-                        <div className="input-row" key={index}>
-                            <Text type={"p-small"}
-                                  color={'#fe5d37'}>{`${input.label} ${input.required ? "*" : ""}`}</Text>
-                            <Input register={register} errors={errors} inputName={input.name}
-                                   placeholder={input.placeholder ? input.placeholder : ""}
-                                   type={input.type ? input.type : "text"}/>
-                        </div>
-
-                    ) : input.tag === "select" ? (
-                        <div className="select-row" key={index}>
-                            <Text type={"p-small"}
-                                  color={'#fe5d37'}>{`${input.label} ${input.required ? "*" : ""}`}</Text>
-                            <Select register={register} errors={errors} selectName={input.name}
-                                    options={input.options ? input.options.map((option) => option) : ["Nessuna opzione disponibile"]}
-                                    defaultValue={input.defaultValue ? input.defaultValue : "Seleziona un opzione"}
-                            />
-                        </div>
-                    ) : input.tag === "textarea" && (
-                        <div className="textarea-row" key={index}>
-                            <Text type={"p-small"}
-                                  color={'#fe5d37'}>{`${input.label} ${input.required ? "*" : ""}`}</Text>
-                            <TextArea register={register} errors={errors}
-                                      placeholder={input.placeholder ? input.placeholder : ""}
-                                      textAreaName={input.name}/>
-                        </div>
-                    )
-                ))
-            }
+            <div className="fields">
+                {
+                    formElementsList.map((elementName: string) => (
+                        renderFormElement(elementName)
+                    ))
+                }
+            </div>
 
             <Button text={options ? 'Iscriviti' : "Invia"} type={"submit"} isDisabled={!formIsValid}/>
         </motion.form>

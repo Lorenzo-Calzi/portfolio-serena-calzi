@@ -22,7 +22,7 @@ import PriceIcon from "../../../assets/icons/price-tag-orange.svg"
 const CourseDetailsPage = () => {
     const {nomeCorso} = useParams();
     const currentIndex = CoursesSTUB.findIndex((course) => course.title.toLowerCase() === nomeCorso?.replaceAll("-", " "))
-    
+
     useLayoutEffect(() => {
         if (currentIndex === -1) {
             window.location.href = "/page-not-found";
@@ -125,9 +125,9 @@ const CourseDetailsPage = () => {
 
                                 <div className="contact">
                                     <ContactForm
-                                        formInputs={CoursesSTUB[currentIndex].details.formInputs}
-                                        formSchema={CoursesSTUB[currentIndex].details.formSchema}
-                                        options={CoursesSTUB[currentIndex].title.toString()}/>
+                                        formElementsList={CoursesSTUB[currentIndex].details.formElementsList}
+                                        options={CoursesSTUB[currentIndex].title.toString()}
+                                    />
                                     <ContactInfo/>
                                 </div>
                             </div>

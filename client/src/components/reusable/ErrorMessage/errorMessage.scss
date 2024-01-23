@@ -2,7 +2,7 @@
 
 .error-message {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   p {
@@ -12,7 +12,7 @@
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   .error-message {
-    gap: 5px;
+    gap: 10px;
     padding: 4px 0;
 
     img {
@@ -24,7 +24,7 @@
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   .error-message {
-    gap: 5px;
+    gap: 10px;
     padding: 4px 0;
 
     img {
@@ -103,6 +103,7 @@
 @media screen and (min-width: 1201px) and (max-width: 1500px) {
   .error-message {
     gap: 10px;
+    padding: 0 30px;
 
     img {
       width: 20px;
@@ -113,7 +114,8 @@
 
 @media screen and (min-width: 1501px) and (max-width: 2000px) {
   .error-message {
-    gap: 15px;
+    gap: 10px;
+    padding: 0 30px;
 
     img {
       width: 20px;
@@ -124,7 +126,8 @@
 
 @media screen and (min-width: 2001px) {
   .error-message {
-    gap: 15px;
+    gap: 10px;
+    padding: 0 30px;
 
     img {
       width: 20px;
