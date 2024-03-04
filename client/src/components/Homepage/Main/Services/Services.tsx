@@ -74,7 +74,7 @@ const Services = () => {
                                 transition={{delay: 0, duration: 1}}
                                 viewport={{once: true, amount: 0}}
                     >
-                        <Text type={"h2"} textAlign={"center"}>Servizi</Text>
+                        <Text type={"h2"} textAlign={"center"}>Servizi Educativi</Text>
                     </motion.div>
 
                     <Carousel slidesPerView={swiperSetting.slidesPerView} spaceBetween={swiperSetting.spaceBetween}

@@ -14,10 +14,10 @@ const About = () => {
             <div className="page-container">
                 <div className="content">
                     <div className="copies">
-                        <Text type={"h4"} color={"#fe5d37"}>More About Me</Text>
-                        <Text type={"h2"}>Special Care For Your Children</Text>
-                        <Text type={"p-big"}>Formulate innovative web-readiness and installed base ideas. Distinctively integrate high-payoff paradigms without next generation systems disseminate holistic e-services through customer directed expertise.</Text>
-                        <Button text={"Learn More"} link={"/about"} />
+                        <Text type={"h4"} color={"#fe5d37"}>Mi presento</Text>
+                        <Text type={"h2"}>*Frase Rappresentativa*</Text>
+                        <Text type={"p-big"}>*Descrizione breve*</Text>
+                        <Button text={"Leggi di più"} link={"/about"}/>
                     </div>
 
                     <Carousel slidesPerView={1} spaceBetween={50} stub={AboutSTUB} autoplay>

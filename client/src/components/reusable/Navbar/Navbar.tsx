@@ -38,13 +38,16 @@ const Navbar = ({currentSlug}: NavbarProps) => {
                             <Anchor fontWeight={500} href={currentSlug ? "/servizi" : "#services"}>Servizi</Anchor>
                         </li>
                         <li className={currentSlug === "about" ? "active" : ""}>
-                            <Anchor fontWeight={500} href={currentSlug ? "/about" : "#about"}>About</Anchor>
+                            <Anchor fontWeight={500} href={currentSlug ? "/about" : "#about"}>Chi Sono</Anchor>
                         </li>
                         <li className={currentSlug === "corsi" ? "active" : ""}>
                             <Anchor fontWeight={500} href={currentSlug ? "/corsi" : "#courses"}>Corsi</Anchor>
                         </li>
-                        <li className={currentSlug === "progetti" ? "active" : ""}>
-                            <Anchor fontWeight={500} href={currentSlug ? "/progetti" : "#steps"}>Progetti</Anchor>
+                        {/*<li className={currentSlug === "progetti" ? "active" : ""}>*/}
+                        {/*    <Anchor fontWeight={500} href={currentSlug ? "/progetti" : "#steps"}>Progetti</Anchor>*/}
+                        {/*</li>*/}
+                        <li>
+                            <Anchor fontWeight={500}>Recensioni</Anchor>
                         </li>
                     </motion.ul>
 

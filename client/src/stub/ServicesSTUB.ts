@@ -6,29 +6,29 @@ import Image4 from "../assets/icons/image-4.svg";
 export default [
     {
         image: Image1,
-        title: "Title 1",
-        description: "Ubiquitous models rather than parallel initiatives. Seamlessly reinvent success.",
+        title: "CONSULENZA PEDAGOGICA ",
+        description: "Rivolto ai genitori",
         backgroundColor: '#FEE9E4',
         textColor: '#FD5D37'
     },
     {
         image: Image2,
-        title: "Title 2",
-        description: "Ubiquitous models rather than parallel initiatives. Seamlessly reinvent success.",
+        title: "PERCORSO PEDAGOGICO-CLINICO",
+        description: "Rivolto a bambini e ragazzi",
         backgroundColor: '#ECEAFF',
         textColor: '#7869CF'
     },
     {
         image: Image3,
-        title: "Title 3",
-        description: "Ubiquitous models rather than parallel initiatives. Seamlessly reinvent success.",
+        title: "CORSI FORMATIVI PER I GENITORI",
+        description: "Rivolto ai genitori",
         backgroundColor: '#FFF2D8',
         textColor: '#FBB50F'
     },
     {
         image: Image4,
-        title: "Title 4",
-        description: "Ubiquitous models rather than parallel initiatives. Seamlessly reinvent success.",
+        title: "SUPERVISIONE PEDAGOGICA",
+        description: "Rivolto ad educatori professionali e allle scuole",
         backgroundColor: '#DEFDFA',
         textColor: '#5AD7CA'
     }

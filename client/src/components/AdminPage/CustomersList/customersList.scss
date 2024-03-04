@@ -1,71 +1,50 @@
 #customers-list {
-  .content {
+  display: flex;
+  flex-direction: column;
+
+  .customers {
     display: flex;
     flex-direction: column;
 
-    .filter {
+    .customer {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
+      background: white;
+      box-shadow: rgba(0, 0, 0, 0.04) 0 3px 5px;
 
-      select {
-        width: fit-content;
-        max-width: 100%;
-        box-shadow: rgba(0, 0, 0, 0.04) 0 3px 5px;
-        border: none;
-      }
-
-      p {
-        padding-top: 5px;
-      }
-    }
-
-    .customers {
-      display: flex;
-      flex-direction: column;
-
-      .customer {
+      .data {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: white;
-        box-shadow: rgba(0, 0, 0, 0.04) 0 3px 5px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
 
-        .data {
+        .row {
           display: flex;
-          flex-direction: column;
           justify-content: flex-start;
-          align-items: flex-start;
+          align-items: center;
+          flex-wrap: wrap;
 
-          .row {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            flex-wrap: wrap;
-
-            p {
-              &:first-child {
-                font-weight: 700;
-              }
+          p {
+            &:first-child {
+              font-weight: 700;
             }
           }
         }
+      }
 
-        .trash {
-          border-radius: 50%;
-          background-image: url(../../../assets/icons/trash-bin.svg);
-          background-position: center;
-          background-repeat: no-repeat;
-          background-color: #e5e5e5;
-          cursor: pointer;
-          transition: all 0.2s linear;
+      .trash {
+        border-radius: 50%;
+        background-image: url(../../../assets/icons/trash-bin.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #e5e5e5;
+        cursor: pointer;
+        transition: all 0.2s linear;
 
-          &:hover {
-            transform: scale(1.05);
-            background-color: #cccccc;
-          }
+        &:hover {
+          transform: scale(1.05);
+          background-color: #cccccc;
         }
       }
     }
@@ -74,45 +53,37 @@
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   #customers-list {
-    .content {
+    gap: 20px;
+    padding: 20px 0;
+
+    .customers {
       gap: 20px;
-      padding: 20px 0;
 
-      select {
-        padding: 10px 0 10px 20px;
-        border-radius: 4px;
-        border-right: 20px solid transparent;
-      }
-
-      .customers {
+      .customer {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 20px;
+        padding: 20px;
+        border-radius: 4px;
 
-        .customer {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 20px;
-          padding: 20px;
-          border-radius: 4px;
+        .data {
+          gap: 10px;
 
-          .data {
-            gap: 10px;
+          .row {
+            gap: 0 5px;
 
-            .row {
-              gap: 0 5px;
-
-              &:has(h4) {
-                margin-bottom: 10px;
-              }
+            &:has(h4) {
+              margin-bottom: 10px;
             }
           }
+        }
 
-          .trash {
-            width: 40px;
-            height: 40px;
-            align-self: center;
+        .trash {
+          width: 40px;
+          height: 40px;
+          align-self: center;
 
-            background-size: 60%;
-          }
+          background-size: 60%;
         }
       }
     }
@@ -121,45 +92,36 @@
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
   #customers-list {
-    .content {
+    gap: 20px;
+    padding: 20px 0;
+
+    .customers {
       gap: 20px;
-      padding: 20px 0;
 
-      select {
-        width: fit-content;
-        padding: 10px 0 10px 20px;
-        border-radius: 4px;
-        border-right: 20px solid transparent;
-      }
-
-      .customers {
+      .customer {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 20px;
+        padding: 20px;
+        border-radius: 4px;
 
-        .customer {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 20px;
-          padding: 20px;
-          border-radius: 4px;
+        .data {
+          gap: 10px;
 
-          .data {
-            gap: 10px;
+          .row {
+            gap: 0 5px;
 
-            .row {
-              gap: 0 5px;
-
-              &:has(h4) {
-                margin-bottom: 10px;
-              }
+            &:has(h4) {
+              margin-bottom: 10px;
             }
           }
+        }
 
-          .trash {
-            width: 40px;
-            height: 40px;
-            align-self: center;
-            background-size: 60%;
-          }
+        .trash {
+          width: 40px;
+          height: 40px;
+          align-self: center;
+          background-size: 60%;
         }
       }
     }
@@ -168,43 +130,34 @@
 
 @media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
   #customers-list {
-    .content {
+    gap: 20px;
+    padding: 20px 0;
+
+    .customers {
       gap: 20px;
-      padding: 20px 0;
 
-      select {
-        width: fit-content;
-        padding: 10px 0 10px 20px;
-        border-radius: 4px;
-        border-right: 20px solid transparent;
-      }
-
-      .customers {
+      .customer {
         gap: 20px;
+        padding: 20px;
+        border-radius: 4px;
 
-        .customer {
-          gap: 20px;
-          padding: 20px;
-          border-radius: 4px;
+        .data {
+          max-width: 80%;
+          gap: 10px;
 
-          .data {
-            max-width: 80%;
-            gap: 10px;
+          .row {
+            gap: 0 5px;
 
-            .row {
-              gap: 0 5px;
-
-              &:has(h4) {
-                margin-bottom: 10px;
-              }
+            &:has(h4) {
+              margin-bottom: 10px;
             }
           }
+        }
 
-          .trash {
-            width: 40px;
-            height: 40px;
-            background-size: 60%;
-          }
+        .trash {
+          width: 40px;
+          height: 40px;
+          background-size: 60%;
         }
       }
     }
@@ -213,43 +166,34 @@
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
   #customers-list {
-    .content {
+    gap: 20px;
+    padding: 20px 0;
+
+    .customers {
       gap: 20px;
-      padding: 20px 0;
 
-      select {
-        width: fit-content;
-        padding: 10px 0 10px 20px;
-        border-radius: 4px;
-        border-right: 20px solid transparent;
-      }
-
-      .customers {
+      .customer {
         gap: 20px;
+        padding: 20px;
+        border-radius: 4px;
 
-        .customer {
-          gap: 20px;
-          padding: 20px;
-          border-radius: 4px;
+        .data {
+          max-width: 80%;
+          gap: 10px;
 
-          .data {
-            max-width: 80%;
-            gap: 10px;
+          .row {
+            gap: 0 5px;
 
-            .row {
-              gap: 0 5px;
-
-              &:has(h4) {
-                margin-bottom: 10px;
-              }
+            &:has(h4) {
+              margin-bottom: 10px;
             }
           }
+        }
 
-          .trash {
-            width: 40px;
-            height: 40px;
-            background-size: 60%;
-          }
+        .trash {
+          width: 40px;
+          height: 40px;
+          background-size: 60%;
         }
       }
     }
@@ -258,43 +202,34 @@
 
 @media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
   #customers-list {
-    .content {
+    gap: 20px;
+    padding: 20px 0;
+
+    .customers {
       gap: 20px;
-      padding: 20px 0;
 
-      select {
-        width: fit-content;
-        padding: 10px 0 10px 20px;
-        border-radius: 4px;
-        border-right: 20px solid transparent;
-      }
-
-      .customers {
+      .customer {
         gap: 20px;
+        padding: 20px;
+        border-radius: 4px;
 
-        .customer {
-          gap: 20px;
-          padding: 20px;
-          border-radius: 4px;
+        .data {
+          max-width: 80%;
+          gap: 10px;
 
-          .data {
-            max-width: 80%;
-            gap: 10px;
+          .row {
+            gap: 0 5px;
 
-            .row {
-              gap: 0 5px;
-
-              &:has(h4) {
-                margin-bottom: 10px;
-              }
+            &:has(h4) {
+              margin-bottom: 10px;
             }
           }
+        }
 
-          .trash {
-            width: 40px;
-            height: 40px;
-            background-size: 60%;
-          }
+        .trash {
+          width: 40px;
+          height: 40px;
+          background-size: 60%;
         }
       }
     }
@@ -303,43 +238,34 @@
 
 @media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
   #customers-list {
-    .content {
+    gap: 20px;
+    padding: 20px 0;
+
+    .customers {
       gap: 20px;
-      padding: 20px 0;
 
-      select {
-        width: fit-content;
-        padding: 10px 0 10px 20px;
-        border-radius: 4px;
-        border-right: 20px solid transparent;
-      }
-
-      .customers {
+      .customer {
         gap: 20px;
+        padding: 20px;
+        border-radius: 4px;
 
-        .customer {
-          gap: 20px;
-          padding: 20px;
-          border-radius: 4px;
+        .data {
+          max-width: 80%;
+          gap: 10px;
 
-          .data {
-            max-width: 80%;
-            gap: 10px;
+          .row {
+            gap: 0 5px;
 
-            .row {
-              gap: 0 5px;
-
-              &:has(h4) {
-                margin-bottom: 10px;
-              }
+            &:has(h4) {
+              margin-bottom: 10px;
             }
           }
+        }
 
-          .trash {
-            width: 40px;
-            height: 40px;
-            background-size: 60%;
-          }
+        .trash {
+          width: 40px;
+          height: 40px;
+          background-size: 60%;
         }
       }
     }
@@ -348,43 +274,34 @@
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
   #customers-list {
-    .content {
+    gap: 20px;
+    padding: 20px 0;
+
+    .customers {
       gap: 20px;
-      padding: 20px 0;
 
-      select {
-        width: fit-content;
-        padding: 10px 0 10px 20px;
-        border-radius: 4px;
-        border-right: 20px solid transparent;
-      }
-
-      .customers {
+      .customer {
         gap: 20px;
+        padding: 20px;
+        border-radius: 4px;
 
-        .customer {
-          gap: 20px;
-          padding: 20px;
-          border-radius: 4px;
+        .data {
+          max-width: 80%;
+          gap: 10px;
 
-          .data {
-            max-width: 80%;
-            gap: 10px;
+          .row {
+            gap: 0 5px;
 
-            .row {
-              gap: 0 5px;
-
-              &:has(h4) {
-                margin-bottom: 10px;
-              }
+            &:has(h4) {
+              margin-bottom: 10px;
             }
           }
+        }
 
-          .trash {
-            width: 40px;
-            height: 40px;
-            background-size: 60%;
-          }
+        .trash {
+          width: 40px;
+          height: 40px;
+          background-size: 60%;
         }
       }
     }
@@ -393,43 +310,34 @@
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
   #customers-list {
-    .content {
+    gap: 20px;
+    padding: 20px 0;
+
+    .customers {
       gap: 20px;
-      padding: 20px 0;
 
-      select {
-        width: fit-content;
-        padding: 10px 0 10px 20px;
-        border-radius: 4px;
-        border-right: 20px solid transparent;
-      }
-
-      .customers {
+      .customer {
         gap: 20px;
+        padding: 20px;
+        border-radius: 4px;
 
-        .customer {
-          gap: 20px;
-          padding: 20px;
-          border-radius: 4px;
+        .data {
+          max-width: 80%;
+          gap: 10px;
 
-          .data {
-            max-width: 80%;
-            gap: 10px;
+          .row {
+            gap: 0 5px;
 
-            .row {
-              gap: 0 5px;
-
-              &:has(h4) {
-                margin-bottom: 10px;
-              }
+            &:has(h4) {
+              margin-bottom: 10px;
             }
           }
+        }
 
-          .trash {
-            width: 40px;
-            height: 40px;
-            background-size: 60%;
-          }
+        .trash {
+          width: 40px;
+          height: 40px;
+          background-size: 60%;
         }
       }
     }
@@ -438,39 +346,30 @@
 
 @media screen and (min-width: 1201px) and (max-width: 1500px) {
   #customers-list {
-    .content {
+    gap: 20px;
+    padding: 30px 0;
+
+    .customers {
       gap: 20px;
-      padding: 30px 0;
 
-      select {
-        width: fit-content;
-        padding: 10px 0 10px 20px;
+      .customer {
+        padding: 20px;
         border-radius: 8px;
-        border-right: 20px solid transparent;
-      }
 
-      .customers {
-        gap: 20px;
+        .data {
+          .row {
+            gap: 5px;
 
-        .customer {
-          padding: 20px;
-          border-radius: 8px;
-
-          .data {
-            .row {
-              gap: 5px;
-
-              &:has(h4) {
-                margin-bottom: 10px;
-              }
+            &:has(h4) {
+              margin-bottom: 10px;
             }
           }
+        }
 
-          .trash {
-            width: 40px;
-            height: 40px;
-            background-size: 60%;
-          }
+        .trash {
+          width: 40px;
+          height: 40px;
+          background-size: 60%;
         }
       }
     }
@@ -479,39 +378,30 @@
 
 @media screen and (min-width: 1501px) and (max-width: 2000px) {
   #customers-list {
-    .content {
+    gap: 20px;
+    padding: 30px 0;
+
+    .customers {
       gap: 20px;
-      padding: 30px 0;
 
-      select {
-        width: fit-content;
-        padding: 10px 0 10px 20px;
+      .customer {
+        padding: 20px;
         border-radius: 8px;
-        border-right: 20px solid transparent;
-      }
 
-      .customers {
-        gap: 20px;
+        .data {
+          .row {
+            gap: 5px;
 
-        .customer {
-          padding: 20px;
-          border-radius: 8px;
-
-          .data {
-            .row {
-              gap: 5px;
-
-              &:has(h4) {
-                margin-bottom: 10px;
-              }
+            &:has(h4) {
+              margin-bottom: 10px;
             }
           }
+        }
 
-          .trash {
-            width: 40px;
-            height: 40px;
-            background-size: 60%;
-          }
+        .trash {
+          width: 40px;
+          height: 40px;
+          background-size: 60%;
         }
       }
     }
@@ -520,39 +410,30 @@
 
 @media screen and (min-width: 2001px) {
   #customers-list {
-    .content {
+    gap: 20px;
+    padding: 30px 0;
+
+    .customers {
       gap: 20px;
-      padding: 30px 0;
 
-      select {
-        width: fit-content;
-        padding: 10px 0 10px 20px;
+      .customer {
+        padding: 20px;
         border-radius: 8px;
-        border-right: 20px solid transparent;
-      }
 
-      .customers {
-        gap: 20px;
+        .data {
+          .row {
+            gap: 5px;
 
-        .customer {
-          padding: 20px;
-          border-radius: 8px;
-
-          .data {
-            .row {
-              gap: 5px;
-
-              &:has(h4) {
-                margin-bottom: 10px;
-              }
+            &:has(h4) {
+              margin-bottom: 10px;
             }
           }
+        }
 
-          .trash {
-            width: 40px;
-            height: 40px;
-            background-size: 60%;
-          }
+        .trash {
+          width: 40px;
+          height: 40px;
+          background-size: 60%;
         }
       }
     }

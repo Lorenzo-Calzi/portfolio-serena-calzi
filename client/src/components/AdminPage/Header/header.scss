@@ -1,5 +1,38 @@
+@import '../../../sass/common';
+
 .header {
   background: white;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    .selectors {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      button {
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        color: black;
+        background: #ffdcd2;
+        box-shadow: rgba(0, 0, 0, 0.04) 0 3px 5px;
+        cursor: pointer;
+
+        &:hover {
+          color: $white-color;
+          background-color: #ff8563;
+        }
+      }
+
+      .active {
+        color: $white-color;
+        background-color: $theme-color;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 320px) and (orientation: portrait) {

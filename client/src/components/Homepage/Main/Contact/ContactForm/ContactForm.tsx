@@ -33,7 +33,6 @@ interface ContactFormProps {
 }
 
 const ContactForm = ({formElementsList, options, description}: ContactFormProps) => {
-    // console.log(formElementsList)
     const filtered = Object.keys(FormSchemaSTUB)
         .filter((key: string) => formElementsList.includes(key))
         .reduce((obj: any, key: string) => {
@@ -41,8 +40,6 @@ const ContactForm = ({formElementsList, options, description}: ContactFormProps)
             obj[key] = FormSchemaSTUB[key]
             return obj;
         }, {});
-
-    console.log(filtered)
 
     const resolverSchema = Yup.object().shape(filtered);
     const dispatch = useDispatch()
