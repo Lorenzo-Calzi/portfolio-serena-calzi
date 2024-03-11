@@ -20,7 +20,7 @@ export default [
     },
     {
         image: Image3,
-        title: "CORSI FORMATIVI PER I GENITORI",
+        title: "CORSI FORMATIVI",
         description: "Rivolto ai genitori",
         backgroundColor: '#FFF2D8',
         textColor: '#FBB50F'
