@@ -3,10 +3,10 @@
 #contact-info {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: rgb(253, 253, 253);
   border: 2px dashed rgb(235, 235, 235);
   box-shadow: 0 8px 40px 0 rgba(105, 116, 119, 0.08);
-  height: fit-content;
 
   .info {
     display: flex;
