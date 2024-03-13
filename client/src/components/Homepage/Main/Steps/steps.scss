@@ -11,12 +11,15 @@
     align-items: center;
     flex-wrap: wrap;
 
-    .steps-arrow {}
+    .steps-arrow {
+    }
   }
+
   .cloud-top-right {
     position: absolute;
     z-index: 2;
   }
+
   .cloud-bottom-left {
     position: absolute;
     z-index: 2;
@@ -35,12 +38,14 @@
         display: none;
       }
     }
+
     .cloud-top-right {
       top: -40px;
       right: 0;
       width: 150px;
       height: 60px;
     }
+
     .cloud-bottom-left {
       bottom: -20px;
       left: 0;
@@ -61,12 +66,14 @@
         display: none;
       }
     }
+
     .cloud-top-right {
       top: -55px;
       right: 0;
       width: 200px;
       height: 80px;
     }
+
     .cloud-bottom-left {
       bottom: -30px;
       left: 0;
@@ -88,12 +95,14 @@
         display: none;
       }
     }
+
     .cloud-top-right {
       top: -60px;
       right: 0;
       width: 200px;
       height: 80px;
     }
+
     .cloud-bottom-left {
       bottom: -20px;
       left: 0;
@@ -113,12 +122,14 @@
         display: none;
       }
     }
+
     .cloud-top-right {
       top: -55px;
       right: 0;
       width: 200px;
       height: 80px;
     }
+
     .cloud-bottom-left {
       bottom: -30px;
       left: 0;
@@ -140,12 +151,14 @@
         display: none;
       }
     }
+
     .cloud-top-right {
       top: -60px;
       right: 0;
       width: 200px;
       height: 80px;
     }
+
     .cloud-bottom-left {
       bottom: -30px;
       left: 0;
@@ -165,12 +178,14 @@
         display: none;
       }
     }
+
     .cloud-top-right {
       top: -55px;
       right: 0;
       width: 200px;
       height: 80px;
     }
+
     .cloud-bottom-left {
       bottom: -30px;
       left: 0;
@@ -190,12 +205,14 @@
         display: none;
       }
     }
+
     .cloud-top-right {
       top: -55px;
       right: 0;
       width: 200px;
       height: 80px;
     }
+
     .cloud-bottom-left {
       bottom: -30px;
       left: 0;
@@ -215,12 +232,14 @@
         display: none;
       }
     }
+
     .cloud-top-right {
       top: -55px;
       right: 0;
       width: 200px;
       height: 80px;
     }
+
     .cloud-bottom-left {
       bottom: -30px;
       left: 0;
@@ -240,12 +259,14 @@
         width: 70px;
       }
     }
+
     .cloud-top-right {
       top: -55px;
       right: 0;
       width: 200px;
       height: 80px;
     }
+
     .cloud-bottom-left {
       bottom: -30px;
       left: 0;
@@ -265,12 +286,14 @@
         width: 80px;
       }
     }
+
     .cloud-top-right {
       top: -80px;
       right: 0;
       width: 250px;
       height: 120px;
     }
+
     .cloud-bottom-left {
       bottom: -30px;
       left: 0;
@@ -290,12 +313,14 @@
         width: 90px;
       }
     }
+
     .cloud-top-right {
       top: -80px;
       right: 0;
       width: 250px;
       height: 120px;
     }
+
     .cloud-bottom-left {
       bottom: -50px;
       left: 0;

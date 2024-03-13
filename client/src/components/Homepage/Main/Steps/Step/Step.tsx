@@ -25,7 +25,7 @@ const Step = ({image, title, description, index, slug}: StepProps) => {
                 <Text type={'h4'}>{title}</Text>
             </div>
             <div className="bottom">
-                <Text type={"p-small"}>{description}</Text>
+                <Text type={"p-small"} textAlign={"center"}>{description}</Text>
             </div>
             <div className="number">
                 <Text type={'h4'} color={'#fe5d37'}>0{index}</Text>
