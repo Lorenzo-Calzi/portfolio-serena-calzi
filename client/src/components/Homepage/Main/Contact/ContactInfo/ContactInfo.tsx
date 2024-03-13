@@ -28,7 +28,7 @@ const ContactInfo = () => {
 
                 <div className="texts">
                     <Text type={"h4"}>Indirizzo ufficio:</Text>
-                    <Text type={"p-small"}>Via Eduardo de Filippo 2, 20021, Milano</Text>
+                    <Text type={"p-medium"}>Via Eduardo de Filippo 2, 20021, Milano</Text>
                 </div>
             </div>
 
@@ -39,7 +39,7 @@ const ContactInfo = () => {
 
                 <div className="texts">
                     <Text type={"h4"}>Numero di telefono:</Text>
-                    <Text type={"p-small"}>342 361 4249</Text>
+                    <Text type={"p-medium"}>342 361 4249</Text>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@ const ContactInfo = () => {
 
                 <div className="texts">
                     <Text type={"h4"}>Email:</Text>
-                    <Text type={"p-small"}>calzi.serena@gmail.com</Text>
+                    <Text type={"p-medium"}>calzi.serena@gmail.com</Text>
                 </div>
             </div>
 

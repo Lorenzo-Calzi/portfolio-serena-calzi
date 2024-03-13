@@ -24,7 +24,7 @@ const Info = () => {
                     >
                         <div className="info">
                             <img src={ClockIcon} alt="Icona di un orologio stilizzato"/>
-                            <Text type={"p-small"} color={'white'}>Lun - Ven: 9:00 am - 18:00</Text>
+                            <Text type={"p-medium"} color={'white'}>Lun - Ven: 9:00 am - 18:00</Text>
                         </div>
 
                         <div className="divider"/>
@@ -40,7 +40,7 @@ const Info = () => {
 
                         <div className="info">
                             <img src={LocationIcon} alt="Icona di una puntina stilizzata"/>
-                            <Text type={"p-small"} color={'white'}>Palazzolo (MI)</Text>
+                            <Text type={"p-medium"} color={'white'}>Palazzolo (MI)</Text>
                         </div>
                     </motion.div>
 

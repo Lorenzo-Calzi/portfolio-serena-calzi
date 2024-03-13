@@ -14,7 +14,7 @@ const Aspettative = ({register, errors}: AspettativeProps) => {
 
     return (
         <div className="form-textarea-row">
-            <Text type={"p-small"} color={'#fe5d37'}>Quali sono le vostre aspettative rispetto alla partecipazione al
+            <Text type={"p-medium"} color={'#fe5d37'}>Quali sono le vostre aspettative rispetto alla partecipazione al
                 corso?*</Text>
 
             <div className="form-element-container">

@@ -11,7 +11,7 @@ const ErrorMessage = ({message}: ErrorMessageProps) => {
     return (
         <div className="error-message">
             <img src={ErrorIcon} alt="Icona dell'errore"/>
-            <Text type={"p-small"} color={"#f53131"}>{message}</Text>
+            <Text type={"p-medium"} color={"#f53131"}>{message}</Text>
         </div>
     )
 }

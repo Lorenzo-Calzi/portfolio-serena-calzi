@@ -14,7 +14,7 @@ const DataDiNascita = ({register, errors}: DataDiNascitaProps) => {
 
     return (
         <div className="form-input-row">
-            <Text type={"p-small"} color={'#fe5d37'}>Data di Nascita del tuo bambino/a*</Text>
+            <Text type={"p-medium"} color={'#fe5d37'}>Data di Nascita del tuo bambino/a*</Text>
 
             <div className="form-element-container">
                 <input {...register("dataNascita")}

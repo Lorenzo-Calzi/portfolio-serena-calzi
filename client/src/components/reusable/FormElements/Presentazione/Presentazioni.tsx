@@ -14,7 +14,7 @@ const Presentazione = ({register, errors}: PresentazioneProps) => {
 
     return (
         <div className="form-textarea-row">
-            <Text type={"p-small"} color={'#fe5d37'}>Breve presentazione dei genitori (nomi e cognomi)*</Text>
+            <Text type={"p-medium"} color={'#fe5d37'}>Breve presentazione dei genitori (nomi e cognomi)*</Text>
 
             <div className="form-element-container">
                 <textarea

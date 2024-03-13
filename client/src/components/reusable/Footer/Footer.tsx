@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer id="footer">
             <div className="page-container">
-                <Text type={"p-small"}
+                <Text type={"p-medium"}
                       textAlign={"center"}
                       color={"#888888FF"}
                 >

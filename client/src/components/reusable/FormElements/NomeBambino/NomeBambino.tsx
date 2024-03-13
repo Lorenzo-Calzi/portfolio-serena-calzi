@@ -14,7 +14,7 @@ const NomeBambino = ({register, errors}: NomeBambinoProps) => {
 
     return (
         <div className="form-input-row">
-            <Text type={"p-small"} color={'#fe5d37'}>Nome del tuo bambino/a*</Text>
+            <Text type={"p-medium"} color={'#fe5d37'}>Nome del tuo bambino/a*</Text>
 
             <div className="form-element-container">
                 <input {...register("nomeBambino")}

@@ -14,7 +14,7 @@ const Telefono = ({register, errors}: TelefonoProps) => {
 
     return (
         <div className="form-input-row">
-            <Text type={"p-small"} color={'#fe5d37'}>Telefono*</Text>
+            <Text type={"p-medium"} color={'#fe5d37'}>Telefono*</Text>
 
             <div className="form-element-container">
                 <input {...register("telefono")}

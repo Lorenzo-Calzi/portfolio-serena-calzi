@@ -14,7 +14,7 @@ const Cognome = ({register, errors}: CognomeProps) => {
 
     return (
         <div className="form-input-row">
-            <Text type={"p-small"} color={'#fe5d37'}>Cognome*</Text>
+            <Text type={"p-medium"} color={'#fe5d37'}>Cognome*</Text>
 
             <div className="form-element-container">
                 <input {...register("cognome")}

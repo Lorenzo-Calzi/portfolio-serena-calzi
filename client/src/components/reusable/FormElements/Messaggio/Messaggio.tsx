@@ -14,7 +14,7 @@ const Messaggio = ({register, errors}: MessaggioProps) => {
 
     return (
         <div className="form-textarea-row">
-            <Text type={"p-small"} color={'#fe5d37'}>Messaggio*</Text>
+            <Text type={"p-medium"} color={'#fe5d37'}>Messaggio*</Text>
 
             <div className="form-element-container">
                 <textarea

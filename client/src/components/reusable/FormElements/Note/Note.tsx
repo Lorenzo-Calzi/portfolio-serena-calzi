@@ -14,7 +14,7 @@ const Note = ({register, errors}: NoteProps) => {
 
     return (
         <div className="form-textarea-row">
-            <Text type={"p-small"} color={'#fe5d37'}>Note altre da comunicare all'insegnante</Text>
+            <Text type={"p-medium"} color={'#fe5d37'}>Note altre da comunicare all'insegnante</Text>
 
             <div className="form-element-container">
                 <textarea

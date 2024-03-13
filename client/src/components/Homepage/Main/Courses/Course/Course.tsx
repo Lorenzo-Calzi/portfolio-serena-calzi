@@ -39,12 +39,12 @@ const Course = ({title, description, age, time, image, price, slug}: CourseProps
                 <div className="infos">
                     <div className="info">
                         <Text type={"span"}>Età:</Text>
-                        <Text type={"p-small"} color={"#FE5D37FF"}>{age}</Text>
+                        <Text type={"p-medium"} color={"#FE5D37FF"}>{age}</Text>
                     </div>
                     <div className="separator"/>
                     <div className="info">
                         <Text type={"span"}>Orario:</Text>
-                        <Text type={"p-small"} color={"#FE5D37FF"}>{time}</Text>
+                        <Text type={"p-medium"} color={"#FE5D37FF"}>{time}</Text>
                     </div>
                 </div>
             </div>

@@ -14,7 +14,7 @@ const Email = ({register, errors}: EmailProps) => {
 
     return (
         <div className="form-input-row">
-            <Text type={"p-small"} color={'#fe5d37'}>E-mail*</Text>
+            <Text type={"p-medium"} color={'#fe5d37'}>E-mail*</Text>
 
             <div className="form-element-container">
                 <input {...register("email")}

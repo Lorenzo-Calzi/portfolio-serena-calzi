@@ -23,7 +23,7 @@ const Service = ({image, title, description, backgroundColor, textColor, slug}: 
         >
             <img src={image} alt={`${title} icon`}/>
             <Text type={"h4"} textAlign={"center"} color={textColor}>{title}</Text>
-            <Text type={"p-small"} textAlign={"center"} color={textColor}>
+            <Text type={"p-medium"} textAlign={"center"} color={textColor}>
                 {description}
             </Text>
         </motion.a>

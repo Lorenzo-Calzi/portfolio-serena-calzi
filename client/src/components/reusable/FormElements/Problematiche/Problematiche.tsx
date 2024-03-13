@@ -16,7 +16,7 @@ const Problematiche = ({register, errors}: ProblematicheProps) => {
 
     return (
         <div className="form-select-row">
-            <Text type={"p-small"} color={'#fe5d37'}>
+            <Text type={"p-medium"} color={'#fe5d37'}>
                 Il tuo bambino/a ha una disabilità? Altre problematiche importanti da sapere ?*
             </Text>
 

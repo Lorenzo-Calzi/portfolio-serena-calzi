@@ -63,7 +63,7 @@ const CourseDetailsPage = () => {
                                                 {
                                                     CoursesSTUB[currentIndex].details.date.map((date, index) => (
                                                         <Text
-                                                            type={"p-small"}
+                                                            type={"p-medium"}
                                                             key={index}>{CoursesSTUB[currentIndex].details.date.length > 1 && "•"} {date}</Text>
                                                     ))
                                                 }
@@ -75,7 +75,7 @@ const CourseDetailsPage = () => {
 
                                             <div className="right">
                                                 <Text type={"span"}>Età dei partecipanti:</Text>
-                                                <Text type={"p-small"}>{CoursesSTUB[currentIndex].details.age}</Text>
+                                                <Text type={"p-medium"}>{CoursesSTUB[currentIndex].details.age}</Text>
                                             </div>
                                         </div>
 
@@ -85,7 +85,7 @@ const CourseDetailsPage = () => {
                                             <div className="right">
                                                 <Text type={"span"}>Posti disponibili:</Text>
                                                 <Text
-                                                    type={"p-small"}>{CoursesSTUB[currentIndex].details.placesAvailable}</Text>
+                                                    type={"p-medium"}>{CoursesSTUB[currentIndex].details.placesAvailable}</Text>
                                             </div>
                                         </div>
 
@@ -94,7 +94,8 @@ const CourseDetailsPage = () => {
 
                                             <div className="right">
                                                 <Text type={"span"}>Orari:</Text>
-                                                <Text type={"p-small"}>{CoursesSTUB[currentIndex].details.timetables}</Text>
+                                                <Text
+                                                    type={"p-medium"}>{CoursesSTUB[currentIndex].details.timetables}</Text>
                                             </div>
                                         </div>
 
@@ -103,7 +104,7 @@ const CourseDetailsPage = () => {
 
                                             <div className="right">
                                                 <Text type={"span"}>Giorni:</Text>
-                                                <Text type={"p-small"}>{CoursesSTUB[currentIndex].details.days}</Text>
+                                                <Text type={"p-medium"}>{CoursesSTUB[currentIndex].details.days}</Text>
                                             </div>
                                         </div>
 
@@ -112,7 +113,7 @@ const CourseDetailsPage = () => {
 
                                             <div className="right">
                                                 <Text type={"span"}>Prezzo:</Text>
-                                                <Text type={"p-small"}>{CoursesSTUB[currentIndex].details.price}</Text>
+                                                <Text type={"p-medium"}>{CoursesSTUB[currentIndex].details.price}</Text>
                                             </div>
                                         </div>
                                     </div>
@@ -120,7 +121,7 @@ const CourseDetailsPage = () => {
 
                                 <div className="description">
                                     <Text type={"h3"}>Descrizione</Text>
-                                    <Text type={"p-small"}>{CoursesSTUB[currentIndex].details.description}</Text>
+                                    <Text type={"p-medium"}>{CoursesSTUB[currentIndex].details.description}</Text>
                                 </div>
 
                                 <div className="contact">

@@ -16,7 +16,7 @@ const Preferenze = ({register, errors}: PreferenzeProps) => {
 
     return (
         <div className="form-select-row">
-            <Text type={"p-small"} color={'#fe5d37'}>
+            <Text type={"p-medium"} color={'#fe5d37'}>
                 Preferiresti partecipare al corso*
             </Text>
 
