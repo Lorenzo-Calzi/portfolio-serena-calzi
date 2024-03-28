@@ -5,6 +5,10 @@
   .content {
     display: flex;
     flex-direction: column;
+
+    .custom-anchor {
+      align-self: center;
+    }
   }
 
   .apple {

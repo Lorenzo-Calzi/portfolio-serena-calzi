@@ -64,43 +64,7 @@
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
   #header-infos {
-    .content {
-      min-height: 40px;
-
-      .left {
-        gap: 15px;
-
-        .info {
-          gap: 10px;
-
-          img {
-            height: 16px;
-            width: 16px;
-          }
-        }
-
-        .divider {
-          height: 20px;
-          width: 2px;
-        }
-      }
-
-      .right {
-        .social {
-          gap: 15px;
-
-          img {
-            height: 16px;
-            width: 16px;
-          }
-
-          .divider {
-            height: 20px;
-            width: 2px;
-          }
-        }
-      }
-    }
+    display: none;
   }
 }
 

@@ -17,6 +17,7 @@ import ServiceDetails from "./components/ServicesPage/ServiceDetails/ServiceDeta
 import Popup from "./components/reusable/Popup/Popup";
 import Cover from "./components/Cover/Cover";
 import Loader from "./components/reusable/Loader/Loader";
+import ReviewsPage from "./components/ReviewsPage/ReviewsPage";
 
 const router = createBrowserRouter([
     {
@@ -95,6 +96,16 @@ const router = createBrowserRouter([
             <React.StrictMode>
                 <Provider store={store}>
                     <ProjectDetails/>
+                </Provider>
+            </React.StrictMode>
+        )
+    },
+    {
+        path: "recensioni",
+        element: (
+            <React.StrictMode>
+                <Provider store={store}>
+                    <ReviewsPage/>
                 </Provider>
             </React.StrictMode>
         )

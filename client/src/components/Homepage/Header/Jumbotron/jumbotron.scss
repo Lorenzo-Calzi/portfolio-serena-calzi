@@ -74,24 +74,11 @@
         aspect-ratio: 1;
 
         .left-line-img {
-          width: 45px;
-          height: 180px;
-          left: -15px;
-          top: 25px;
+          display: none;
         }
 
         .right-line-img {
-          width: 45px;
-          height: 125px;
-          right: -15px;
-          top: 30px;
-        }
-
-        .car-img {
-          width: 80px;
-          height: 50px;
-          top: -15px;
-          left: 25px;
+          display: none;
         }
       }
     }
@@ -123,24 +110,11 @@
         aspect-ratio: 1;
 
         .left-line-img {
-          width: 60px;
-          height: 240px;
-          left: -15px;
-          top: 35px;
+          display: none;
         }
 
         .right-line-img {
-          width: 60px;
-          height: 155px;
-          right: -15px;
-          top: 40px;
-        }
-
-        .car-img {
-          width: 100px;
-          height: 70px;
-          top: -20px;
-          left: 35px;
+          display: none;
         }
       }
     }
@@ -163,7 +137,7 @@
     }
 
     .content {
-      width: 70%;
+      width: 60%;
       height: calc(100% - 55px);
       justify-content: center;
 
@@ -172,24 +146,11 @@
         aspect-ratio: 1;
 
         .left-line-img {
-          width: 100px;
-          height: 400px;
-          left: -25px;
-          top: 75px;
+          display: none;
         }
 
         .right-line-img {
-          width: 100px;
-          height: 235px;
-          right: -25px;
-          top: 80px;
-        }
-
-        .car-img {
-          width: 130px;
-          height: 100px;
-          top: -5px;
-          left: 60px;
+          display: none;
         }
       }
     }
@@ -217,21 +178,15 @@
       justify-content: center;
 
       .bubble {
-        height: 75%;
+        height: 60%;
         aspect-ratio: 1;
 
         .left-line-img {
-          width: 100px;
-          height: 400px;
-          left: -25px;
-          top: 75px;
+          display: none;
         }
 
         .right-line-img {
-          width: 100px;
-          height: 235px;
-          right: -25px;
-          top: 80px;
+          display: none;
         }
 
         .car-img {
@@ -266,28 +221,15 @@
       justify-content: center;
 
       .bubble {
-        height: 70%;
+        height: 50%;
         aspect-ratio: 1;
 
         .left-line-img {
-          width: 80px;
-          height: 320px;
-          left: -20px;
-          top: 50px;
+          display: none;
         }
 
         .right-line-img {
-          width: 80px;
-          height: 195px;
-          right: -20px;
-          top: 55px;
-        }
-
-        .car-img {
-          width: 100px;
-          height: 70px;
-          top: -10px;
-          left: 55px;
+          display: none;
         }
       }
     }
@@ -319,24 +261,11 @@
         aspect-ratio: 1;
 
         .left-line-img {
-          width: 90px;
-          height: 360px;
-          left: -25px;
-          top: 65px;
+          display: none;
         }
 
         .right-line-img {
-          width: 90px;
-          height: 215px;
-          right: -25px;
-          top: 70px;
-        }
-
-        .car-img {
-          width: 120px;
-          height: 90px;
-          top: -10px;
-          left: 55px;
+          display: none;
         }
       }
     }
@@ -362,30 +291,18 @@
     .content {
       width: 80%;
       height: calc(100% - 60px);
+      justify-content: center;
 
       .bubble {
-        height: 75%;
+        height: 60%;
         aspect-ratio: 1;
 
         .left-line-img {
-          width: 90px;
-          height: 360px;
-          left: -25px;
-          top: 65px;
+          display: none;
         }
 
         .right-line-img {
-          width: 90px;
-          height: 215px;
-          right: -25px;
-          top: 70px;
-        }
-
-        .car-img {
-          width: 120px;
-          height: 90px;
-          top: -10px;
-          left: 55px;
+          display: none;
         }
       }
     }
@@ -413,8 +330,16 @@
       justify-content: center;
 
       .bubble {
-        height: 75%;
+        height: 60%;
         aspect-ratio: 1;
+
+        .left-line-img {
+          display: none;
+        }
+
+        .right-line-img {
+          display: none;
+        }
       }
     }
 
@@ -441,28 +366,15 @@
       justify-content: flex-end;
 
       .bubble {
-        height: 75%;
+        height: 60%;
         aspect-ratio: 1;
 
         .left-line-img {
-          width: 120px;
-          height: 480px;
-          left: -30px;
-          top: 85px;
+          display: none;
         }
 
         .right-line-img {
-          width: 120px;
-          height: 275px;
-          right: -30px;
-          top: 90px;
-        }
-
-        .car-img {
-          width: 150px;
-          height: 120px;
-          top: -10px;
-          left: 75px;
+          display: none;
         }
       }
     }
@@ -490,28 +402,15 @@
       justify-content: flex-end;
 
       .bubble {
-        height: 75%;
+        height: 70%;
         aspect-ratio: 1;
 
         .left-line-img {
-          width: 100px;
-          height: 400px;
-          left: -25px;
-          top: 65px;
+          display: none;
         }
 
         .right-line-img {
-          width: 100px;
-          height: 230px;
-          right: -25px;
-          top: 70px;
-        }
-
-        .car-img {
-          width: 150px;
-          height: 120px;
-          top: -30px;
-          left: 60px;
+          display: none;
         }
       }
     }
@@ -543,24 +442,11 @@
         aspect-ratio: 1;
 
         .left-line-img {
-          width: 150px;
-          height: 600px;
-          left: -35px;
-          top: 130px;
+          display: none;
         }
 
         .right-line-img {
-          width: 150px;
-          height: 330px;
-          right: -35px;
-          top: 135px;
-        }
-
-        .car-img {
-          width: 200px;
-          height: 170px;
-          top: -15px;
-          left: 110px;
+          display: none;
         }
       }
     }

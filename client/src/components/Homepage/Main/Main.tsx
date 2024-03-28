@@ -4,8 +4,8 @@ import Services from "./Services/Services";
 import Contact from "./Contact/Contact";
 import Counter from "./Counter/Counter";
 import Courses from "./Courses/Courses";
-import Steps from "./Steps/Steps";
 import About from "./About/About";
+import Reviews from "./Reviews/Reviews";
 
 const Main = () => {
     return (
@@ -14,7 +14,8 @@ const Main = () => {
             <About/>
             <Counter/>
             <Courses/>
-            <Steps/>
+            {/*<Steps/>*/}
+            <Reviews/>
             <Contact/>
         </main>
     )

@@ -1,32 +1,36 @@
-#services {
+#reviews {
+  display: flex;
+  flex-direction: column;
+  background-color: #DBEAF7;
+  position: relative;
+
   .content {
     display: flex;
     flex-direction: column;
+
+    .swiper {
+      padding: 10px;
+    }
 
     .custom-anchor {
       align-self: center;
     }
   }
 
-  .maracas {
-    position: absolute;
-    animation: zoom 3s infinite linear;
-  }
-
-  .star-xl {
-    position: absolute;
-    animation: rotation 10s infinite linear;
-  }
-
-  .star-sm {
-    position: absolute;
-    animation: rotation 10s infinite linear;
-  }
-
   &:hover {
     .swiper-pagination, .arrow-left, .arrow-right {
       opacity: 1;
     }
+  }
+
+  .cloud-top-right {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .cloud-bottom-left {
+    position: absolute;
+    z-index: 2;
   }
 }
 
@@ -43,7 +47,8 @@
 }
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
-  #services {
+  #reviews {
+    gap: 50px;
     padding: 50px 0;
 
     .content {
@@ -63,22 +68,25 @@
       }
     }
 
-    .maracas {
-      display: none;
+    .cloud-top-right {
+      top: -40px;
+      right: 0;
+      width: 150px;
+      height: 60px;
     }
 
-    .star-xl {
-      display: none;
-    }
-
-    .star-sm {
-      display: none;
+    .cloud-bottom-left {
+      bottom: -20px;
+      left: 0;
+      width: 100px;
+      height: 50px;
     }
   }
 }
 
 @media screen and (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
-  #services {
+  #reviews {
+    gap: 50px;
     padding: 50px 0;
 
     .content {
@@ -98,22 +106,25 @@
       }
     }
 
-    .maracas {
-      display: none;
+    .cloud-top-right {
+      top: -55px;
+      right: 0;
+      width: 200px;
+      height: 80px;
     }
 
-    .star-xl {
-      display: none;
-    }
-
-    .star-sm {
-      display: none;
+    .cloud-bottom-left {
+      bottom: -30px;
+      left: 0;
+      width: 120px;
+      height: 60px;
     }
   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
-  #services {
+  #reviews {
+    gap: 50px;
     padding: 50px 0;
 
     .content {
@@ -133,31 +144,25 @@
       }
     }
 
-    .maracas {
-      width: 60px;
-      height: 60px;
-      top: -10px;
-      left: -30px;
+    .cloud-top-right {
+      top: -60px;
+      right: 0;
+      width: 200px;
+      height: 80px;
     }
 
-    .star-xl {
-      width: 40px;
-      height: 40px;
-      top: -10px;
-      right: 40px;
-    }
-
-    .star-sm {
-      width: 30px;
-      height: 30px;
-      bottom: 0;
-      right: -20px;
+    .cloud-bottom-left {
+      bottom: -20px;
+      left: 0;
+      width: 150px;
+      height: 75px;
     }
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
-  #services {
+  #reviews {
+    gap: 50px;
     padding: 50px 0;
 
     .content {
@@ -177,31 +182,25 @@
       }
     }
 
-    .maracas {
-      width: 60px;
-      height: 60px;
-      top: -10px;
-      left: -30px;
+    .cloud-top-right {
+      top: -55px;
+      right: 0;
+      width: 200px;
+      height: 80px;
     }
 
-    .star-xl {
-      width: 40px;
-      height: 40px;
-      top: -10px;
-      right: 40px;
-    }
-
-    .star-sm {
-      width: 30px;
-      height: 30px;
-      bottom: 0;
-      right: -20px;
+    .cloud-bottom-left {
+      bottom: -30px;
+      left: 0;
+      width: 150px;
+      height: 75px;
     }
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 655px) and (orientation: landscape) {
-  #services {
+  #reviews {
+    gap: 50px;
     padding: 50px 0;
 
     .content {
@@ -221,22 +220,25 @@
       }
     }
 
-    .maracas {
-      display: none;
+    .cloud-top-right {
+      top: -60px;
+      right: 0;
+      width: 200px;
+      height: 80px;
     }
 
-    .star-xl {
-      display: none;
-    }
-
-    .star-sm {
-      display: none;
+    .cloud-bottom-left {
+      bottom: -30px;
+      left: 0;
+      width: 150px;
+      height: 75px;
     }
   }
 }
 
 @media screen and (min-width: 656px) and (max-width: 1024px) and (orientation: landscape) {
-  #services {
+  #reviews {
+    gap: 50px;
     padding: 50px 0;
 
     .content {
@@ -256,31 +258,25 @@
       }
     }
 
-    .maracas {
-      width: 50px;
-      height: 50px;
-      top: -10px;
-      left: -30px;
+    .cloud-top-right {
+      top: -55px;
+      right: 0;
+      width: 200px;
+      height: 80px;
     }
 
-    .star-xl {
-      width: 30px;
-      height: 30px;
-      top: -10px;
-      right: 40px;
-    }
-
-    .star-sm {
-      width: 20px;
-      height: 20px;
-      bottom: 0;
-      right: -20px;
+    .cloud-bottom-left {
+      bottom: -30px;
+      left: 0;
+      width: 150px;
+      height: 75px;
     }
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
-  #services {
+  #reviews {
+    gap: 50px;
     padding: 50px 0;
 
     .content {
@@ -300,31 +296,25 @@
       }
     }
 
-    .maracas {
-      width: 60px;
-      height: 60px;
-      top: -10px;
-      left: -30px;
+    .cloud-top-right {
+      top: -55px;
+      right: 0;
+      width: 200px;
+      height: 80px;
     }
 
-    .star-xl {
-      width: 40px;
-      height: 40px;
-      top: -10px;
-      right: 40px;
-    }
-
-    .star-sm {
-      width: 30px;
-      height: 30px;
-      bottom: 0;
-      right: -20px;
+    .cloud-bottom-left {
+      bottom: -30px;
+      left: 0;
+      width: 150px;
+      height: 75px;
     }
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
-  #services {
+  #reviews {
+    gap: 50px;
     padding: 50px 0;
 
     .content {
@@ -344,32 +334,26 @@
       }
     }
 
-    .maracas {
-      width: 60px;
-      height: 60px;
-      top: -10px;
-      left: -30px;
+    .cloud-top-right {
+      top: -55px;
+      right: 0;
+      width: 200px;
+      height: 80px;
     }
 
-    .star-xl {
-      width: 40px;
-      height: 40px;
-      top: -10px;
-      right: 40px;
-    }
-
-    .star-sm {
-      width: 30px;
-      height: 30px;
-      bottom: 0;
-      right: -20px;
+    .cloud-bottom-left {
+      bottom: -30px;
+      left: 0;
+      width: 150px;
+      height: 75px;
     }
   }
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1500px) {
-  #services {
-    padding: 100px 0;
+  #reviews {
+    gap: 100px;
+    padding: 50px 0;
 
     .content {
       gap: 50px;
@@ -388,32 +372,26 @@
       }
     }
 
-    .maracas {
-      width: 80px;
+    .cloud-top-right {
+      top: -55px;
+      right: 0;
+      width: 200px;
       height: 80px;
-      top: -10px;
-      left: -30px;
     }
 
-    .star-xl {
-      width: 50px;
-      height: 50px;
-      top: -10px;
-      right: 40px;
-    }
-
-    .star-sm {
-      width: 35px;
-      height: 35px;
-      bottom: 0;
-      right: -20px;
+    .cloud-bottom-left {
+      bottom: -30px;
+      left: 0;
+      width: 150px;
+      height: 75px;
     }
   }
 }
 
 @media screen and (min-width: 1501px) and (max-width: 2000px) {
-  #services {
-    padding: 100px 0;
+  #reviews {
+    gap: 100px;
+    padding: 50px 0;
 
     .content {
       gap: 50px;
@@ -432,32 +410,26 @@
       }
     }
 
-    .maracas {
-      width: 90px;
-      height: 90px;
-      top: -10px;
-      left: -60px;
+    .cloud-top-right {
+      top: -80px;
+      right: 0;
+      width: 250px;
+      height: 120px;
     }
 
-    .star-xl {
-      width: 60px;
-      height: 60px;
-      top: -40px;
-      right: 100px;
-    }
-
-    .star-sm {
-      width: 35px;
-      height: 35px;
-      bottom: -60px;
-      right: -40px;
+    .cloud-bottom-left {
+      bottom: -30px;
+      left: 0;
+      width: 150px;
+      height: 75px;
     }
   }
 }
 
 @media screen and (min-width: 2001px) {
-  #services {
-    padding: 100px 0;
+  #reviews {
+    gap: 100px;
+    padding: 50px 0;
 
     .content {
       gap: 50px;
@@ -476,25 +448,18 @@
       }
     }
 
-    .maracas {
-      width: 90px;
-      height: 90px;
-      top: -10px;
-      left: -60px;
+    .cloud-top-right {
+      top: -80px;
+      right: 0;
+      width: 250px;
+      height: 120px;
     }
 
-    .star-xl {
-      width: 60px;
-      height: 60px;
-      top: -40px;
-      right: 100px;
-    }
-
-    .star-sm {
-      width: 35px;
-      height: 35px;
-      bottom: -60px;
-      right: -40px;
+    .cloud-bottom-left {
+      bottom: -50px;
+      left: 0;
+      width: 150px;
+      height: 75px;
     }
   }
 }

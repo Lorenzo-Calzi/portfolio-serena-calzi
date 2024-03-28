@@ -18,14 +18,15 @@ const About = () => {
                         <Text type={"h2"}>DOTT.SSA SERENA ALESSANDRA CALZI</Text>
 
                         <div>
-                            <Text type={"h4"}>PEDAGOGISTA, SPECIALIZZATA IN PEDAGOGIA CLINICA:</Text>
+                            <Text type={"p-big"} fontWeight={700}>PEDAGOGISTA, SPECIALIZZATA IN PEDAGOGIA
+                                CLINICA:</Text>
                             <Text type={"p-big"}>
                                 Iscritta al registro interno dell’associazione UNIPED con n. 22459 S0
                             </Text>
                         </div>
 
                         <div>
-                            <Text type={"h4"}>INSEGNANTE DI MASSAGGIO INFANTILE ABILITATA:</Text>
+                            <Text type={"p-big"} fontWeight={700}>INSEGNANTE DI MASSAGGIO INFANTILE ABILITATA:</Text>
                             <Text type={"p-big"}>
                                 Iscritta ad AIMI Lombardia con n. 9853
                             </Text>

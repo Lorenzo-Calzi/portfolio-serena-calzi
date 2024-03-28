@@ -30,17 +30,22 @@ const Sidebar = ({isVisibleSideBar, currentSlug}: SidebarProps) => {
                     <li className={currentSlug === "servizi" ? "active" : ""}
                         onClick={() => dispatch(toggleSideBar())}>
                         <img src={ChevronRightIcon} alt="Icona di un freccia verso destra"/>
-                        <Anchor fontWeight={500} href={currentSlug ? "/servizi" : "#services"}>About</Anchor></li>
+                        <Anchor fontWeight={500} href={currentSlug ? "/servizi" : "#services"}>Servizi</Anchor></li>
                     <li className={currentSlug === "about" ? "active" : ""} onClick={() => dispatch(toggleSideBar())}>
                         <img src={ChevronRightIcon} alt="Icona di un freccia verso destra"/>
-                        <Anchor fontWeight={500} href={currentSlug ? "/about" : "#about"}>Studi</Anchor></li>
+                        <Anchor fontWeight={500} href={currentSlug ? "/about" : "#about"}>Chi Sono</Anchor></li>
                     <li className={currentSlug === "corsi" ? "active" : ""} onClick={() => dispatch(toggleSideBar())}>
                         <img src={ChevronRightIcon} alt="Icona di un freccia verso destra"/>
                         <Anchor fontWeight={500} href={currentSlug ? "/corsi" : "#courses"}>Corsi</Anchor></li>
+                    <li className={currentSlug === "recensioni" ? "active" : ""}
+                        onClick={() => dispatch(toggleSideBar())}>
+                        <img src={ChevronRightIcon} alt="Icona di un freccia verso destra"/>
+                        <Anchor fontWeight={500} href={currentSlug ? "/recensioni" : "#reviews"}>Recensioni</Anchor>
+                    </li>
                     <li className={currentSlug === "progetti" ? "active" : ""}
                         onClick={() => dispatch(toggleSideBar())}>
                         <img src={ChevronRightIcon} alt="Icona di un freccia verso destra"/>
-                        <Anchor fontWeight={500} href={currentSlug ? "/progetti" : "#steps"}>Contatti</Anchor>
+                        <Anchor fontWeight={500} href={currentSlug ? "/contattami" : "#contact"}>Contatti</Anchor>
                     </li>
                 </ul>
             </div>

@@ -2,6 +2,7 @@ import React from "react";
 import './course.scss'
 import Text from '../../../../reusable/Text/Text'
 import {motion} from "framer-motion";
+import Button from "../../../../reusable/Button/Button";
 
 interface CourseProps {
     title: string,
@@ -10,10 +11,11 @@ interface CourseProps {
     time: string,
     image: string,
     price: string
+    placesAvailable: string,
     slug: string
 }
 
-const Course = ({title, description, age, time, image, price, slug}: CourseProps) => {
+const Course = ({title, description, age, time, image, price, placesAvailable, slug}: CourseProps) => {
     return (
         <motion.a id="course"
                   href={`/corsi/${slug}`}
@@ -38,15 +40,21 @@ const Course = ({title, description, age, time, image, price, slug}: CourseProps
                 <Text type={"p-big"}>{description}</Text>
                 <div className="infos">
                     <div className="info">
-                        <Text type={"span"}>Età:</Text>
-                        <Text type={"p-medium"} color={"#FE5D37FF"}>{age}</Text>
+                        <Text type={"p-big"} oneLine fontWeight={500}>Età:</Text>
+                        <Text type={"p-medium"} color={"#FE5D37FF"} fontWeight={500}>{age}</Text>
                     </div>
                     <div className="separator"/>
                     <div className="info">
-                        <Text type={"span"}>Orario:</Text>
-                        <Text type={"p-medium"} color={"#FE5D37FF"}>{time}</Text>
+                        <Text type={"p-big"} oneLine fontWeight={500}>Orario:</Text>
+                        <Text type={"p-medium"} color={"#FE5D37FF"} fontWeight={500}>{time}</Text>
+                    </div>
+                    <div className="separator"/>
+                    <div className="info">
+                        <Text type={"p-big"} oneLine fontWeight={500}>Posti:</Text>
+                        <Text type={"p-medium"} color={"#FE5D37FF"} fontWeight={500}>{placesAvailable}</Text>
                     </div>
                 </div>
+                <Button text={"Dettagli"} link={`/corsi/${slug}`}/>
             </div>
         </motion.a>
     )

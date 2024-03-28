@@ -93,38 +93,38 @@ const ContactForm = ({formElementsList, options, description}: ContactFormProps)
         dispatch(togglePopup("Complimenti, ti sei registrato con successo!"))
     }
 
-    const renderFormElement = (elementName: string) => {
+    const renderFormElement = (elementName: string, i: number) => {
         switch (elementName) {
             case "nome":
-                return <Nome register={register} errors={errors}/>
+                return <Nome register={register} errors={errors} key={i}/>
             case "cognome":
-                return <Cognome register={register} errors={errors}/>
+                return <Cognome register={register} errors={errors} key={i}/>
             case "email":
-                return <Email register={register} errors={errors}/>
+                return <Email register={register} errors={errors} key={i}/>
             case "telefono":
-                return <Telefono register={register} errors={errors}/>
+                return <Telefono register={register} errors={errors} key={i}/>
             case "nomeBambino":
-                return <NomeBambino register={register} errors={errors}/>
+                return <NomeBambino register={register} errors={errors} key={i}/>
             case "dataNascita":
-                return <DataDiNascita register={register} errors={errors}/>
+                return <DataDiNascita register={register} errors={errors} key={i}/>
             case "corsi":
-                return <Corsi register={register} errors={errors}/>
+                return <Corsi register={register} errors={errors} key={i}/>
             case "problematiche":
-                return <Problematiche register={register} errors={errors}/>
+                return <Problematiche register={register} errors={errors} key={i}/>
             case "preferenze":
-                return <Preferenze register={register} errors={errors}/>
+                return <Preferenze register={register} errors={errors} key={i}/>
             case "partecipazioneDiCoppia":
-                return <PartecipazioneDiCoppia register={register} errors={errors}/>
+                return <PartecipazioneDiCoppia register={register} errors={errors} key={i}/>
             case "presentazione":
-                return <Presentazione register={register} errors={errors}/>
+                return <Presentazione register={register} errors={errors} key={i}/>
             case "messaggio":
-                return <Messaggio register={register} errors={errors}/>
+                return <Messaggio register={register} errors={errors} key={i}/>
             case "aspettative":
-                return <Aspettative register={register} errors={errors}/>
+                return <Aspettative register={register} errors={errors} key={i}/>
             case "note":
-                return <Note register={register} errors={errors}/>
+                return <Note register={register} errors={errors} key={i}/>
             default:
-                return <></>
+                return <React.Fragment key={i}></React.Fragment>
         }
     }
 
@@ -141,8 +141,8 @@ const ContactForm = ({formElementsList, options, description}: ContactFormProps)
 
             <div className="fields">
                 {
-                    formElementsList.map((elementName: string) => (
-                        renderFormElement(elementName)
+                    formElementsList.map((elementName: string, i: number) => (
+                        renderFormElement(elementName, i)
                     ))
                 }
             </div>

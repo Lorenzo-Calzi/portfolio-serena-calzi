@@ -3,6 +3,7 @@ import './services.scss'
 import Service from "./Service/Service";
 import Text from "../../../reusable/Text/Text"
 import Carousel from "../../../reusable/Carousel/Carousel";
+import Button from "../../../reusable/Button/Button";
 import ServicesSTUB from "../../../../stub/ServicesSTUB";
 import {SwiperSlide} from "swiper/react";
 import 'swiper/css';
@@ -90,6 +91,8 @@ const Services = () => {
                             ))
                         }
                     </Carousel>
+
+                    <Button text={"Tutti i servizi"} link={"/servizi"}/>
                 </div>
                 <img src={Maracas} alt="Immagine di una maracas" className="maracas"/>
                 <img src={StarBig} alt="Immagine di una stella" className="star-xl"/>

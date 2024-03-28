@@ -88,22 +88,10 @@
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
   #navbar {
+    height: 110px;
+
     .content {
-      height: 110px;
-
-      ul {
-        gap: 10px;
-
-        li {
-          border-radius: 20px;
-
-          a {
-            padding: 5px 13px;
-          }
-        }
-      }
-
-      .toggleSideBarButton {
+      ul, .bookAVisitButton {
         display: none;
       }
     }
@@ -136,22 +124,10 @@
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
   #navbar {
+    height: 110px;
+
     .content {
-      height: 110px;
-
-      ul {
-        gap: 60px;
-
-        li {
-          border-radius: 20px;
-
-          a {
-            padding: 5px 13px;
-          }
-        }
-      }
-
-      .toggleSideBarButton {
+      ul, .bookAVisitButton {
         display: none;
       }
     }
@@ -160,22 +136,10 @@
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
   #navbar {
+    height: 110px;
+
     .content {
-      height: 110px;
-
-      ul {
-        gap: 10px;
-
-        li {
-          border-radius: 20px;
-
-          a {
-            padding: 5px 13px;
-          }
-        }
-      }
-
-      .toggleSideBarButton {
+      ul, .bookAVisitButton {
         display: none;
       }
     }
@@ -188,7 +152,7 @@
       height: 110px;
 
       ul {
-        gap: 60px;
+        gap: 30px;
 
         li {
           border-radius: 20px;
@@ -212,7 +176,7 @@
       height: 110px;
 
       ul {
-        gap: 60px;
+        gap: 45px;
 
         li {
           border-radius: 20px;

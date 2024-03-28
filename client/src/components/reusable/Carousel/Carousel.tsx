@@ -19,7 +19,8 @@ const Carousel = ({children, stub, slidesPerView, navigation, pagination, autopl
 
     return (
         <div id="carousel">
-            { stub.length > slidesPerView && navigation && <div onClick={() => swiperRef.current?.slidePrev()} className="arrow-left" /> }
+            {stub.length > slidesPerView && navigation &&
+                <div onClick={() => swiperRef.current?.slidePrev()} className="arrow-left"/>}
 
             <Swiper slidesPerView={slidesPerView}
                     spaceBetween={spaceBetween}
@@ -31,15 +32,17 @@ const Carousel = ({children, stub, slidesPerView, navigation, pagination, autopl
                         delay: 2500,
                         disableOnInteraction: false,
                     }}
-                    pagination={ stub.length > slidesPerView && pagination && {
+                    pagination={stub.length > slidesPerView && pagination && {
                         clickable: true,
                         dynamicBullets: true,
                     }}
-                    modules={[Autoplay, Navigation, Pagination]}>
+                    modules={[Autoplay, Navigation, Pagination]}
+            >
                 {children}
             </Swiper>
 
-            { stub.length > slidesPerView && navigation &&  <div onClick={() => swiperRef.current?.slideNext()} className="arrow-right" /> }
+            {stub.length > slidesPerView && navigation &&
+                <div onClick={() => swiperRef.current?.slideNext()} className="arrow-right"/>}
         </div>
     )
 }

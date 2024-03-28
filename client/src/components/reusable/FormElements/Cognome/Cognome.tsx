@@ -24,7 +24,7 @@ const Cognome = ({register, errors}: CognomeProps) => {
                        onBlurCapture={() => setIsOnFocus(false)}
                        style={{borderColor: errors["cognome"] && !isOnFocus ? '#f53131' : 'transparent'}}
                 />
-                {errors["nome"] && !isOnFocus && (
+                {errors["cognome"] && !isOnFocus && (
                     <ErrorMessage message={errors["cognome"].message}/>
                 )}
             </div>

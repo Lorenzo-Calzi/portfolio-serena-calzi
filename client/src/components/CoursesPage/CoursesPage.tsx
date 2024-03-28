@@ -21,6 +21,7 @@ const CoursesPage = () => {
                                     time={course.details.timetables}
                                     image={course.image}
                                     price={course.details.price}
+                                    placesAvailable={course.details.placesAvailable}
                                     slug={course.title.replace(/ /g, "-").toLowerCase()}
                                     key={index}
                             />

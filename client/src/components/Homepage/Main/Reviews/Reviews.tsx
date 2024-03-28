@@ -1,6 +1,6 @@
 import React, {useLayoutEffect, useState} from "react";
-import './courses.scss'
-import Course from "./Course/Course";
+import './reviews.scss'
+import Review from "./Review/Review";
 import Text from "../../../reusable/Text/Text"
 import Carousel from "../../../reusable/Carousel/Carousel";
 import Button from "../../../reusable/Button/Button";
@@ -8,13 +8,11 @@ import {SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import {motion} from "framer-motion";
-import CoursesSTUB from "../../../../stub/CoursesSTUB";
-import Apple from '../../../../assets/images/apple.png'
-import Divided from '../../../../assets/images/math.png'
-import Ruler from '../../../../assets/images/ruler.png'
-import Cloud from '../../../../assets/images/cloud.png'
+import ReviewsSTUB from "../../../../stub/ReviewsSTUB";
+import CloudTopRight from "../../../../assets/images/cloud-1.png"
+import CloudBottomLeft from "../../../../assets/images/cloud-2.png"
 
-const Courses = () => {
+const Reviews = () => {
     const [swiperSetting, setSwiperSetting] = useState({
         slidesPerView: 3,
         spaceBetween: 30
@@ -69,7 +67,9 @@ const Courses = () => {
     };
 
     return (
-        <section id="courses">
+        <section id="reviews">
+            <img src={CloudTopRight} className="cloud-top-right" alt="Immagini a forma di nuvola"/>
+
             <div className="page-container">
                 <div className="content">
                     <motion.div initial={{opacity: 0, y: -100}}
@@ -77,44 +77,35 @@ const Courses = () => {
                                 transition={{delay: 0, duration: 1}}
                                 viewport={{once: true, amount: 0}}
                     >
-                        <Text type={"h2"} textAlign={"center"}>Corsi</Text>
+                        <Text type={"h2"} textAlign={"center"}>Recensioni</Text>
                     </motion.div>
 
                     <Carousel
                         slidesPerView={swiperSetting.slidesPerView}
                         spaceBetween={swiperSetting.spaceBetween}
-                        stub={CoursesSTUB}
+                        stub={ReviewsSTUB}
                         navigation
-                        pagination
                     >
                         {
-                            CoursesSTUB.map((course, index) => (
+                            ReviewsSTUB.map((review, index) => (
                                 <SwiperSlide key={index}>
-                                    <Course title={course.title}
-                                            description={course.description}
-                                            age={course.details.age}
-                                            time={course.details.timetables}
-                                            image={course.image}
-                                            price={course.details.price}
-                                            placesAvailable={course.details.placesAvailable}
-                                            slug={course.title.replace(/ /g, "-").toLowerCase()}
+                                    <Review title={review.title}
+                                            description={review.description}
+                                            name={review.name}
+                                            gender={review.gender}
+                                            key={index}
                                     />
                                 </SwiperSlide>
                             ))
                         }
                     </Carousel>
 
-                    <Button text={"Tutti i corsi"} link={"/corsi"}/>
+                    <Button text={"Tutte le recensioni"} link={"/recensioni"}/>
                 </div>
-
-                <img src={Apple} alt="Immagine di una mela" className="apple"/>
-                <img src={Ruler} alt="Immagine di un righello" className="ruler"/>
-                <img src={Cloud} alt="Immagine di una nuvola" className="cloud"/>
-                <img src={Divided} alt="Immagine del simbolo diviso" className="divided"/>
             </div>
-            <div className="steps-before"/>
+            <img src={CloudBottomLeft} className="cloud-bottom-left" alt="Immagini a forma di nuvola"/>
         </section>
     )
 }
 
-export default Courses
+export default Reviews

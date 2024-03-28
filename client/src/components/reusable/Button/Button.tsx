@@ -9,8 +9,10 @@ interface ButtonProps {
     link?: string,
     className?: string,
     isDisabled?: boolean
+    invertedColor?: boolean
 }
-const Button = ({text, handler, type, link, className, isDisabled}: ButtonProps) => {
+
+const Button = ({text, handler, type, link, className, isDisabled, invertedColor}: ButtonProps) => {
     return (
         link ? (
             <Anchor href={link} color={"white"}>

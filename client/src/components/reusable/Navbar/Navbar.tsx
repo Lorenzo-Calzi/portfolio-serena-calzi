@@ -46,8 +46,9 @@ const Navbar = ({currentSlug}: NavbarProps) => {
                         {/*<li className={currentSlug === "progetti" ? "active" : ""}>*/}
                         {/*    <Anchor fontWeight={500} href={currentSlug ? "/progetti" : "#steps"}>Progetti</Anchor>*/}
                         {/*</li>*/}
-                        <li>
-                            <Anchor fontWeight={500}>Recensioni</Anchor>
+                        <li className={currentSlug === "recensioni" ? "active" : ""}>
+                            <Anchor fontWeight={500}
+                                    href={currentSlug ? "/recensioni" : "#reviews"}>Recensioni</Anchor>
                         </li>
                     </motion.ul>
 
@@ -57,7 +58,7 @@ const Navbar = ({currentSlug}: NavbarProps) => {
                                 viewport={{once: true, amount: 0}}
                     >
                         <Button text={"Contattami"} className={"bookAVisitButton"}
-                                link={currentSlug ? "/#contact" : "#contact"}/>
+                                link={currentSlug ? "/contattami" : "#contact"}/>
                     </motion.div>
 
                     <motion.div className={"toggleSideBarButton"}

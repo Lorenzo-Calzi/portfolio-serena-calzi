@@ -240,10 +240,6 @@
         li {
           gap: 20px;
 
-          &:first-child {
-            padding: 0 0 20px 0;
-          }
-
           img {
             width: 20px;
             height: 20px;
@@ -266,7 +262,53 @@
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
   #sidebar {
-    display: none;
+    .content {
+      min-width: 40%;
+
+      .close-button-row {
+        height: 100px;
+
+        .logo {
+          height: 85%;
+          aspect-ratio: 1;
+        }
+
+        .close-button {
+          height: 50px;
+          width: 50px;
+          right: -26px;
+
+          img {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+
+      ul {
+        height: calc(100% - 100px);
+        padding: 10%;
+
+        li {
+          gap: 20px;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+
+          a {
+            flex: 1;
+            padding: 20px 0;
+          }
+        }
+      }
+    }
+
+    .void {
+      width: 60%;
+      height: 100%;
+    }
   }
 }
 
@@ -384,13 +426,105 @@
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: landscape) {
   #sidebar {
-    display: none;
+    .content {
+      min-width: 40%;
+
+      .close-button-row {
+        height: 100px;
+
+        .logo {
+          height: 85%;
+          aspect-ratio: 1;
+        }
+
+        .close-button {
+          height: 50px;
+          width: 50px;
+          right: -26px;
+
+          img {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+
+      ul {
+        height: calc(100% - 100px);
+        padding: 10%;
+
+        li {
+          gap: 20px;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+
+          a {
+            flex: 1;
+            padding: 20px 0;
+          }
+        }
+      }
+    }
+
+    .void {
+      width: 60%;
+      height: 100%;
+    }
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) and (orientation: portrait) {
   #sidebar {
-    display: none;
+    .content {
+      min-width: 40%;
+
+      .close-button-row {
+        height: 100px;
+
+        .logo {
+          height: 85%;
+          aspect-ratio: 1;
+        }
+
+        .close-button {
+          height: 50px;
+          width: 50px;
+          right: -26px;
+
+          img {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+
+      ul {
+        height: calc(100% - 100px);
+        padding: 10%;
+
+        li {
+          gap: 20px;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+
+          a {
+            flex: 1;
+            padding: 20px 0;
+          }
+        }
+      }
+    }
+
+    .void {
+      width: 60%;
+      height: 100%;
+    }
   }
 }
 
