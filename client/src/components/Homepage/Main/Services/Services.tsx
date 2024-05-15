@@ -92,7 +92,7 @@ const Services = () => {
                         }
                     </Carousel>
 
-                    <Button text={"Tutti i servizi"} link={"/servizi"}/>
+                    <Button text={"Tutti i servizi"} link={"/servizi"} invertedColor/>
                 </div>
                 <img src={Maracas} alt="Immagine di una maracas" className="maracas"/>
                 <img src={StarBig} alt="Immagine di una stella" className="star-xl"/>

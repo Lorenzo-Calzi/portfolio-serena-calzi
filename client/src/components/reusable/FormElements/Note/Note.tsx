@@ -19,7 +19,7 @@ const Note = ({register, errors}: NoteProps) => {
             <div className="form-element-container">
                 <textarea
                     {...register("note")}
-                    placeholder={"Note..."}
+                    placeholder={"Scrivi delle note"}
                     onFocusCapture={() => setIsOnFocus(true)}
                     onBlurCapture={() => setIsOnFocus(false)}
                     style={{borderColor: errors["note"] && !isOnFocus ? '#f53131' : 'transparent'}}

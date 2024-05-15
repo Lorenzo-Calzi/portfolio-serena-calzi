@@ -18,7 +18,7 @@ const Cognome = ({register, errors}: CognomeProps) => {
 
             <div className="form-element-container">
                 <input {...register("cognome")}
-                       placeholder={"Cognome..."}
+                       placeholder={"Scrivi il tuo cognome"}
                        type={"text"}
                        onFocusCapture={() => setIsOnFocus(true)}
                        onBlurCapture={() => setIsOnFocus(false)}

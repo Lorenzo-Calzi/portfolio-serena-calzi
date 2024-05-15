@@ -1,14 +1,14 @@
 import React, {useLayoutEffect, useState} from "react";
 import './courses.scss'
-import Course from "./Course/Course";
 import Text from "../../../reusable/Text/Text"
-import Carousel from "../../../reusable/Carousel/Carousel";
 import Button from "../../../reusable/Button/Button";
+import Carousel from "../../../reusable/Carousel/Carousel";
+import Course from "./Course/Course";
+import CoursesSTUB from "../../../../stub/CoursesSTUB";
 import {SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import {motion} from "framer-motion";
-import CoursesSTUB from "../../../../stub/CoursesSTUB";
 import Apple from '../../../../assets/images/apple.png'
 import Divided from '../../../../assets/images/math.png'
 import Ruler from '../../../../assets/images/ruler.png'
@@ -98,13 +98,14 @@ const Courses = () => {
                                             price={course.details.price}
                                             placesAvailable={course.details.placesAvailable}
                                             slug={course.title.replace(/ /g, "-").toLowerCase()}
+                                            sale={course.sale}
                                     />
                                 </SwiperSlide>
                             ))
                         }
                     </Carousel>
 
-                    <Button text={"Tutti i corsi"} link={"/corsi"}/>
+                    <Button text={"Tutti i corsi"} link={"/corsi"} invertedColor/>
                 </div>
 
                 <img src={Apple} alt="Immagine di una mela" className="apple"/>

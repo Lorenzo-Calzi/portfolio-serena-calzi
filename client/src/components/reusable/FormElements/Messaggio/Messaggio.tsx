@@ -19,7 +19,7 @@ const Messaggio = ({register, errors}: MessaggioProps) => {
             <div className="form-element-container">
                 <textarea
                     {...register("messaggio")}
-                    placeholder={"Messaggio..."}
+                    placeholder={"Scrivi un messaggio"}
                     onFocusCapture={() => setIsOnFocus(true)}
                     onBlurCapture={() => setIsOnFocus(false)}
                     style={{borderColor: errors["messaggio"] && !isOnFocus ? '#f53131' : 'transparent'}}

@@ -18,7 +18,7 @@ const Email = ({register, errors}: EmailProps) => {
 
             <div className="form-element-container">
                 <input {...register("email")}
-                       placeholder={"E-mail..."}
+                       placeholder={"Scrivi la tua e-mail"}
                        type={"email"}
                        onFocusCapture={() => setIsOnFocus(true)}
                        onBlurCapture={() => setIsOnFocus(false)}

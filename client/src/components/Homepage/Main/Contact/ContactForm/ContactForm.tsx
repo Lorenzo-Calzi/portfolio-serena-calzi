@@ -147,7 +147,8 @@ const ContactForm = ({formElementsList, options, description}: ContactFormProps)
                 }
             </div>
 
-            <Button text={options ? 'Iscriviti' : "Invia"} type={"submit"} isDisabled={!formIsValid}/>
+            <Button text={options ? 'Iscriviti' : "Invia"} type={"submit"} isDisabled={!formIsValid}
+                    invertedColor={false}/>
         </motion.form>
     )
 }

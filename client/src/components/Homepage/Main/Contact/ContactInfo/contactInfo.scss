@@ -32,6 +32,10 @@
 
   .map {
     width: 100%;
+
+    .gm-style iframe + div {
+      border: none !important;
+    }
   }
 }
 

@@ -23,6 +23,7 @@ const CoursesPage = () => {
                                     price={course.details.price}
                                     placesAvailable={course.details.placesAvailable}
                                     slug={course.title.replace(/ /g, "-").toLowerCase()}
+                                    sale={course.sale}
                                     key={index}
                             />
                         ))

@@ -19,7 +19,7 @@ const Presentazione = ({register, errors}: PresentazioneProps) => {
             <div className="form-element-container">
                 <textarea
                     {...register("presentazione")}
-                    placeholder={"Presentazione..."}
+                    placeholder={"Scivi la tua presentazione"}
                     onFocusCapture={() => setIsOnFocus(true)}
                     onBlurCapture={() => setIsOnFocus(false)}
                     style={{borderColor: errors["presentazione"] && !isOnFocus ? '#f53131' : 'transparent'}}

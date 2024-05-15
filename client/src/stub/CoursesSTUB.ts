@@ -16,6 +16,7 @@ export default [
             images: ["https://www.end-violence.org/sites/default/files/inline-images/UN0640668.jpeg", "https://img.freepik.com/free-photo/smiley-little-girl-red-dress_23-2148984788.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703462400&semt=ais"],
             formElementsList: ["email", "telefono", "nomeBambino", "dataNascita", "corsi", "problematiche", "preferenze", "partecipazioneDiCoppia", "presentazione", "aspettative", "note"]
         },
+        sale: true
     },
     {
         title: "Corso Massaggio Di Gruppo",
@@ -32,5 +33,6 @@ export default [
             images: ["https://www.end-violence.org/sites/default/files/inline-images/UN0640668.jpeg", "https://img.freepik.com/free-photo/smiley-little-girl-red-dress_23-2148984788.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703462400&semt=ais"],
             formElementsList: ["email", "telefono", "nomeBambino", "dataNascita", "corsi", "problematiche", "preferenze", "partecipazioneDiCoppia", "presentazione", "aspettative", "note"]
         },
+        sale: false
     },
 ];

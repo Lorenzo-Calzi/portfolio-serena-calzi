@@ -18,6 +18,7 @@ import Popup from "./components/reusable/Popup/Popup";
 import Cover from "./components/Cover/Cover";
 import Loader from "./components/reusable/Loader/Loader";
 import ReviewsPage from "./components/ReviewsPage/ReviewsPage";
+import ContactPage from "./components/ContactPage/ContactPage";
 
 const router = createBrowserRouter([
     {
@@ -106,6 +107,16 @@ const router = createBrowserRouter([
             <React.StrictMode>
                 <Provider store={store}>
                     <ReviewsPage/>
+                </Provider>
+            </React.StrictMode>
+        )
+    },
+    {
+        path: "contattami",
+        element: (
+            <React.StrictMode>
+                <Provider store={store}>
+                    <ContactPage/>
                 </Provider>
             </React.StrictMode>
         )

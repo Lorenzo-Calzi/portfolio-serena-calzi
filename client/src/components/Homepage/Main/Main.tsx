@@ -1,11 +1,11 @@
 import React from "react";
 import './main.scss'
 import Services from "./Services/Services";
-import Contact from "./Contact/Contact";
+import About from "./About/About";
 import Counter from "./Counter/Counter";
 import Courses from "./Courses/Courses";
-import About from "./About/About";
 import Reviews from "./Reviews/Reviews";
+import Contact from "./Contact/Contact";
 
 const Main = () => {
     return (

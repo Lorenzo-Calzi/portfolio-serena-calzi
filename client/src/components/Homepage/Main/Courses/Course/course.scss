@@ -6,7 +6,6 @@
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  cursor: pointer;
 
   .top-content {
     position: absolute;
@@ -31,13 +30,8 @@
       }
     }
 
-    .price {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .sale {
       position: absolute;
-      border-radius: 50%;
-      background-color: $theme-color;
     }
   }
 
@@ -70,6 +64,10 @@
         background-color: $theme-color;
       }
     }
+
+    .custom-anchor {
+      align-self: center;
+    }
   }
 }
 
@@ -89,7 +87,7 @@
         }
       }
 
-      .price {
+      .sale {
         width: 60px;
         height: 60px;
         bottom: -30px;
@@ -142,7 +140,7 @@
         }
       }
 
-      .price {
+      .sale {
         width: 65px;
         height: 65px;
         bottom: -32.5px;
@@ -195,7 +193,7 @@
         }
       }
 
-      .price {
+      .sale {
         width: 65px;
         height: 65px;
         bottom: -32.5px;
@@ -248,7 +246,7 @@
         }
       }
 
-      .price {
+      .sale {
         width: 65px;
         height: 65px;
         bottom: -32.5px;
@@ -301,7 +299,7 @@
         }
       }
 
-      .price {
+      .sale {
         width: 65px;
         height: 65px;
         bottom: -32.5px;
@@ -354,7 +352,7 @@
         }
       }
 
-      .price {
+      .sale {
         width: 65px;
         height: 65px;
         bottom: -32.5px;
@@ -407,7 +405,7 @@
         }
       }
 
-      .price {
+      .sale {
         width: 65px;
         height: 65px;
         bottom: -32.5px;
@@ -460,7 +458,7 @@
         }
       }
 
-      .price {
+      .sale {
         width: 65px;
         height: 65px;
         bottom: -32.5px;
@@ -513,7 +511,7 @@
         }
       }
 
-      .price {
+      .sale {
         width: 70px;
         height: 70px;
         bottom: -35px;
@@ -565,7 +563,7 @@
         }
       }
 
-      .price {
+      .sale {
         width: 70px;
         height: 70px;
         bottom: -35px;
@@ -617,7 +615,7 @@
         }
       }
 
-      .price {
+      .sale {
         width: 70px;
         height: 70px;
         bottom: -35px;

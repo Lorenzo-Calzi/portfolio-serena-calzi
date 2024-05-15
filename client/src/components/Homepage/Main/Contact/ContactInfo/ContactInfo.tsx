@@ -7,7 +7,11 @@ import TelephoneIcon from "../../../../../assets/icons/telephone-call-orange.svg
 import {GoogleMap, MarkerF, useLoadScript} from "@react-google-maps/api";
 import {motion} from "framer-motion";
 
-const ContactInfo = () => {
+interface ContactInfoProps {
+    height?: "fit-content" | "auto"
+}
+
+const ContactInfo = ({height = "auto"}: ContactInfoProps) => {
     const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
     const {isLoaded} = useLoadScript({
         googleMapsApiKey: googleMapsApiKey ? googleMapsApiKey : ''
@@ -20,6 +24,7 @@ const ContactInfo = () => {
                     whileInView={{opacity: 1}}
                     transition={{delay: 0, duration: 1}}
                     viewport={{once: true, amount: 0}}
+                    style={{height}}
         >
             <div className="info">
                 <div className="icon">

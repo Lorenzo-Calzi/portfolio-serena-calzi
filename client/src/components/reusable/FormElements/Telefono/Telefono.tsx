@@ -18,7 +18,7 @@ const Telefono = ({register, errors}: TelefonoProps) => {
 
             <div className="form-element-container">
                 <input {...register("telefono")}
-                       placeholder={"Telefono..."}
+                       placeholder={"Scrivi il tuo numero di telefono"}
                        type={"tel"}
                        onFocusCapture={() => setIsOnFocus(true)}
                        onBlurCapture={() => setIsOnFocus(false)}

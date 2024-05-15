@@ -3,6 +3,7 @@ import './course.scss'
 import Text from '../../../../reusable/Text/Text'
 import {motion} from "framer-motion";
 import Button from "../../../../reusable/Button/Button";
+import SaleSVG from "../../../../../assets/icons/sale.svg"
 
 interface CourseProps {
     title: string,
@@ -13,24 +14,22 @@ interface CourseProps {
     price: string
     placesAvailable: string,
     slug: string
+    sale: boolean
 }
 
-const Course = ({title, description, age, time, image, price, placesAvailable, slug}: CourseProps) => {
+const Course = ({title, description, age, time, image, placesAvailable, slug, sale}: CourseProps) => {
     return (
-        <motion.a id="course"
-                  href={`/corsi/${slug}`}
-                  initial={{opacity: 0, scale: 0.8}}
-                  whileInView={{opacity: 1, scale: 1}}
-                  transition={{delay: 0, duration: 1}}
-                  viewport={{once: true, amount: 0}}
+        <motion.div id="course"
+                    initial={{opacity: 0, scale: 0.8}}
+                    whileInView={{opacity: 1, scale: 1}}
+                    transition={{delay: 0, duration: 1}}
+                    viewport={{once: true, amount: 0}}
         >
             <div className="top-content">
                 <div className="image-container">
                     <div className="image" style={{backgroundImage: `url(${image})`}}/>
                 </div>
-                <div className="price">
-                    <Text type={"h4"} color={"white"}>{price}</Text>
-                </div>
+                {sale && <img src={SaleSVG} alt="icona dello sconto" className="sale"/>}
             </div>
 
             <div className="void-space-transaparent"/>
@@ -56,7 +55,7 @@ const Course = ({title, description, age, time, image, price, placesAvailable, s
                 </div>
                 <Button text={"Dettagli"} link={`/corsi/${slug}`}/>
             </div>
-        </motion.a>
+        </motion.div>
     )
 }
 

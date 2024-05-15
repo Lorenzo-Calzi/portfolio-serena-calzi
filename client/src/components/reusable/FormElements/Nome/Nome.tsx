@@ -18,7 +18,7 @@ const Nome = ({register, errors}: NomeProps) => {
 
             <div className="form-element-container">
                 <input {...register("nome")}
-                       placeholder={"Nome..."}
+                       placeholder={"Scrivi il tuo nome"}
                        type={"text"}
                        onFocusCapture={() => setIsOnFocus(true)}
                        onBlurCapture={() => setIsOnFocus(false)}

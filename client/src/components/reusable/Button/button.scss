@@ -9,12 +9,9 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
-  color: $white-color;
-  background-color: $theme-color;
   transition: 0.5s;
   text-transform: capitalize;
   text-align: center;
-  border: none;
   cursor: pointer;
 
   &:disabled {
@@ -57,6 +54,23 @@
     &:nth-child(4) {
       --n: 4;
     }
+  }
+}
+
+.classic-color {
+  color: $white-color;
+  background-color: $theme-color;
+  border: 1px solid $white-color;
+}
+
+.inverted-color {
+  color: $theme-color;
+  background-color: $white-color;
+  border: 1px solid $theme-color;
+
+  &:hover {
+    color: $white-color;
+    border: 1px solid $title-color;
   }
 }
 

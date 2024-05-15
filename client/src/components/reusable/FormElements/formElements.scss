@@ -19,6 +19,10 @@
       &::placeholder {
         color: $body-color;
       }
+
+      &:placeholder-shown {
+        text-overflow: ellipsis;
+      }
     }
   }
 }

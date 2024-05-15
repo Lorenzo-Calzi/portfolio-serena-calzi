@@ -16,19 +16,21 @@ const Button = ({text, handler, type, link, className, isDisabled, invertedColor
     return (
         link ? (
             <Anchor href={link} color={"white"}>
-                <button className={`custom-button ${className && className}`}
-                        onClick={handler ? handler : undefined}
-                        type={type ? type : 'button'}
-                        disabled={isDisabled ? isDisabled : false}>
+                <button
+                    className={`custom-button ${invertedColor ? "inverted-color" : "classic-color"} ${className && className}`}
+                    onClick={handler ? handler : undefined}
+                    type={type ? type : 'button'}
+                    disabled={isDisabled ? isDisabled : false}>
                     {text}
                     <span/><span/><span/><span/>
                 </button>
             </Anchor>
         ) : (
-            <button className={`custom-button ${className && className}`}
-                    onClick={handler ? handler : undefined}
-                    type={type ? type : 'button'}
-                    disabled={isDisabled ? isDisabled : false}>
+            <button
+                className={`custom-button ${invertedColor ? "inverted-color" : "classic-color"} ${className && className}`}
+                onClick={handler ? handler : undefined}
+                type={type ? type : 'button'}
+                disabled={isDisabled ? isDisabled : false}>
                 {text}
                 <span/><span/><span/><span/>
             </button>

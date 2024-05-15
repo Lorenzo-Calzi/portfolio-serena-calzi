@@ -30,7 +30,6 @@ const CourseDetailsPage = () => {
     })
 
     return (
-
         (currentIndex !== -1) ? (
             <div className="course-details">
                 <Header components={<Breadcrumb title={nomeCorso ? nomeCorso.replaceAll("-", " ") : "Corso"}/>}/>
@@ -129,7 +128,7 @@ const CourseDetailsPage = () => {
                                         formElementsList={CoursesSTUB[currentIndex].details.formElementsList}
                                         options={CoursesSTUB[currentIndex].title.toString()}
                                     />
-                                    <ContactInfo/>
+                                    <ContactInfo height={"fit-content"}/>
                                 </div>
                             </div>
                         )
@@ -139,7 +138,6 @@ const CourseDetailsPage = () => {
                 <Footer/>
             </div>
         ) : <></>
-
     )
 }
 

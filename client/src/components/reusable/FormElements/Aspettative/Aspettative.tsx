@@ -20,7 +20,7 @@ const Aspettative = ({register, errors}: AspettativeProps) => {
             <div className="form-element-container">
                 <textarea
                     {...register("aspettative")}
-                    placeholder={"Aspettative..."}
+                    placeholder={"Scrivi le tue aspettative"}
                     onFocusCapture={() => setIsOnFocus(true)}
                     onBlurCapture={() => setIsOnFocus(false)}
                     style={{borderColor: errors["aspettative"] && !isOnFocus ? '#f53131' : 'transparent'}}
