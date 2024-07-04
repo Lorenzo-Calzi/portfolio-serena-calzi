@@ -10,8 +10,8 @@ import Contact from "./Contact/Contact";
 const Main = () => {
     return (
         <main id="main">
-            <Services/>
             <About/>
+            <Services/>
             <Counter/>
             <Courses/>
             {/*<Steps/>*/}

@@ -18,6 +18,7 @@ import ChildIcon from "../../../assets/icons/child-orange.svg"
 import ClockIcon from "../../../assets/icons/clock-orange.svg"
 import AsteriskIcon from "../../../assets/icons/asterisk-orange.svg"
 import PriceIcon from "../../../assets/icons/price-tag-orange.svg"
+import PlaceIcon from "../../../assets/icons/place-orange.svg"
 
 const CourseDetailsPage = () => {
     const {nomeCorso} = useParams();
@@ -66,6 +67,15 @@ const CourseDetailsPage = () => {
                                                             key={index}>{CoursesSTUB[currentIndex].details.date.length > 1 && "•"} {date}</Text>
                                                     ))
                                                 }
+                                            </div>
+                                        </div>
+
+                                        <div className="detail">
+                                            <img src={PlaceIcon} alt="Icona del luogo"/>
+
+                                            <div className="right">
+                                                <Text type={"span"}>Luogo:</Text>
+                                                <Text type={"p-medium"}>{CoursesSTUB[currentIndex].details.place}</Text>
                                             </div>
                                         </div>
 

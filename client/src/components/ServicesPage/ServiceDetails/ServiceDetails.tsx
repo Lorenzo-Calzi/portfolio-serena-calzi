@@ -12,6 +12,8 @@ import ChildIcon from "../../../assets/icons/child-orange.svg";
 import ClockIcon from "../../../assets/icons/clock-orange.svg";
 import AsteriskIcon from "../../../assets/icons/asterisk-orange.svg";
 import PriceIcon from "../../../assets/icons/price-tag-orange.svg";
+import ModeIcon from "../../../assets/icons/mode.svg";
+import PerformanceTypeIcon from "../../../assets/icons/performance-type.svg";
 import ContactInfo from "../../Homepage/Main/Contact/ContactInfo/ContactInfo";
 import Carousel from "../../reusable/Carousel/Carousel";
 import {SwiperSlide} from "swiper/react";
@@ -73,8 +75,19 @@ const ServiceDetails = () => {
                                             <img src={UserIcon} alt="Icona dello user"/>
 
                                             <div className="right">
-                                                <Text type={"span"}>Età dei partecipanti:</Text>
-                                                <Text type={"p-medium"}>{ServicesSTUB[currentIndex].details.age}</Text>
+                                                <Text type={"span"}>Target:</Text>
+                                                <Text
+                                                    type={"p-medium"}>{ServicesSTUB[currentIndex].details.target}</Text>
+                                            </div>
+                                        </div>
+
+                                        <div className="detail">
+                                            <img src={PerformanceTypeIcon} alt="Icona del tipo di performance"/>
+
+                                            <div className="right">
+                                                <Text type={"span"}>Tipo di prestazione:</Text>
+                                                <Text
+                                                    type={"p-medium"}>{ServicesSTUB[currentIndex].details.performanceType}</Text>
                                             </div>
                                         </div>
 
@@ -85,6 +98,16 @@ const ServiceDetails = () => {
                                                 <Text type={"span"}>Posti disponibili:</Text>
                                                 <Text
                                                     type={"p-medium"}>{ServicesSTUB[currentIndex].details.placesAvailable}</Text>
+                                            </div>
+                                        </div>
+
+                                        <div className="detail">
+                                            <img src={ModeIcon} alt="Icona della modalità"/>
+
+                                            <div className="right">
+                                                <Text type={"span"}>Modalità:</Text>
+                                                <Text
+                                                    type={"p-medium"}>{ServicesSTUB[currentIndex].details.mode}</Text>
                                             </div>
                                         </div>
 
@@ -111,8 +134,10 @@ const ServiceDetails = () => {
                                             <img src={PriceIcon} alt="Icona del prezzo"/>
 
                                             <div className="right">
-                                                <Text type={"span"}>Prezzo:</Text>
-                                                <Text type={"p-medium"}>{ServicesSTUB[currentIndex].details.price}</Text>
+                                                <Text type={"span"}>Costi:</Text>
+                                                {ServicesSTUB[currentIndex].details.price.map((item) =>
+                                                    <Text type={"p-medium"}>{item}</Text>
+                                                )}
                                             </div>
                                         </div>
                                     </div>

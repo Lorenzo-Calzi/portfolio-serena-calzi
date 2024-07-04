@@ -33,12 +33,13 @@ const Navbar = ({currentSlug}: NavbarProps) => {
                         viewport={{once: true, amount: 0}}
                     >
                         <li className={currentSlug === "" ? "active" : ""}>
-                            <Anchor fontWeight={500} href={"/"}>Home</Anchor></li>
-                        <li className={currentSlug === "servizi" ? "active" : ""}>
-                            <Anchor fontWeight={500} href={currentSlug ? "/servizi" : "#services"}>Servizi</Anchor>
+                            <Anchor fontWeight={500} href={"/"}>Home</Anchor>
                         </li>
                         <li className={currentSlug === "about" ? "active" : ""}>
                             <Anchor fontWeight={500} href={currentSlug ? "/about" : "#about"}>Chi Sono</Anchor>
+                        </li>
+                        <li className={currentSlug === "servizi" ? "active" : ""}>
+                            <Anchor fontWeight={500} href={currentSlug ? "/servizi" : "#services"}>Servizi</Anchor>
                         </li>
                         <li className={currentSlug === "corsi" ? "active" : ""}>
                             <Anchor fontWeight={500} href={currentSlug ? "/corsi" : "#courses"}>Corsi</Anchor>

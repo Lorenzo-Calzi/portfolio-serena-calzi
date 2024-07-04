@@ -1,50 +1,68 @@
-import React, {useRef} from "react";
-import './carosuel.scss'
-import {Swiper} from "swiper/react";
-import {Autoplay, Navigation, Pagination} from 'swiper/modules';
-import {Swiper as SwiperType} from 'swiper';
+import React, { useRef } from "react";
+import "./carosuel.scss";
+import { Swiper } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper as SwiperType } from "swiper";
 
 interface CarouselProps {
-    children: React.ReactNode,
-    slidesPerView: number,
-    spaceBetween: number,
-    navigation?: boolean
-    pagination?: boolean,
-    autoplay?: boolean,
-    stub: {}[]
+    children: React.ReactNode;
+    slidesPerView: number;
+    spaceBetween: number;
+    navigation?: boolean;
+    pagination?: boolean;
+    autoplay?: boolean;
+    stub: {}[];
 }
 
-const Carousel = ({children, stub, slidesPerView, navigation, pagination, autoplay, spaceBetween}: CarouselProps) => {
+const Carousel = ({
+    children,
+    stub,
+    slidesPerView,
+    navigation,
+    pagination,
+    autoplay,
+    spaceBetween
+}: CarouselProps) => {
     const swiperRef = useRef<SwiperType>();
 
     return (
         <div id="carousel">
-            {stub.length > slidesPerView && navigation &&
-                <div onClick={() => swiperRef.current?.slidePrev()} className="arrow-left"/>}
+            {stub.length > slidesPerView && navigation && (
+                <div onClick={() => swiperRef.current?.slidePrev()} className="arrow-left" />
+            )}
 
-            <Swiper slidesPerView={slidesPerView}
-                    spaceBetween={spaceBetween}
-                    onBeforeInit={(swiper: any) => {
-                        swiperRef.current = swiper;
-                    }}
-                    loop
-                    autoplay={stub.length > slidesPerView && autoplay && {
+            <Swiper
+                slidesPerView={slidesPerView}
+                spaceBetween={spaceBetween}
+                centerInsufficientSlides={true}
+                onBeforeInit={(swiper: any) => {
+                    swiperRef.current = swiper;
+                }}
+                loop
+                autoplay={
+                    stub.length > slidesPerView &&
+                    autoplay && {
                         delay: 2500,
-                        disableOnInteraction: false,
-                    }}
-                    pagination={stub.length > slidesPerView && pagination && {
+                        disableOnInteraction: false
+                    }
+                }
+                pagination={
+                    stub.length > slidesPerView &&
+                    pagination && {
                         clickable: true,
-                        dynamicBullets: true,
-                    }}
-                    modules={[Autoplay, Navigation, Pagination]}
+                        dynamicBullets: true
+                    }
+                }
+                modules={[Autoplay, Navigation, Pagination]}
             >
                 {children}
             </Swiper>
 
-            {stub.length > slidesPerView && navigation &&
-                <div onClick={() => swiperRef.current?.slideNext()} className="arrow-right"/>}
+            {stub.length > slidesPerView && navigation && (
+                <div onClick={() => swiperRef.current?.slideNext()} className="arrow-right" />
+            )}
         </div>
-    )
-}
+    );
+};
 
-export default Carousel
+export default Carousel;

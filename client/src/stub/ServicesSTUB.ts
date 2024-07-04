@@ -1,39 +1,43 @@
-import Image1 from "../assets/icons/books.svg";
-import Image2 from "../assets/icons/grow.svg";
-import Image3 from "../assets/icons/teacher.svg";
-import Image4 from "../assets/icons/motherhood-mother.svg";
+import GrowSVG from "../assets/icons/grow.svg";
+import BookSVG from "../assets/icons/books.svg";
+import MotherSVG from "../assets/icons/motherhood-mother.svg";
+import TeacherSVG from "../assets/icons/teacher.svg";
 
 export default [
     {
-        image: Image1,
+        image: GrowSVG,
         title: "CONSULENZA PEDAGOGICA",
         description: "Rivolto ai genitori",
         details: {
             description: "Continually restore backward-compatible networks for goal-oriented results. Rapidiously provide access to best of breed manufactured products whereas out-of-the-box “outside the box” thinking. Assertively plagiarize error-free “outside the box” thinking rather than optimal supply chains. Proactively benchmark flexible opportunities before out-of-the-box materials. Authoritatively streamline multimedia based...",
-            date: ["25 Gennaio 2024"],
-            age: "0 - 2 anni",
-            placesAvailable: "10",
-            timetables: "10:00 - 12:00",
-            days: "Lunedì, Mercoledì",
-            price: "47€",
+            date: ["*"],
+            target: "Genitori con bimbi d’età 0-6, pre-adolescenti e adolescenti",
+            performanceType: "1-1",
+            placesAvailable: "*",
+            mode: "In presenza o online",
+            timetables: "*",
+            days: "*",
+            price: ["Primo contatto telefonico gratuito", "€60 primo colloquio", "€50 a incontro d’osservazione del nucleo", "€40 a incontro (se si attiva un percorso)"],
             images: ["https://www.end-violence.org/sites/default/files/inline-images/UN0640668.jpeg", "https://img.freepik.com/free-photo/smiley-little-girl-red-dress_23-2148984788.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703462400&semt=ais"],
-            formElementsList: ["email", "telefono", "nomeBambino", "dataNascita", "corsi", "problematiche", "preferenze", "partecipazioneDiCoppia", "presentazione", "aspettative", "note"]
+            formElementsList: ["email", "telefono", "note"]
         },
         backgroundColor: '#FEE9E4',
         textColor: '#FD5D37'
     },
     {
-        image: Image2,
+        image: BookSVG,
         title: "PERCORSO PEDAGOGICO CLINICO",
         description: "Rivolto a bambini e ragazzi",
         details: {
             description: "Continually restore backward-compatible networks for goal-oriented results. Rapidiously provide access to best of breed manufactured products whereas out-of-the-box “outside the box” thinking. Assertively plagiarize error-free “outside the box” thinking rather than optimal supply chains. Proactively benchmark flexible opportunities before out-of-the-box materials. Authoritatively streamline multimedia based...",
-            date: ["25 Gennaio 2024"],
-            age: "0 - 2 anni",
-            placesAvailable: "10",
-            timetables: "10:00 - 12:00",
-            days: "Lunedì, Mercoledì",
-            price: "47€",
+            date: ["*"],
+            target: "*",
+            performanceType: "*",
+            placesAvailable: "*",
+            mode: "*",
+            timetables: "*",
+            days: "*",
+            price: ["*"],
             images: ["https://www.end-violence.org/sites/default/files/inline-images/UN0640668.jpeg", "https://img.freepik.com/free-photo/smiley-little-girl-red-dress_23-2148984788.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703462400&semt=ais"],
             formElementsList: ["email", "telefono", "nomeBambino", "dataNascita", "corsi", "problematiche", "preferenze", "partecipazioneDiCoppia", "presentazione", "aspettative", "note"]
         },
@@ -41,17 +45,19 @@ export default [
         textColor: '#7869CF'
     },
     {
-        image: Image3,
+        image: MotherSVG,
         title: "CORSI FORMATIVI",
         description: "Rivolto ai genitori",
         details: {
             description: "Continually restore backward-compatible networks for goal-oriented results. Rapidiously provide access to best of breed manufactured products whereas out-of-the-box “outside the box” thinking. Assertively plagiarize error-free “outside the box” thinking rather than optimal supply chains. Proactively benchmark flexible opportunities before out-of-the-box materials. Authoritatively streamline multimedia based...",
-            date: ["25 Gennaio 2024"],
-            age: "0 - 2 anni",
-            placesAvailable: "10",
-            timetables: "10:00 - 12:00",
-            days: "Lunedì, Mercoledì",
-            price: "47€",
+            date: ["*"],
+            target: "*",
+            performanceType: "*",
+            placesAvailable: "*",
+            mode: "*",
+            timetables: "*",
+            days: "*",
+            price: ["*"],
             images: ["https://www.end-violence.org/sites/default/files/inline-images/UN0640668.jpeg", "https://img.freepik.com/free-photo/smiley-little-girl-red-dress_23-2148984788.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703462400&semt=ais"],
             formElementsList: ["email", "telefono", "nomeBambino", "dataNascita", "corsi", "problematiche", "preferenze", "partecipazioneDiCoppia", "presentazione", "aspettative", "note"]
         },
@@ -59,17 +65,19 @@ export default [
         textColor: '#FBB50F'
     },
     {
-        image: Image4,
+        image: TeacherSVG,
         title: "SUPERVISIONE PEDAGOGICA",
         description: "Rivolto ad educatori professionali e allle scuole",
         details: {
             description: "Continually restore backward-compatible networks for goal-oriented results. Rapidiously provide access to best of breed manufactured products whereas out-of-the-box “outside the box” thinking. Assertively plagiarize error-free “outside the box” thinking rather than optimal supply chains. Proactively benchmark flexible opportunities before out-of-the-box materials. Authoritatively streamline multimedia based...",
-            date: ["25 Gennaio 2024"],
-            age: "0 - 2 anni",
-            placesAvailable: "10",
-            timetables: "10:00 - 12:00",
-            days: "Lunedì, Mercoledì",
-            price: "47€",
+            date: ["*"],
+            target: "*",
+            performanceType: "*",
+            placesAvailable: "*",
+            mode: "*",
+            timetables: "*",
+            days: "*",
+            price: ["*"],
             images: ["https://www.end-violence.org/sites/default/files/inline-images/UN0640668.jpeg", "https://img.freepik.com/free-photo/smiley-little-girl-red-dress_23-2148984788.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703462400&semt=ais"],
             formElementsList: ["email", "telefono", "nomeBambino", "dataNascita", "corsi", "problematiche", "preferenze", "partecipazioneDiCoppia", "presentazione", "aspettative", "note"]
         },
