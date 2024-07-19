@@ -1,4 +1,4 @@
-@import '../../../sass/common';
+@import "../../../sass/common";
 
 .input-container {
   flex-grow: 1;
@@ -9,7 +9,8 @@
   input {
     border: 1px solid;
 
-    &:active, &:focus {
+    &:active,
+    &:focus {
       outline: 1px dashed $theme-color;
     }
 
@@ -18,7 +19,6 @@
     }
   }
 }
-
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   .input-container {

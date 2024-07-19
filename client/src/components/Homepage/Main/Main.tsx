@@ -1,5 +1,5 @@
 import React from "react";
-import './main.scss'
+import "./main.scss";
 import Services from "./Services/Services";
 import About from "./About/About";
 import Counter from "./Counter/Counter";
@@ -10,15 +10,15 @@ import Contact from "./Contact/Contact";
 const Main = () => {
     return (
         <main id="main">
-            <About/>
-            <Services/>
-            <Counter/>
-            <Courses/>
+            <About />
+            <Services />
+            <Counter />
+            <Courses />
             {/*<Steps/>*/}
-            <Reviews/>
-            <Contact/>
+            <Reviews />
+            <Contact />
         </main>
-    )
-}
+    );
+};
 
-export default Main
+export default Main;

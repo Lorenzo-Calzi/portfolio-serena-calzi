@@ -1,10 +1,12 @@
 import ImageCourse1 from "../assets/images/course-1.jpg";
+import ImageCourse2 from "../assets/images/course-6.jpg";
 
 export default [
     {
+        id: "corso-massaggio-individuale",
         title: "Corso Massaggio Individuale",
         description: "Interactively brand client center through is customized value good ideas.",
-        image: ImageCourse1,
+        image: ImageCourse2,
         details: {
             description:
                 "Continually restore backward-compatible networks for goal-oriented results. Rapidiously provide access to best of breed manufactured products whereas out-of-the-box “outside the box” thinking. Assertively plagiarize error-free “outside the box” thinking rather than optimal supply chains. Proactively benchmark flexible opportunities before out-of-the-box materials. Authoritatively streamline multimedia based...",
@@ -36,6 +38,7 @@ export default [
         sale: true
     },
     {
+        id: "corso-massaggio-di-gruppo",
         title: "Corso Massaggio Di Gruppo",
         description: "Interactively brand client center through is customized value good ideas.",
         image: ImageCourse1,

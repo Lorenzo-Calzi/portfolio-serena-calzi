@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import "./homepage.scss"
+import React, { useEffect, useState } from "react";
+import "./homepage.scss";
 import Header from "../reusable/Header/Header";
 import Jumbotron from "./Header/Jumbotron/Jumbotron";
 import Main from "./Main/Main";
@@ -12,25 +12,25 @@ const client = axios.create({
 });
 
 const Homepage = () => {
-    const [courses, setCourses] = useState([])
+    const [courses, setCourses] = useState([]);
 
     useEffect(() => {
-        getAllCourses()
-    }, [])
+        getAllCourses();
+    }, []);
 
     const getAllCourses = async () => {
         // const response = await client.get("/courses");
         // setCourses(response.data)
-    }
+    };
 
     return (
         <div id="homepage">
-            <Header components={<Jumbotron/>}/>
-            <Main/>
-            <Footer/>
-            <JumpToTop/>
+            <Header components={<Jumbotron />} />
+            <Main />
+            <Footer />
+            <JumpToTop />
         </div>
-    )
-}
+    );
+};
 
-export default Homepage
+export default Homepage;

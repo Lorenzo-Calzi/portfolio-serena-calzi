@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-import "./jumpToTop.scss"
+import React, { useEffect } from "react";
+import "./jumpToTop.scss";
 import Anchor from "../../reusable/Anchor/Anchor";
 
 const JumpToTop = () => {
@@ -8,19 +8,19 @@ const JumpToTop = () => {
 
         if (headerEl && jumpToTopEl) {
             if (currentY >= headerEl.offsetHeight) {
-                jumpToTopEl.className = "show"
+                jumpToTopEl.className = "show";
             } else {
-                jumpToTopEl.className = "hide"
+                jumpToTopEl.className = "hide";
             }
         }
-    }
+    };
 
     useEffect(() => {
         const headerEl = document.getElementById("header");
         const jumpToTopEl = document.getElementById("jumpToTop");
 
         if (headerEl && jumpToTopEl) {
-            checkScroll(headerEl, jumpToTopEl)
+            checkScroll(headerEl, jumpToTopEl);
 
             window.addEventListener("scroll", () => checkScroll(headerEl, jumpToTopEl));
             return () => {
@@ -31,9 +31,9 @@ const JumpToTop = () => {
 
     return (
         <div id="jumpToTop">
-            <Anchor href={"#"}/>
+            <Anchor href={"#"} />
         </div>
-    )
-}
+    );
+};
 
-export default JumpToTop
+export default JumpToTop;

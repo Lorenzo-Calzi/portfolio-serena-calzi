@@ -1,6 +1,6 @@
 import React from "react";
-import './laoder.scss'
-import {ColorRing} from "react-loader-spinner";
+import "./laoder.scss";
+import { ColorRing } from "react-loader-spinner";
 
 const Loader = () => {
     return (
@@ -12,10 +12,10 @@ const Loader = () => {
                 ariaLabel="blocks-loading"
                 wrapperStyle={{}}
                 wrapperClass="blocks-wrapper"
-                colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
+                colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
             />
         </div>
-    )
-}
+    );
+};
 
-export default Loader
+export default Loader;

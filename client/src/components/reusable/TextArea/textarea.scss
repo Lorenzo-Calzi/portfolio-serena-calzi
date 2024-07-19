@@ -1,4 +1,4 @@
-@import '../../../sass/common';
+@import "../../../sass/common";
 
 .textarea-container {
   display: flex;
@@ -9,7 +9,8 @@
     border: 1px solid;
     resize: none;
 
-    &:active, &:focus {
+    &:active,
+    &:focus {
       outline: 1px dashed $theme-color;
     }
 

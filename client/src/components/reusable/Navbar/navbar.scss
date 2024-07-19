@@ -1,4 +1,4 @@
-@import '../../../sass/common';
+@import "../../../sass/common";
 
 #navbar {
   width: 100%;
@@ -12,7 +12,7 @@
     align-items: center;
 
     h4 {
-      font-family: 'Dancing Script', cursive;
+      font-family: "Dancing Script", cursive;
       font-weight: 700;
     }
 
@@ -49,13 +49,13 @@
   }
 }
 
-
 @media screen and (max-width: 320px) and (orientation: portrait) {
   #navbar {
     height: 100px;
 
     .content {
-      ul, .bookAVisitButton {
+      ul,
+      .bookAVisitButton {
         display: none;
       }
     }
@@ -67,7 +67,8 @@
     height: 100px;
 
     .content {
-      ul, .bookAVisitButton {
+      ul,
+      .bookAVisitButton {
         display: none;
       }
     }
@@ -79,7 +80,8 @@
     height: 100px;
 
     .content {
-      ul, .bookAVisitButton {
+      ul,
+      .bookAVisitButton {
         display: none;
       }
     }
@@ -91,7 +93,8 @@
     height: 110px;
 
     .content {
-      ul, .bookAVisitButton {
+      ul,
+      .bookAVisitButton {
         display: none;
       }
     }
@@ -103,7 +106,8 @@
     height: 100px;
 
     .content {
-      ul, .bookAVisitButton {
+      ul,
+      .bookAVisitButton {
         display: none;
       }
     }
@@ -115,7 +119,8 @@
     height: 100px;
 
     .content {
-      ul, .bookAVisitButton {
+      ul,
+      .bookAVisitButton {
         display: none;
       }
     }
@@ -127,7 +132,8 @@
     height: 110px;
 
     .content {
-      ul, .bookAVisitButton {
+      ul,
+      .bookAVisitButton {
         display: none;
       }
     }
@@ -139,7 +145,8 @@
     height: 110px;
 
     .content {
-      ul, .bookAVisitButton {
+      ul,
+      .bookAVisitButton {
         display: none;
       }
     }

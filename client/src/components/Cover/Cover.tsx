@@ -1,10 +1,8 @@
 import React from "react";
-import "./cover.scss"
+import "./cover.scss";
 
 const Cover = () => {
-    return (
-        <div id="cover"/>
-    )
-}
+    return <div id="cover" />;
+};
 
-export default Cover
+export default Cover;

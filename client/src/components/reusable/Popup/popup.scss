@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    animation: 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     background-color: rgb(253, 253, 253);
     border: 2px dashed rgb(235, 235, 235);
     box-shadow: 0 8px 40px 0 rgba(105, 116, 119, 0.08);
@@ -37,7 +37,6 @@
     transform: translateY(-200px);
   }
 }
-
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   #popup {

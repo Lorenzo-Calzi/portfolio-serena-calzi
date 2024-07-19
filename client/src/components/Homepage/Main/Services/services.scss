@@ -1,6 +1,6 @@
 #services {
-  background-color: #F9F6EF;
-  
+  background-color: #f9f6ef;
+
   .content {
     display: flex;
     flex-direction: column;
@@ -26,7 +26,9 @@
   }
 
   &:hover {
-    .swiper-pagination, .arrow-left, .arrow-right {
+    .swiper-pagination,
+    .arrow-left,
+    .arrow-right {
       opacity: 1;
     }
   }
@@ -57,7 +59,8 @@
         .arrows {
           gap: 30px;
 
-          .arrow-left, .arrow-right {
+          .arrow-left,
+          .arrow-right {
             width: 40px;
             height: 40px;
           }
@@ -92,7 +95,8 @@
         .arrows {
           gap: 30px;
 
-          .arrow-left, .arrow-right {
+          .arrow-left,
+          .arrow-right {
             width: 40px;
             height: 40px;
           }
@@ -127,7 +131,8 @@
         .arrows {
           gap: 30px;
 
-          .arrow-left, .arrow-right {
+          .arrow-left,
+          .arrow-right {
             width: 40px;
             height: 40px;
           }
@@ -171,7 +176,8 @@
         .arrows {
           gap: 30px;
 
-          .arrow-left, .arrow-right {
+          .arrow-left,
+          .arrow-right {
             width: 40px;
             height: 40px;
           }
@@ -215,7 +221,8 @@
         .arrows {
           gap: 30px;
 
-          .arrow-left, .arrow-right {
+          .arrow-left,
+          .arrow-right {
             width: 40px;
             height: 40px;
           }
@@ -250,7 +257,8 @@
         .arrows {
           gap: 30px;
 
-          .arrow-left, .arrow-right {
+          .arrow-left,
+          .arrow-right {
             width: 40px;
             height: 40px;
           }
@@ -294,7 +302,8 @@
         .arrows {
           gap: 30px;
 
-          .arrow-left, .arrow-right {
+          .arrow-left,
+          .arrow-right {
             width: 40px;
             height: 40px;
           }
@@ -338,7 +347,8 @@
         .arrows {
           gap: 30px;
 
-          .arrow-left, .arrow-right {
+          .arrow-left,
+          .arrow-right {
             width: 40px;
             height: 40px;
           }
@@ -382,7 +392,8 @@
         .arrows {
           gap: 30px;
 
-          .arrow-left, .arrow-right {
+          .arrow-left,
+          .arrow-right {
             width: 50px;
             height: 50px;
           }
@@ -426,7 +437,8 @@
         .arrows {
           gap: 30px;
 
-          .arrow-left, .arrow-right {
+          .arrow-left,
+          .arrow-right {
             width: 50px;
             height: 50px;
           }
@@ -470,7 +482,8 @@
         .arrows {
           gap: 30px;
 
-          .arrow-left, .arrow-right {
+          .arrow-left,
+          .arrow-right {
             width: 50px;
             height: 50px;
           }
@@ -500,4 +513,3 @@
     }
   }
 }
-

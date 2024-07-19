@@ -1,34 +1,35 @@
-import React, {useMemo} from "react";
-import './contactInfo.scss'
-import Text from '../../../../reusable/Text/Text'
-import MapIcon from "../../../../../assets/icons/map-pin-orange.svg"
-import EmailIcon from "../../../../../assets/icons/presentation-card-open.svg"
-import TelephoneIcon from "../../../../../assets/icons/telephone-call-orange.svg"
-import {GoogleMap, MarkerF, useLoadScript} from "@react-google-maps/api";
-import {motion} from "framer-motion";
+import React, { useMemo } from "react";
+import "./contactInfo.scss";
+import Text from "../../../../reusable/Text/Text";
+import MapIcon from "../../../../../assets/icons/map-pin-orange.svg";
+import EmailIcon from "../../../../../assets/icons/presentation-card-open.svg";
+import TelephoneIcon from "../../../../../assets/icons/telephone-call-orange.svg";
+import { GoogleMap, MarkerF, useLoadScript } from "@react-google-maps/api";
+import { motion } from "framer-motion";
 
 interface ContactInfoProps {
-    height?: "fit-content" | "auto"
+    height?: "fit-content" | "auto";
 }
 
-const ContactInfo = ({height = "auto"}: ContactInfoProps) => {
-    const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY
-    const {isLoaded} = useLoadScript({
-        googleMapsApiKey: googleMapsApiKey ? googleMapsApiKey : ''
-    })
-    const center = useMemo(() => ({lat: 45.55897716416121, lng: 9.135750454738675}), [])
+const ContactInfo = ({ height = "auto" }: ContactInfoProps) => {
+    const googleMapsApiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+    const { isLoaded } = useLoadScript({
+        googleMapsApiKey: googleMapsApiKey ? googleMapsApiKey : ""
+    });
+    const center = useMemo(() => ({ lat: 45.55897716416121, lng: 9.135750454738675 }), []);
 
     return (
-        <motion.div id="contact-info"
-                    initial={{opacity: 0}}
-                    whileInView={{opacity: 1}}
-                    transition={{delay: 0, duration: 1}}
-                    viewport={{once: true, amount: 0}}
-                    style={{height}}
+        <motion.div
+            id="contact-info"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0, duration: 1 }}
+            viewport={{ once: true, amount: 0 }}
+            style={{ height }}
         >
             <div className="info">
                 <div className="icon">
-                    <img src={MapIcon} alt="Icona di una mappa"/>
+                    <img src={MapIcon} alt="Icona di una mappa" />
                 </div>
 
                 <div className="texts">
@@ -39,7 +40,7 @@ const ContactInfo = ({height = "auto"}: ContactInfoProps) => {
 
             <div className="info">
                 <div className="icon">
-                    <img src={TelephoneIcon} alt="Icona di un telefono"/>
+                    <img src={TelephoneIcon} alt="Icona di un telefono" />
                 </div>
 
                 <div className="texts">
@@ -50,7 +51,7 @@ const ContactInfo = ({height = "auto"}: ContactInfoProps) => {
 
             <div className="info">
                 <div className="icon">
-                    <img src={EmailIcon} alt="Icona di una busta aperta"/>
+                    <img src={EmailIcon} alt="Icona di una busta aperta" />
                 </div>
 
                 <div className="texts">
@@ -59,26 +60,21 @@ const ContactInfo = ({height = "auto"}: ContactInfoProps) => {
                 </div>
             </div>
 
-            {
-                isLoaded && (
-                    <GoogleMap
-                        mapContainerClassName={'map'}
-                        zoom={17}
-                        center={center}
-                        options={
-                            {
-                                mapTypeControl: false,
-                                mapTypeId: "roadmap",
-                            }
-                        }
-                    >
-                        <MarkerF position={center}/>
-                    </GoogleMap>
-                )
-            }
-
+            {isLoaded && (
+                <GoogleMap
+                    mapContainerClassName={"map"}
+                    zoom={17}
+                    center={center}
+                    options={{
+                        mapTypeControl: false,
+                        mapTypeId: "roadmap"
+                    }}
+                >
+                    <MarkerF position={center} />
+                </GoogleMap>
+            )}
         </motion.div>
-    )
-}
+    );
+};
 
-export default ContactInfo
+export default ContactInfo;

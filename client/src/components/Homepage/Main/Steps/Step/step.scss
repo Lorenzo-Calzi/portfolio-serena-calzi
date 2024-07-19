@@ -1,4 +1,4 @@
-@import '../../../../../sass/common';
+@import "../../../../../sass/common";
 
 #step {
   height: 100%;
@@ -25,11 +25,10 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    background-color: #DBEAF7;
+    background-color: #dbeaf7;
     border-radius: 50%;
   }
 }
-
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   #step {

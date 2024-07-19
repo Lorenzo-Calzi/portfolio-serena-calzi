@@ -1,8 +1,8 @@
-@import '../../../../sass/common';
+@import "../../../../sass/common";
 
 #steps {
   position: relative;
-  background-color: #DBEAF7;
+  background-color: #dbeaf7;
 
   .content {
     height: 100%;
@@ -25,7 +25,6 @@
     z-index: 2;
   }
 }
-
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   #steps {

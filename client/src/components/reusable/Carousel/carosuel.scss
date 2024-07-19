@@ -1,4 +1,4 @@
-@import '../../../sass/common';
+@import "../../../sass/common";
 
 #carousel {
   display: flex;
@@ -34,7 +34,8 @@
     }
   }
 
-  .arrow-left, .arrow-right {
+  .arrow-left,
+  .arrow-right {
     position: absolute;
     z-index: 999;
     background-position: center;
@@ -81,7 +82,8 @@
       }
     }
 
-    .arrow-left, .arrow-right {
+    .arrow-left,
+    .arrow-right {
       display: none;
     }
   }
@@ -101,7 +103,8 @@
       }
     }
 
-    .arrow-left, .arrow-right {
+    .arrow-left,
+    .arrow-right {
       display: none;
     }
   }
@@ -121,7 +124,8 @@
       }
     }
 
-    .arrow-left, .arrow-right {
+    .arrow-left,
+    .arrow-right {
       display: none;
     }
   }
@@ -141,7 +145,8 @@
       }
     }
 
-    .arrow-left, .arrow-right {
+    .arrow-left,
+    .arrow-right {
       display: none;
     }
   }
@@ -161,7 +166,8 @@
       }
     }
 
-    .arrow-left, .arrow-right {
+    .arrow-left,
+    .arrow-right {
       display: none;
     }
   }
@@ -181,7 +187,8 @@
       }
     }
 
-    .arrow-left, .arrow-right {
+    .arrow-left,
+    .arrow-right {
       display: none;
     }
   }
@@ -201,7 +208,8 @@
       }
     }
 
-    .arrow-left, .arrow-right {
+    .arrow-left,
+    .arrow-right {
       display: none;
     }
   }
@@ -221,7 +229,8 @@
       }
     }
 
-    .arrow-left, .arrow-right {
+    .arrow-left,
+    .arrow-right {
       display: none;
     }
   }
@@ -240,7 +249,8 @@
       }
     }
 
-    .arrow-left, .arrow-right {
+    .arrow-left,
+    .arrow-right {
       background-size: 60%;
       width: 60px;
       height: 60px;
@@ -273,7 +283,8 @@
       }
     }
 
-    .arrow-left, .arrow-right {
+    .arrow-left,
+    .arrow-right {
       background-size: 60%;
       width: 60px;
       height: 60px;
@@ -306,7 +317,8 @@
       }
     }
 
-    .arrow-left, .arrow-right {
+    .arrow-left,
+    .arrow-right {
       background-size: 60%;
       width: 60px;
       height: 60px;
@@ -325,4 +337,3 @@
     }
   }
 }
-

@@ -1,1 +1,1 @@
-export default ["nome", "cognome", "email", "telefono", "corsi", "messaggio"]
+export default ["nome", "cognome", "email", "telefono", "corsi", "messaggio"];

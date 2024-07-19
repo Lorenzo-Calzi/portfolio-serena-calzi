@@ -1,4 +1,4 @@
-@import '../../../sass/common';
+@import "../../../sass/common";
 
 .select-container {
   flex-grow: 1;
@@ -12,12 +12,12 @@
     background-color: white;
     color: $body-color;
 
-    &:active, &:focus {
+    &:active,
+    &:focus {
       outline: 1px dashed $theme-color;
     }
   }
 }
-
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   .select-container {

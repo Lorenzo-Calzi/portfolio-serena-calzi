@@ -13,7 +13,8 @@ export default [
     },
     {
         title: "Top!",
-        description: "Interactively brand client center through is customized value good ideas. center through is customized value good ideas. er through is customized value good ideas.",
+        description:
+            "Interactively brand client center through is customized value good ideas. center through is customized value good ideas. er through is customized value good ideas.",
         name: "Marco",
         gender: "M"
     },
@@ -22,5 +23,5 @@ export default [
         description: "Interactively brand client center through is customized value good ideas.",
         name: "Chiara",
         gender: "F"
-    },
+    }
 ];

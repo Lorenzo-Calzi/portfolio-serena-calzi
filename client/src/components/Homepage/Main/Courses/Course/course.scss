@@ -1,4 +1,4 @@
-@import '../../../../../sass/common';
+@import "../../../../../sass/common";
 
 #course {
   display: flex;
@@ -42,14 +42,14 @@
 
   .void-space {
     width: 100%;
-    background-color: #FEE9E4;
+    background-color: #fee9e4;
   }
 
   .course-content {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #FEE9E4;
+    background-color: #fee9e4;
 
     .infos {
       display: flex;
@@ -70,7 +70,6 @@
     }
   }
 }
-
 
 @media screen and (max-width: 320px) and (orientation: portrait) {
   #course {

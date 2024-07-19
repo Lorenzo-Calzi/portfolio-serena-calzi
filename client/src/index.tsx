@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
-import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {Provider, useSelector} from "react-redux";
+import React, { useEffect } from "react";
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Provider, useSelector } from "react-redux";
 import store from "./redux/store";
 import Homepage from "./components/Homepage/Homepage";
 import AboutPage from "./components/AboutPage/AboutPage";
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         element: (
             <React.StrictMode>
                 <Provider store={store}>
-                    <Homepage/>
+                    <Homepage />
                 </Provider>
             </React.StrictMode>
         )
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: (
             <React.StrictMode>
                 <Provider store={store}>
-                    <ServicesPage/>
+                    <ServicesPage />
                 </Provider>
             </React.StrictMode>
         )
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         element: (
             <React.StrictMode>
                 <Provider store={store}>
-                    <ServiceDetails/>
+                    <ServiceDetails />
                 </Provider>
             </React.StrictMode>
         )
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
         element: (
             <React.StrictMode>
                 <Provider store={store}>
-                    <AboutPage/>
+                    <AboutPage />
                 </Provider>
             </React.StrictMode>
         )
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
         element: (
             <React.StrictMode>
                 <Provider store={store}>
-                    <CoursesPage/>
+                    <CoursesPage />
                 </Provider>
             </React.StrictMode>
         )
@@ -76,7 +76,7 @@ const router = createBrowserRouter([
         element: (
             <React.StrictMode>
                 <Provider store={store}>
-                    <CourseDetailsPage/>
+                    <CourseDetailsPage />
                 </Provider>
             </React.StrictMode>
         )
@@ -86,7 +86,7 @@ const router = createBrowserRouter([
         element: (
             <React.StrictMode>
                 <Provider store={store}>
-                    <ProjectsPage/>
+                    <ProjectsPage />
                 </Provider>
             </React.StrictMode>
         )
@@ -96,7 +96,7 @@ const router = createBrowserRouter([
         element: (
             <React.StrictMode>
                 <Provider store={store}>
-                    <ProjectDetails/>
+                    <ProjectDetails />
                 </Provider>
             </React.StrictMode>
         )
@@ -106,7 +106,7 @@ const router = createBrowserRouter([
         element: (
             <React.StrictMode>
                 <Provider store={store}>
-                    <ReviewsPage/>
+                    <ReviewsPage />
                 </Provider>
             </React.StrictMode>
         )
@@ -116,7 +116,7 @@ const router = createBrowserRouter([
         element: (
             <React.StrictMode>
                 <Provider store={store}>
-                    <ContactPage/>
+                    <ContactPage />
                 </Provider>
             </React.StrictMode>
         )
@@ -126,7 +126,7 @@ const router = createBrowserRouter([
         element: (
             <React.StrictMode>
                 <Provider store={store}>
-                    <AdminPage/>
+                    <AdminPage />
                 </Provider>
             </React.StrictMode>
         )
@@ -136,52 +136,51 @@ const router = createBrowserRouter([
         element: (
             <React.StrictMode>
                 <Provider store={store}>
-                    <ErrorPage/>
+                    <ErrorPage />
                 </Provider>
             </React.StrictMode>
         )
     }
-])
+]);
 
 const SharedPopup = () => {
-    const {popupVisibility, popupMessage} = useSelector((state: any) => state.popup)
+    const { popupVisibility, popupMessage } = useSelector((state: any) => state.popup);
     useEffect(() => {
         if (popupVisibility) {
-            document.body.classList.add('scroll-disabled')
+            document.body.classList.add("scroll-disabled");
         } else {
-            document.body.classList.remove('scroll-disabled')
+            document.body.classList.remove("scroll-disabled");
         }
     }, [popupVisibility]);
 
-    return popupVisibility && <Popup popupVisibility={popupVisibility} message={popupMessage}/>
-}
+    return popupVisibility && <Popup popupVisibility={popupVisibility} message={popupMessage} />;
+};
 
 const SharedSideBar = () => {
-    const {sideBarVisibility} = useSelector((state: any) => state.sideBar)
+    const { sideBarVisibility } = useSelector((state: any) => state.sideBar);
 
-    return sideBarVisibility && <Cover/>
-}
+    return sideBarVisibility && <Cover />;
+};
 
 const SharedLoader = () => {
-    const {loaderVisibility} = useSelector((state: any) => state.loader)
+    const { loaderVisibility } = useSelector((state: any) => state.loader);
 
-    return loaderVisibility && <Loader/>
-}
+    return loaderVisibility && <Loader />;
+};
 
-const root = ReactDOM.createRoot(
-    document.getElementById('root') as HTMLElement
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+
+root.render(
+    <>
+        <React.StrictMode>
+            <Provider store={store}>
+                <RouterProvider router={router} />
+                <SharedPopup />
+                <SharedSideBar />
+                <SharedLoader />
+            </Provider>
+        </React.StrictMode>
+    </>
 );
 
-root.render(<>
-    <React.StrictMode>
-        <Provider store={store}>
-            <RouterProvider router={router}/>
-            <SharedPopup/>
-            <SharedSideBar/>
-            <SharedLoader/>
-        </Provider>
-    </React.StrictMode>
-</>)
-
 reportWebVitals();
-
