@@ -56,6 +56,11 @@
     .description {
       display: flex;
       flex-direction: column;
+
+      .paragraph {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     .contact {
@@ -103,6 +108,10 @@
 
       .description {
         gap: 25px;
+
+        .paragraph {
+          gap: 10px;
+        }
       }
 
       .contact {
@@ -152,6 +161,10 @@
 
       .description {
         gap: 25px;
+
+        .paragraph {
+          gap: 10px;
+        }
       }
 
       .contact {
@@ -201,6 +214,10 @@
 
       .description {
         gap: 25px;
+
+        .paragraph {
+          gap: 10px;
+        }
       }
 
       .contact {
@@ -250,6 +267,10 @@
 
       .description {
         gap: 25px;
+
+        .paragraph {
+          gap: 10px;
+        }
       }
 
       .contact {
@@ -299,6 +320,10 @@
 
       .description {
         gap: 25px;
+
+        .paragraph {
+          gap: 10px;
+        }
       }
 
       .contact {
@@ -348,6 +373,10 @@
 
       .description {
         gap: 25px;
+
+        .paragraph {
+          gap: 10px;
+        }
       }
 
       .contact {
@@ -396,6 +425,10 @@
 
       .description {
         gap: 25px;
+
+        .paragraph {
+          gap: 10px;
+        }
       }
 
       .contact {
@@ -443,6 +476,10 @@
 
       .description {
         gap: 25px;
+
+        .paragraph {
+          gap: 10px;
+        }
       }
 
       .contact {
@@ -490,6 +527,10 @@
 
       .description {
         gap: 25px;
+
+        .paragraph {
+          gap: 10px;
+        }
       }
 
       .contact {
@@ -537,6 +578,10 @@
 
       .description {
         gap: 25px;
+
+        .paragraph {
+          gap: 10px;
+        }
       }
 
       .contact {
@@ -584,6 +629,10 @@
 
       .description {
         gap: 25px;
+
+        .paragraph {
+          gap: 10px;
+        }
       }
 
       .contact {

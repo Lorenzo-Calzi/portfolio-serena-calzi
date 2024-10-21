@@ -12,6 +12,7 @@ const Contact = () => {
             <div className="page-container">
                 <div className="content">
                     <ContactForm
+                        index={-1}
                         formElementsList={DefaultFormInputsSTUB}
                         description={"Compila il form se hai bisogno di informazioni!"}
                     />

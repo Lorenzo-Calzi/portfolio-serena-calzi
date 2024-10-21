@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import "./courseDetailsPage.scss";
 import Breadcrumb from "../../reusable/Breadcrumb/Breadcrumb";
 import Header from "../../reusable/Header/Header";
@@ -165,14 +165,17 @@ const CourseDetailsPage = () => {
 
                         <div className="description">
                             <Text type={"h3"}>Descrizione</Text>
-                            <Text type={"p-medium"}>
-                                {CoursesSTUB[currentIndex].details.description}
-                            </Text>
+                            <div className="paragraph">
+                                {CoursesSTUB[currentIndex].details.description.map(desc => (
+                                    <Text type={"p-medium"}>{desc}</Text>
+                                ))}
+                            </div>
                         </div>
 
                         <div className="contact">
                             <ContactForm
                                 id={CoursesSTUB[currentIndex].id}
+                                index={currentIndex}
                                 formElementsList={
                                     CoursesSTUB[currentIndex].details.formElementsList
                                 }

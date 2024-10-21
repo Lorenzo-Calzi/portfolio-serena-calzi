@@ -172,6 +172,7 @@ const ServiceDetails = () => {
                         <div className="contact">
                             <ContactForm
                                 id={ServicesSTUB[currentIndex].id}
+                                index={currentIndex}
                                 formElementsList={
                                     ServicesSTUB[currentIndex].details.formElementsList
                                 }

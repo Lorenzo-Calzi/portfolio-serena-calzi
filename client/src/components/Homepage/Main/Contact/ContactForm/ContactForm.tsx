@@ -32,11 +32,12 @@ import CoursesSTUB from "../../../../../stub/CoursesSTUB";
 interface ContactFormProps {
     formElementsList: string[];
     id?: string;
+    index: number;
     options?: string;
     description?: string;
 }
 
-const ContactForm = ({ formElementsList, id, options, description }: ContactFormProps) => {
+const ContactForm = ({ formElementsList, id, index, options, description }: ContactFormProps) => {
     const filtered = Object.keys(FormSchemaSTUB)
         .filter((key: string) => formElementsList.includes(key))
         .reduce((obj: any, key: string) => {
@@ -68,6 +69,12 @@ const ContactForm = ({ formElementsList, id, options, description }: ContactForm
         const emptyFields = Object.keys(watch()).filter(
             (key: any) => !watch(key) && !requiredFields.includes(key)
         );
+
+        console.log({
+            watch: watch(),
+            emptyFields: emptyFields.length,
+            errors: Object.keys(errors).length
+        });
 
         if (watch() && !emptyFields.length && Object.keys(errors).length === 0) {
             setFormIsValid(true);
@@ -107,10 +114,9 @@ const ContactForm = ({ formElementsList, id, options, description }: ContactForm
 
     const registration = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const snapshot = await db.collection(CoursesSTUB[0].id).get();
+        const snapshot = await db.collection(CoursesSTUB[index].id).get();
         const count = snapshot.size;
-        const placesAvailable = parseInt(CoursesSTUB[0].details.placesAvailable) - count;
-        console.log(placesAvailable);
+        const placesAvailable = parseInt(CoursesSTUB[index].details.placesAvailable) - count;
 
         if (placesAvailable) {
             try {

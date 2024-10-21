@@ -14,7 +14,7 @@ const ContactPage = () => {
             <div className="page-container">
                 <div className="contact-content">
                     <div className="contact">
-                        <ContactForm formElementsList={DefaultFormInputsSTUB} />
+                        <ContactForm index={-1} formElementsList={DefaultFormInputsSTUB} />
                         <ContactInfo />
                     </div>
                 </div>

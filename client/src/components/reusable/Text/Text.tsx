@@ -1,5 +1,6 @@
 import React from "react";
 import "./text.scss";
+import CoursesSTUB from "../../../stub/CoursesSTUB";
 
 interface TextProps {
     children: React.ReactNode;
