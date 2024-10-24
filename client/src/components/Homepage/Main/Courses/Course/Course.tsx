@@ -14,7 +14,7 @@ interface CourseProps {
     price: string;
     placesAvailable: string;
     slug: string;
-    sale: boolean;
+    discountedPrice: string;
 }
 
 const Course = ({
@@ -25,7 +25,7 @@ const Course = ({
     image,
     placesAvailable,
     slug,
-    sale
+    discountedPrice
 }: CourseProps) => {
     return (
         <motion.div
@@ -39,7 +39,7 @@ const Course = ({
                 <div className="image-container">
                     <div className="image" style={{ backgroundImage: `url(${image})` }} />
                 </div>
-                {sale && <img src={SaleSVG} alt="icona dello sconto" className="sale" />}
+                {discountedPrice && <img src={SaleSVG} alt="icona dello sconto" className="sale" />}
             </div>
 
             <div className="void-space-transaparent" />

@@ -155,9 +155,17 @@ const CourseDetailsPage = () => {
 
                                     <div className="right">
                                         <Text type={"span"}>Prezzo:</Text>
-                                        <Text type={"p-medium"}>
-                                            {CoursesSTUB[currentIndex].details.price}
-                                        </Text>
+
+                                        {CoursesSTUB[currentIndex].details.discountedPrice ? (
+                                            <Text type={"p-medium"}>
+                                                <s>{CoursesSTUB[currentIndex].details.price}</s> -{" "}
+                                                {CoursesSTUB[currentIndex].details.discountedPrice}
+                                            </Text>
+                                        ) : (
+                                            <Text type={"p-medium"}>
+                                                {CoursesSTUB[currentIndex].details.price}
+                                            </Text>
+                                        )}
                                     </div>
                                 </div>
                             </div>

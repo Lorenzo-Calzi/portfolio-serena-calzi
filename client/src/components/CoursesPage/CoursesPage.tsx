@@ -21,9 +21,9 @@ const CoursesPage = () => {
                             time={course.details.timetables}
                             image={course.image}
                             price={course.details.price}
+                            discountedPrice={course.details.discountedPrice}
                             placesAvailable={course.details.placesAvailable}
                             slug={course.title.replace(/ /g, "-").toLowerCase()}
-                            sale={course.sale}
                             key={index}
                         />
                     ))}
